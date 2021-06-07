@@ -3,10 +3,10 @@ MAMAMAKI
 
 **[Code Institute](https://codeinstitute.net/)  Milestone Project 3: Backend Development**
 
-<img src="static/readme images/logo.png" alt="Logo" width="80%" height="80%">
+<img src="static/readme images/logo.png" alt="Logo" width="65%" height="65%">
 
-MAMAMAKI is a site where it is possible to see Japanese home cooking recipes and where when loged in you can add and adjust your own recipes. 
-The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to design share recipes.
+MAMAMAKI is a site where it is possible to see Japanese home cooking recipes and where when loged in you can add and adjust your own recipes.
+The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
 
 Demo
 ======
@@ -42,7 +42,7 @@ Table of Contents
 UX
 ======
 
-This is meant to be a B2B site which targets visitors  who are in need of business cards and want to design it themselves.
+This is meant to be a B2C site which targets visitors who are interested in Japanese home cooking.
 
 ### User stories
 
@@ -74,22 +74,27 @@ This is meant to be a B2B site which targets visitors  who are in need of busine
 ### Skeleton
 
 Desktop wireframes <br>
+<img src="static/readme images/desktop_all_pages.png" alt="Desktop overview" width="85%" height="85%">
 
-<img src="static/readme images/home_page.png" alt="Desktop home page" width="65%" height="65%">
+<img src="static/readme images/home_page.png" alt="Desktop home page" width="45%" height="45%">
 
-<img src="static/readme images/about_page.png" alt="Desktop about page" width="65%" height="65%">
+<img src="static/readme images/about_page.png" alt="Desktop about page" width="45%" height="45%">
 
-<img src="static/readme images/recipes.png" alt="Recipes page" width="65%" height="65%">
+<img src="static/readme images/recipes.png" alt="Recipes page" width="45%" height="45%">
 
-<img src="static/readme images/specific_recipe.png" alt="Specific recipes page" width="65%" height="65%">
+<img src="static/readme images/specific_recipe.png" alt="Specific recipes page" width="45%" height="45%">
 
-<img src="static/readme images/register.png" alt="Register" width="65%" height="65%">
+<img src="static/readme images/register.png" alt="Register" width="45%" height="45%">
 
-<img src="static/readme images/log_in.png" alt="Log in" width="65%" height="65%">
+<img src="static/readme images/log_in.png" alt="Log in" width="45%" height="45%">
 
-<!-- Tablet wireframes <br>
+<img src="static/readme images/profile_page.png" alt="Profile page" width="45%" height="45%">
 
-<img src="assets/images/readme_images/tablet_overview.png" alt="Tablet Overview 1" width="85%" height="85%"> -->
+<img src="static/readme images/add_recipe_page.png" alt="Add recipe page" width="45%" height="45%">
+
+Tablet wireframes <br>
+
+<img src="static/readme images/tablet_all_pages.png" alt="Tablet overview" width="85%" height="85%">
 
 <!-- Mobile wireframes<br>
 
