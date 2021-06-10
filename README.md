@@ -1,7 +1,7 @@
 MAMAMAKI
 ======
 
-**[Code Institute](https://codeinstitute.net/)  Milestone Project 3: Backend Development**
+**[Code Institute](https://codeinstitute.net/)  Milestone Project 3: Python and Data Centric Development**
 
 <img src="static/readme images/logo.png" alt="Logo" width="65%" height="65%">
 
@@ -48,68 +48,62 @@ This is meant to be a B2C site which targets visitors who are interested in Japa
 
 ##### Visitor Goals
 
-<!-- - Create / design your own business card.
-- Be able to choose the paper type and quantity.
-- Request a sample kit with papers for if you are not familiar with the paper types.
-- Request a quotation and download the designed card. -->
+- To be able to see different recipes and search for them.
+- To create an account and log in on that account.
+- To create and edit own recipes.
 
 ##### Site Owners Goals
 
-<!-- - Provide the service of designing your own business cards in an easy way, without additional designing costs.
-- Reduce workload on the prepress (design) staff.
-- Expand customer base. -->
+- To share the love for Japanese home cooking and promote it.
+- Share nice Japanese home cooking recipes.
 
 ### Strategy
 
-<!-- The design goal is to make a clear, accessible, structured site so that visitors can easily design their own business cards. -->
+The design goal is to make a clear, accessible, structured site so that visitors can easily see the recipes, navigate on the site and add + edit their own recipes.
 
 ### Scope
 
-<!-- The site shows a homepage with an explanation, there the user can either first request a sample kit for the paper types or start designing. On the creator site it allows the user to choose out of three different sizes of business cards, to choose a background color, to choose the paper type, to choose the quantity, to upload an own photo or logo, to edit text content, to download the designed card as a low-res jpeg file, to send a request for a quotation for the designed business cards. -->
+The site shows a home page with a small introduction. Second is the about page which tells a bit about the creator of the site and why the site was created. Furthermore, the site contains a recipe page on which you can you choose to go to a specific recipe. It also contains a register page, a log in page, a profile page and a add recipe page.
+The profile page and add recipe page will only be visible when you are logged in.
 
 ### Structure
 
-<!-- This site is structured as clear as possible, it is easy to see what can be done on the page, on all screen sizes it is clear what should be done on each part of the site. The design of the card is visible on all screen sizes. This all ensures that the user knows what to do and what to expect. -->
+The site will be structured as clear as possible, it should be easy to see what you can do on the page, on all screen sizes it should be clear what you can do on each part of the site. 
 
 ### Skeleton
 
 Desktop wireframes <br>
 <img src="static/readme images/desktop_all_pages.png" alt="Desktop overview" width="85%" height="85%">
 
-<img src="static/readme images/home_page.png" alt="Desktop home page" width="45%" height="45%">
-
-<img src="static/readme images/about_page.png" alt="Desktop about page" width="45%" height="45%">
-
-<img src="static/readme images/recipes.png" alt="Recipes page" width="45%" height="45%">
-
-<img src="static/readme images/specific_recipe.png" alt="Specific recipes page" width="45%" height="45%">
-
-<img src="static/readme images/register.png" alt="Register" width="45%" height="45%">
-
-<img src="static/readme images/log_in.png" alt="Log in" width="45%" height="45%">
-
-<img src="static/readme images/profile_page.png" alt="Profile page" width="45%" height="45%">
-
-<img src="static/readme images/add_recipe_page.png" alt="Add recipe page" width="45%" height="45%">
-
 Tablet wireframes <br>
 
 <img src="static/readme images/tablet_all_pages.png" alt="Tablet overview" width="85%" height="85%">
 
-<!-- Mobile wireframes<br>
+Mobile wireframes<br>
 
-<img src="assets/images/readme_images/mobile_overview.png" alt="Mobile Overview 1" width="85%" height="85%"> -->
+<img src="static/readme images/mobile_all_pages.png" alt="Mobile Overview" width="85%" height="85%">
 
 **Surface**
 
-<!-- The colors that were used are the existing corporate identity colors, white and an off-white color, which are:
+The following colors will be used:
 
-<img src="assets/images/readme_images/red.png" alt="Red" width="25%" height="25%"> <img src="assets/images/readme_images/red2.png" alt="Red 2" width="25%" height="25%"> <img src="assets/images/readme_images/dark_grey.png" alt="Dark Grey"  width="25%" height="25%"> <img src="assets/images/readme_images/white.png" alt="White"  width="25%" height="25%"> <img src="assets/images/readme_images/off_white.png" alt="Off White"  width="25%" height="25%">
+<img src="static/readme images/hex_DF5B5B.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color"  width="25%" height="25%"> <br>
 
-The colors used as background colors for the user to select were found when another project was inspected with the DevTools. These colors have been chosen because they are full and bright. <br>
-<img src="assets/images/readme_images/colors.png" alt="Background colors" width="25%" height="25%">
+And for a gradient background: <br>
+<img src="static/readme images/hex_DE5959.png" alt="Gradient 1"  width="25%" height="25%"> <img src="static/readme images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
 
-During development the site's layout was restructured a little bit, because this seemed visually or otherwise better.
+Which results in this: <br>
+<img src="static/readme images/gradient_backrgound.png" alt="Gradient background colors" width="25%" height="25%"> <br>
+For this [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) was used.
+
+The colors were chosen because they fit very well with Japan, reminding of Sakura blossoms. The background of the sea is a reference to a traditional Japanese painting, called “The Great Wave off Kanagawa”. <br>
+<img src="static/readme images/background_login.png" alt="Waves background" width="45%" height="45%"> <br>
+
+This was chosen because it gives a nice separation to the register and log in page from the rest of the site and I think it connects well with the recipes, because a few of them use fish as an ingredient. And fish comes from the sea.
+
+The first set up for the wireframes was with a grey background and footer, but it was felt to be UX unappealing, that’s why this was changed to the current wireframes.
+
+<!-- During development the site's layout was restructured a little bit, because this seemed visually or otherwise better.
 What was changed is:
 
 1. The color for the red headers and buttons were changed from #e73b3b to #e72f4c and #e02a51 because during testing #e73b3b did not give a good enough contrast.
@@ -125,36 +119,31 @@ What was changed is:
 
 ### Fonts and icons
 
-<!-- [Google Fonts](https://fonts.google.com/) was used to embed the Roboto font in the code. Roboto was chosen because this is already in use on the existing POSTFLY site and it fits the corporate identity.
+[Google Fonts](https://fonts.google.com/) was used to embed the Chicle and Ubuntu font in the code. Chicle was chosen because this reminds of Japanse calligraphy. Ubuntu was chosen because for the main text I felt this has a better readability which gives better UX.
 
-For the icons on the homepage [Font Awesome](https://fontawesome.com/) was used and for the other two pages the icons of [Materialize](https://materializecss.com/icons.html) were used. -->
+For the icons [Font Awesome](https://fontawesome.com/) was used.
 
 Features
 ======
 
-<!-- The site contains the following features: 
+The site contains the following features: 
 
-- choose out of three different sizes of business cards
-- choose a background color
-- choose the paper type
-- choose the quantity
-- upload an own photo or logo
-- edit text content
-- download the designed card as a low-res jpeg file
-- reset the selected items
-- send a request for a quotation for the designed business cards -->
+- See an overview of multiple recipes.
+- Select a specific recipe and see the details of that recipe.
+- Have clear and easy to use page navigation.
+- Register an account.
+- Log in to that account and log out of it.
+- Add and edit one’s own recipes.
+
 
 ### Features for the future 
 
-<!-- The following items can be added: 
+The following items can be added: 
 
-- choose a different color for the frontside and the backside of the card
--	choose the production / delivery time
--	customize the paper size
-- choose between round or right angles
--	integrate it on the POSTFLY website
--	show costs in advance without having to ask for a quotation
-- set the designed business card through as an order -->
+- Comment on other people’s recipes.
+- Being able to share a recipe on social media.
+- Being able to print out a recipe directly from the site with one click on a button. 
+- Put the ingredients on a shopping list which one can print out.
 
 Technologies
 ======
@@ -256,18 +245,26 @@ Credits
 ======
 
 ### Content
-All content has been written by me.
+All content has been written by me, but the original recipes come out of two books which are:
+1. [Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
+2. [Japans Koken - Harumi Kurihara](https://www.yutori.co.jp/en/index.html) 
+
 
 ### Media 
 
 #### Images:
 
-1. [MCICON](https://www.mcicon.com/product/sushi-icon-3/) 
-- for the sushi icon of the logo.
+1. [MCICON](https://www.mcicon.com/product/sushi-icon-3/) for the sushi icon in the logo.
 
-2. Photos, all the photos are my own.
+2. [Adobe Stock](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) The wave image is a licensed image downloaded with a paid Adobe Stock account, the image was used for the background of the register and log in page.
+
+3. Photos of the food, all these photos are my own.
+
+4. [Color-hex](https://www.color-hex.com/) was used to get the images of the colors that were used.
 
 #### Code:
+
+1. [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) to create the gradient background with CSS.
 
 <!-- 1. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
 2. Adding the defer attribute to the script files in html was a tip given by my mentor Narender, this ensures that the script files are executed when the page has finished loading.
