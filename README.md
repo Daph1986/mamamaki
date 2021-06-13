@@ -5,7 +5,7 @@ MAMAMAKI
 
 <img src="static/readme images/logo.png" alt="Logo" width="65%" height="65%">
 
-MAMAMAKI is a site where it is possible to see Japanese home cooking recipes and where when loged in you can add and adjust your own recipes.
+MAMAMAKI is a site for Japanese home cooking recipes and when you are loged in, you can add and edit your own recipes.
 The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
 
 Demo
@@ -19,25 +19,44 @@ Demo
 Table of Contents
 ======
 
-- [UX](#ux)
-    - [User stories](#user-stories)
-    - [Strategy](#strategy)
-    - [Scope](#scope)
-    - [Structure](#structure)
-    - [Skeleton](#skeleton)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Testing and Bugs](#testing-and-bugs)
-- [Deployment](#deployment)
-    - [Live version](#live-version)
-    - [GitHub Pages](#github-pages)
-    - [Run local](#run-local)
-    - [Setting EmailJS up](#setting-emailjs-up)
-- [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-    - [Other](#other)
-    - [Acknowledgements](#acknowledgements)
+**<details><summary>UX</summary>**
+* [**_User stories_**](#user-stories)
+    * [_Strategy_](#strategy)
+    * [_Scope_](#scope)
+    * [_Structure_](#structure)
+    * [_Skeleton_](#skeleton)
+</details>
+
+**<details><summary>Features</summary>**
+* [**_Existing Features_**](#existing-features)
+* [**_Features for the future_**](#features-for-the-future)
+</details>
+
+**<details><summary>Technologies</summary>**
+* [**_Code languages, libraries and frameworks_**](#code-languages-libraries-and-frameworks)
+* [**_Wireframes_**](#wireframes)
+* [**_Others_**](#others)
+</details>
+
+**<details><summary>Testing and Bugs</summary>**
+* [**_Preface_**](#preface)
+</details>
+
+**<details><summary>Deployment</summary>**
+* [**_Live version_**](#live-version)
+* [**_GitHub Pages_**](#github-pages)
+* [**_Run local_**](#run-local)
+* [**_Setting EmailJS up_**](#setting-emailjs-up)
+</details>
+
+
+**<details><summary>Credits</summary>**
+* [**_Content_**](#content)
+* [**_Media_**](#media)
+* [**_Other_**](#other)
+* [**_Acknowledgements_**](#acknowledgements)
+</details>
+<br>
 
 UX
 ======
@@ -83,6 +102,10 @@ Mobile wireframes<br>
 
 <img src="static/readme images/mobile_all_pages.png" alt="Mobile Overview" width="85%" height="85%">
 
+Raw data diagram<br>
+
+<img src="static/readme images/raw_data_diagram.png" alt="Data Overview" width="65%" height="65%">
+
 **Surface**
 
 The following colors will be used:
@@ -123,6 +146,8 @@ What was changed is:
 
 For the icons [Font Awesome](https://fontawesome.com/) was used.
 
+<div align="right"><a href="#top">🔝</a></div>
+
 Features
 ======
 
@@ -135,7 +160,6 @@ The site contains the following features:
 - Log in to that account and log out of it.
 - Add and edit one’s own recipes.
 
-
 ### Features for the future 
 
 The following items can be added: 
@@ -144,6 +168,8 @@ The following items can be added:
 - Being able to share a recipe on social media.
 - Being able to print out a recipe directly from the site with one click on a button. 
 - Put the ingredients on a shopping list which one can print out.
+
+<div align="right"><a href="#top">🔝</a></div>
 
 Technologies
 ======
@@ -167,11 +193,15 @@ Technologies
 - Adobe Illustrator: to create the logo.
 - VSCode: to write the code in.
 
+<div align="right"><a href="#top">🔝</a></div>
+
 Testing and Bugs
 ======
 
 <!-- The tests have been done on multiple devices and browsers, in the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
 For more details about testing and bugs please view this [file](testing/README.md). -->
+
+<div align="right"><a href="#top">🔝</a></div>
 
 Deployment
 ======
@@ -241,6 +271,8 @@ Receiving objects: 100% (113/113), 8.54 MiB | 11.13 MiB/s, done.
 Resolving deltas: 100% (34/34), done.
 ``` -->
 
+<div align="right"><a href="#top">🔝</a></div>
+
 Credits
 ======
 
@@ -297,3 +329,8 @@ All content has been written by me, but the original recipes come out of two boo
 - Aukje (byIlsa_lead) thank you for hosting a "Preparing for your Second Milestone Project" call on zoom, it was really helpful! Also thank you for your time and effort to go through my code in order to help me with my question about my form.
 - Cormac, Johann and Scott from Code Institute tutor assistance, thank you for helping me with my questions.
 - Special thanks to my colleagues, friends and family for their support, tips and for testing my site. -->
+- Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collabsable table of contents.
+- Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
+
+
+<div align="right"><a href="#top">🔝</a></div>
