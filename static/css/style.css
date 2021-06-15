@@ -7,10 +7,17 @@ body {
   background-color: #f1dec2;
   background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
   height: 1500px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #212121;
 }
 
 header, main, footer {
   padding-left: 300px;
+}
+
+main .fas:before {
+  color: #212121;
+  font-size: 20px;
 }
 
 /* ---------------------- Sidenav ---------------------- */
@@ -24,7 +31,7 @@ header, main, footer {
 }
 
 .sidenav li>a {
-  font-family: chicle;
+  font-family: 'Chicle', sans-serif;
   font-size: 18px;
   color: #fff;
 }
@@ -45,6 +52,18 @@ header, main, footer {
   height: 40px;
   width: 40px;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------- Buttons ---------------------- */
+
+.btn-green {
+  background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 18px;
+}
+
+.btn-green > i {
+  color: #fff;
 }
 
 /* ------------------ Media queries ------------------- */

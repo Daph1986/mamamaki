@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<main>
+
+		<h4 class="center-align">Tōroku</h4>
+		<h4 class="center-align">Register</h4>
+
+		<div class="row">
+			<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+				<div class="card-panel">
+					<!-- Username -->
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="fas fa-user-plus prefix icon-black"></i>
+							<input id="username" name="username" type="text" class="validate">
+							<label for="username">Username</label>
+						</div>
+					</div>
+					<!-- Password -->
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="fas fa-user-lock prefix icon-black"></i>
+						  	<input id="password" name="password" type="password" class="validate">
+						  	<label for="password">Password</label>
+						</div>
+					</div>
+					<!-- Register -->
+					<div class="row">
+						<button type="submit" class="col s4 btn-large btn-green">
+							Register <i class="fas fa-arrow-alt-circle-right"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</main>
+
+{% endblock %}
