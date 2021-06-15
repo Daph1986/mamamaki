@@ -1,5 +1,56 @@
+/* ------------- Styling for gerneral use ------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Ubuntu&display=swap');
+
+
 body {
   background-color: #f1dec2;
   background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
-  height: 1000px;
+  height: 1500px;
+}
+
+header, main, footer {
+  padding-left: 300px;
+}
+
+/* ---------------------- Sidenav ---------------------- */
+
+.logo {
+  width: 150px;
+}
+
+.sidenav {
+  background-color: #DF5B5B;
+}
+
+.sidenav li>a {
+  font-family: chicle;
+  font-size: 18px;
+  color: #fff;
+}
+
+.fas:before {
+  color: #fff;
+}
+
+.hamburger-menu {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.opaque-overlay {
+  padding-left: 6px;
+  padding-top: 6px;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------ Media queries ------------------- */
+
+@media only screen and (max-width : 1024px) {
+  header, main, footer {
+    padding-left: 0;
+  }
 }
