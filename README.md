@@ -16,6 +16,8 @@ Demo
 <img src="assets/images/readme_images/mockup1.png" alt="Mockup 1" width="65%" height="65%">
 <img src="assets/images/readme_images/mockup2.png" alt="Mockup 2" width="65%" height="65%"> -->
 
+<div align="right"><a href="#top">🔝</a></div>
+
 Table of Contents
 ======
 
@@ -58,6 +60,8 @@ Table of Contents
 </details>
 <br>
 
+<div align="right"><a href="#top">🔝</a></div>
+
 UX
 ======
 
@@ -69,7 +73,7 @@ This is meant to be a B2C site which targets visitors who are interested in Japa
 
 - To be able to see different recipes and search for them.
 - To create an account and log in on that account.
-- To create and edit own recipes.
+- To create, read, update and delete own recipes.
 
 ##### Site Owners Goals
 
