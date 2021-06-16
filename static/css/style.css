@@ -106,6 +106,32 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   color: #707070;
 }
 
+/* ---------------------- Footer ---------------------- */
+
+.custom-footer {
+  background-color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  color: #212121;
+  font-size: small;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 2;
+  padding-left: 300px;
+}
+
+.custom-footer p {
+  margin-right: 35px;
+}
+
+.social-icons {
+  margin-right: 15px;
+  font-size: large;
+  color: #212121;
+}
+
 /* ------------------ Media queries ------------------- */
 
 @media only screen and (max-width : 1024px) {
@@ -127,5 +153,20 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .flashes h4 {
     padding-left: 0px;
     line-height: 2;
+  }
+  .custom-footer {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width : 414px) {
+  body {
+    height: 736px;
+  }
+  .register {
+    height: 736px;
+  }
+  .headers{
+    margin-top: 50px;
   }
 }
