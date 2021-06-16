@@ -27,16 +27,32 @@
 				<li><a href="#!"><i class="fas fa-home"></i>Home</a></li>
 				<li><a href="#!"><i class="fas fa-info center-align"></i>About</a></li>
 				<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-book-open"></i>Recipes</a></li>
-				<li><a href="#!"><i class="fas fa-user"></i>Register</a></li>
+				<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
 				<li><a href="#!"><i class="fas fa-user-lock"></i>Log in</a></li>
 			</ul>
 		<!-- mobile navbar-->
-			<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars hamburger-menu opaque-overlay hide-on-large-only"></i></a>
+			<a href="#" data-target="slide-out" class="sidenav-trigger">
+				<i class="fas fa-bars hamburger-menu opaque-overlay hide-on-large-only"></i>
+			</a>
 	</header>
 
+	<section>
+		<!-- Flash messages -->
+		{% with messages = get_flashed_messages() %}
+		    {% if messages %}
+			    {% for message in messages %}
+				    <div class="row flashes">
+						<h4 class="center-align">{{ message }}</h4>
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</section>
 
-	{% block content %}
-	{% endblock %}
+    <main class="container">
+	    {% block content %}
+	    {% endblock %}
+	</main>
  
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
 	    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>

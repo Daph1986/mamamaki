@@ -7,10 +7,29 @@ body {
   background-color: #f1dec2;
   background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
   height: 1500px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #212121;
 }
 
 header, main, footer {
   padding-left: 300px;
+}
+
+main .fas:before {
+  color: #212121;
+  font-size: 20px;
+}
+
+.headers{
+  margin-top: 100px;
+}
+
+.flashes h4 {
+  background-color: #df5b5bd3;
+  font-family: 'Chicle', sans-serif;
+  color: #fff;
+  padding-left: 300px;
+  line-height: 2;
 }
 
 /* ---------------------- Sidenav ---------------------- */
@@ -24,7 +43,7 @@ header, main, footer {
 }
 
 .sidenav li>a {
-  font-family: chicle;
+  font-family: 'Chicle', sans-serif;
   font-size: 18px;
   color: #fff;
 }
@@ -35,8 +54,8 @@ header, main, footer {
 
 .hamburger-menu {
   font-size: 30px;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .opaque-overlay {
@@ -47,10 +66,66 @@ header, main, footer {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* ---------------------- Buttons ---------------------- */
+
+.btn-green {
+  background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 18px;
+}
+
+.btn-large:hover {
+  background-color:#439e46; 
+}
+
+/* ---------------------- Register / Log in ---------------------- */
+
+.register {
+  background-image: url(/static/images/background_login.png);
+  height: 1500px;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display:flexbox;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #707070;
+  -webkit-box-shadow: 0 1px 0 0 #707070;
+  box-shadow: 0 1px 0 0 #707070;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label, 
+input[type=password]:not(.browser-default):focus:not([readonly])+label {
+  color: #707070;
+}
+
 /* ------------------ Media queries ------------------- */
 
 @media only screen and (max-width : 1024px) {
+  body {
+    height: 1366px;
+  }
   header, main, footer {
     padding-left: 0;
+  }
+  .btn-green {
+    font-size: 14px;
+  }
+  main .fas:before {
+    font-size: 16px;
+  }
+  .register {
+    height: 1366px;
+  }
+  .flashes h4 {
+    padding-left: 0px;
+    line-height: 2;
   }
 }
