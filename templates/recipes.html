@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-	{%for recipe in recipes %}
-	    {{ recipe.japanese_recipe_name}}<br>
-		{{ recipe.english_recipe_name}}<br>
-		{{ recipe.recipe_introduction }}<br>
-		{{ recipe.recipe_preparation_time }}<br>
-		{{ recipe.recipe_servings }}<br>
-		{{ recipe.recipe_image }}<br>
-	{% endfor %}
+  {%for recipe in recipes %}
+    {{ recipe.japanese_recipe_name}}<br>
+    {{ recipe.english_recipe_name}}<br>
+    {{ recipe.recipe_introduction }}<br>
+    {{ recipe.recipe_preparation_time }}<br>
+    {{ recipe.recipe_servings }}<br>
+    {{ recipe.recipe_image }}<br>
+  {% endfor %}
 
 {% endblock %}
