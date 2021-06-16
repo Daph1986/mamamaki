@@ -15,11 +15,6 @@ header, main, footer {
   padding-left: 300px;
 }
 
-main .fas:before {
-  color: #212121;
-  font-size: 20px;
-}
-
 .headers{
   margin-top: 100px;
 }
@@ -48,7 +43,7 @@ main .fas:before {
   color: #fff;
 }
 
-.fas:before {
+.sidenav li>a>i {
   color: #fff;
 }
 
@@ -56,6 +51,7 @@ main .fas:before {
   font-size: 30px;
   margin-top: 20px;
   margin-left: 30px;
+  color: #fff;
 }
 
 .opaque-overlay {
@@ -71,7 +67,7 @@ main .fas:before {
 .btn-green {
   background-color: #4CAF50;
   font-family: 'Chicle', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .btn-large:hover {
@@ -82,7 +78,7 @@ main .fas:before {
 
 .register {
   background-image: url(/static/images/background_login.png);
-  height: 1500px;
+  height: 1295px;
 	width: 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -92,6 +88,17 @@ main .fas:before {
 	align-items: center;
 	justify-content: center;
 	position: relative;
+}
+
+.input-field .prefix {
+  font-size: 1.7rem;
+}
+
+/* Materialize uses active / focus colors in green for it's forms. 
+Those don't match the design so the css underneath is used to overwrite it.*/
+
+.input-field .prefix.active {
+  color: #212121;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]), 
@@ -134,7 +141,7 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 
 /* ------------------ Media queries ------------------- */
 
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width : 1023.98px) {
   body {
     height: 1366px;
   }
@@ -144,11 +151,8 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .btn-green {
     font-size: 14px;
   }
-  main .fas:before {
-    font-size: 16px;
-  }
   .register {
-    height: 1366px;
+    height: 1250px;
   }
   .flashes h4 {
     padding-left: 0px;
@@ -156,6 +160,15 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   }
   .custom-footer {
     padding-left: 0px;
+  }
+  .btn-green {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 25px;
+  }
+  .input-field .prefix {
+    font-size: 1.5rem;
   }
 }
 
@@ -167,6 +180,15 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
     height: 736px;
   }
   .headers{
-    margin-top: 50px;
+    margin-top: 25px;
+  }
+  .btn-green {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .input-field .prefix {
+    font-size: 1.5rem;
   }
 }
