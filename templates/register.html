@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-	<main>
+	<main class="register">
 
 		<h4 class="center-align">Tōroku</h4>
 		<h4 class="center-align">Register</h4>
@@ -12,22 +12,22 @@
 					<!-- Username -->
 					<div class="row">
 						<div class="input-field col s12">
-							<i class="fas fa-user-plus prefix icon-black"></i>
-							<input id="username" name="username" type="text" class="validate">
+							<i class="fas fa-user-plus prefix"></i>
+							<input id="username" name="username" type="text" class="validate grey lighten-3">
 							<label for="username">Username</label>
 						</div>
 					</div>
 					<!-- Password -->
 					<div class="row">
 						<div class="input-field col s12">
-							<i class="fas fa-user-lock prefix icon-black"></i>
-						  	<input id="password" name="password" type="password" class="validate">
+							<i class="fas fa-user-lock prefix"></i>
+						  	<input id="password" name="password" type="password" class="validate grey lighten-3">
 						  	<label for="password">Password</label>
 						</div>
 					</div>
 					<!-- Register -->
 					<div class="row">
-						<button type="submit" class="col s4 btn-large btn-green">
+						<button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align">
 							Register <i class="fas fa-arrow-alt-circle-right"></i>
 						</button>
 					</div>

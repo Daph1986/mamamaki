@@ -62,14 +62,54 @@ main .fas:before {
   font-size: 18px;
 }
 
-.btn-green > i {
-  color: #fff;
+.btn-large:hover {
+  background-color:#439e46; 
+}
+
+/* ---------------------- Register / Log in ---------------------- */
+
+.register {
+  background-image: url(/static/images/background_login.png);
+  height: 1500px;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display:flexbox;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #707070;
+  -webkit-box-shadow: 0 1px 0 0 #707070;
+  box-shadow: 0 1px 0 0 #707070;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label, 
+input[type=password]:not(.browser-default):focus:not([readonly])+label {
+  color: #707070;
 }
 
 /* ------------------ Media queries ------------------- */
 
 @media only screen and (max-width : 1024px) {
+  body {
+    height: 1366px;
+  }
   header, main, footer {
     padding-left: 0;
+  }
+  .btn-green {
+    font-size: 14px;
+  }
+  main .fas:before {
+    font-size: 16px;
+  }
+  .register {
+    height: 1366px;
   }
 }
