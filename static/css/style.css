@@ -20,6 +20,18 @@ main .fas:before {
   font-size: 20px;
 }
 
+.headers{
+  margin-top: 100px;
+}
+
+.flashes h4 {
+  background-color: #df5b5bd3;
+  font-family: 'Chicle', sans-serif;
+  color: #fff;
+  padding-left: 300px;
+  line-height: 2;
+}
+
 /* ---------------------- Sidenav ---------------------- */
 
 .logo {
@@ -42,8 +54,8 @@ main .fas:before {
 
 .hamburger-menu {
   font-size: 30px;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .opaque-overlay {
@@ -111,5 +123,9 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   }
   .register {
     height: 1366px;
+  }
+  .flashes h4 {
+    padding-left: 0px;
+    line-height: 2;
   }
 }

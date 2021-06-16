@@ -36,9 +36,23 @@
 			</a>
 	</header>
 
+	<section>
+		<!-- Flash messages -->
+		{% with messages = get_flashed_messages() %}
+		    {% if messages %}
+			    {% for message in messages %}
+				    <div class="row flashes">
+						<h4 class="center-align">{{ message }}</h4>
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</section>
 
-	{% block content %}
-	{% endblock %}
+    <main class="container">
+	    {% block content %}
+	    {% endblock %}
+	</main>
  
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
 	    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
