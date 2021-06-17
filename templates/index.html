@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
+  <!-- Image slider -->
   <div class="slider">
     <ul class="slides">
       <li>
-        <img src="static/images/sushi.png"> 
+        <img src="static/images/sushi.png">
       </li>
       <li>
         <img src="static/images/miso_soup.png">
@@ -16,6 +17,26 @@
         <img src="static/images/chicken_with_pepper_cooking.png">
       </li>
     </ul>
+  </div>
+
+  <!-- Homepage content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h5 class="center-align headers">MAMAMAKIA e yōkoso</h5>
+        <h5 class="center-align">Welcome to MAMAMAKI</h5>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <p>
+            This site contains Japanese recipes that can easily be created
+            at your own home.
+            If you yourself have a nice recipe you are most welcome to
+            share it here!
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
 {% endblock %}
