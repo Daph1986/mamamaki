@@ -11,9 +11,9 @@ The focus with this site is to combine knowledge about Japanese home cooking wit
 Demo
 ======
 
-<!-- By clicking this [link](https://daph1986.github.io/Postfly-business-card-creator/) a live demo version will be visible.
+By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version will be visible.
 
-<img src="assets/images/readme_images/mockup1.png" alt="Mockup 1" width="65%" height="65%">
+<!-- <img src="assets/images/readme_images/mockup1.png" alt="Mockup 1" width="65%" height="65%">
 <img src="assets/images/readme_images/mockup2.png" alt="Mockup 2" width="65%" height="65%"> -->
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -130,10 +130,24 @@ This was chosen because it gives a nice separation to the register and log in pa
 
 The first set up for the wireframes was with a grey background and footer, but it was felt to be UX unappealing, that’s why this was changed to the current wireframes.
 
-<!-- During development the site's layout was restructured a little bit, because this seemed visually or otherwise better.
+During development the site's layout was restructured a little bit, because this seemed visually or otherwise better.
 What was changed is:
 
-1. The color for the red headers and buttons were changed from #e73b3b to #e72f4c and #e02a51 because during testing #e73b3b did not give a good enough contrast.
+1. <br>
+On the register page the headers were outside the white block, but this gave a problem with the flash messages. They pushed the content down, the headers text becaume hard. <br>
+<img src="static/readme images/headers_with_flash_message_1.png" alt="Headers with Flash message before" width="45%" height="45%"> <br>
+
+So it was decided to put the headers in the white register block to solve this. <br>
+
+<img src="static/readme images/headers_with_flash_message_2.png" alt="Headers with Flash message after" width="45%" height="45%"> <br>
+
+2. <br>
+Originally the texts were aligned left, but in the actual design this didn't look right.<br>
+<img src="static/readme images/text_align_left.png" alt="Text align left" width="45%" height="45%"> <br>
+So centering the text seemed better.<br>
+<img src="static/readme images/text_align_center.png" alt="Text align center" width="45%" height="45%"> <br>
+
+<!-- 1. The color for the red headers and buttons were changed from #e73b3b to #e72f4c and #e02a51 because during testing #e73b3b did not give a good enough contrast.
 2. The icon for the website was added, because it would be logical to refer to the main website of the company.
 3. On the sample kit request form and the quotation request form a checkbox was added to reduce spam by checking if the user is a robot.
 4. The layout for desktop view on the creator.html for the card selectors was changed a bit to make it look more appealing on smaller screens and to make it more logical to follow the steps.
@@ -292,15 +306,18 @@ All content has been written by me, but the original recipes come out of two boo
 
 1. [MCICON](https://www.mcicon.com/product/sushi-icon-3/) for the sushi icon in the logo.
 
-2. [Adobe Stock](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) The wave image is a licensed image downloaded with a paid Adobe Stock account, the image was used for the background of the register and log in page.
+2. [Adobe Stock](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) the wave image is a licensed image downloaded with a paid Adobe Stock account, the image was used for the background of the register and log in page.
 
 3. Photos of the food, all these photos are my own.
 
 4. [Color-hex](https://www.color-hex.com/) was used to get the images of the colors that were used.
 
+5. [favicon.io](https://favicon.io/emoji-favicons/sushi/) was used to get an existing favicon for the site.
+
 #### Code:
 
 1. [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) to create the gradient background with CSS.
+2. [Code Institute LMS Backend Development Task Manager Miniproject](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) this was used as the basis of the code and then modified to make it my own site.
 
 <!-- 1. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
 2. Adding the defer attribute to the script files in html was a tip given by my mentor Narender, this ensures that the script files are executed when the page has finished loading.
@@ -317,11 +334,11 @@ All content has been written by me, but the original recipes come out of two boo
 
 ### Other
 
-<!-- 1. [DIGIdesigner](https://github.com/D1ang/DIGIdesigner) this idea got me the inspiration for my subject on the milestone 2 project.
-2. [Fabric](http://fabricjs.com/) as a library to make the functions work on the canvas.
-3. [cdnjs](https://cdnjs.com/) to get the JavaScript cdn's from.
-4. [JustSunOne](https://www.youtube.com/watch?v=mghXNWvVGTs) his tutorials about Fabric were followed to get an understanding of how things worked.
-5. [Our Code World](https://ourcodeworld.com/articles/read/1016/how-to-create-your-own-t-shirt-designer-using-fabricjs-in-javascript) this example was used as an inspiration for the business card creator tool.
+1. [creately](https://creately.com/) to create the raw data diagram.
+2. [RandomKeygen](https://randomkeygen.com/) to get a value for the secret key.
+3. [cdnjs](https://cdnjs.com/) to get the fontawsome cdn from.
+4. [jQuery](https://code.jquery.com/) to get the jquery cdn from.
+<!-- 5. [Our Code World](https://ourcodeworld.com/articles/read/1016/how-to-create-your-own-t-shirt-designer-using-fabricjs-in-javascript) this example was used as an inspiration for the business card creator tool.
 6. [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) this creates a table of contents for Markdown, many thanks to follow student Aukje (byIlsa_lead) for sharing this.
 7. [Am I Responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Fdaph1986.github.io%2FPostfly-business-card-creator%2Findex.html) to check the responsiveness and make the mockups. -->
 
