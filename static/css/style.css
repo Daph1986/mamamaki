@@ -15,6 +15,11 @@ header, main, footer {
   padding-left: 300px;
 }
 
+header {
+  position: absolute;
+  z-index: 5;
+}
+
 .headers{
   margin-top: 100px;
 }
@@ -47,11 +52,15 @@ header, main, footer {
   color: #fff;
 }
 
+.sidenav-overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .hamburger-menu {
   font-size: 30px;
   margin-top: 20px;
   margin-left: 30px;
-  color: #fff;
+  color: #fff;;
 }
 
 .opaque-overlay {
@@ -60,6 +69,12 @@ header, main, footer {
   height: 40px;
   width: 40px;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------- Homepage ---------------------- */
+
+.slider .indicators .indicator-item.active {
+  background-color: #C62828;
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -140,7 +155,6 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 }
 
 /* ------------------ Media queries ------------------- */
-
 @media only screen and (max-width : 1023.98px) {
   body {
     height: 1366px;

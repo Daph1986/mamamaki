@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="static/images/favicon.png" type="image/png" sizes="32x32">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
@@ -26,7 +27,7 @@
 					<a href="#user"><img class="logo" src="static/images/logo.png"></a>
 				</div>
 			</li>
-			<li><a href="#!"><i class="fas fa-home menu-icons"></i>Home</a></li>
+			<li><a href="{{ url_for('index') }}"><i class="fas fa-home menu-icons"></i>Home</a></li>
 			<li><a href="#!"><i class="fas fa-info center-align"></i>About</a></li>
 			<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-book-open"></i>Recipes</a></li>
 			<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
@@ -51,7 +52,7 @@
 		{% endwith %}
 	</section>
 
-	<main class="container">
+	<main>
 		{% block content %}
 		{% endblock %}
 	</main>
