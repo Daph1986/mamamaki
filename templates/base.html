@@ -26,7 +26,7 @@
 					<a href="#user"><img class="logo" src="static/images/logo.png"></a>
 				</div>
 			</li>
-			<li><a href="#!"><i class="fas fa-home menu-icons"></i>Home</a></li>
+			<li><a href="{{ url_for('index') }}"><i class="fas fa-home menu-icons"></i>Home</a></li>
 			<li><a href="#!"><i class="fas fa-info center-align"></i>About</a></li>
 			<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-book-open"></i>Recipes</a></li>
 			<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
@@ -51,7 +51,7 @@
 		{% endwith %}
 	</section>
 
-	<main class="container">
+	<main>
 		{% block content %}
 		{% endblock %}
 	</main>
