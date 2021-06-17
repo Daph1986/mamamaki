@@ -77,6 +77,17 @@ header {
   background-color: #C62828;
 }
 
+/* ---------------------- About page ---------------------- */
+
+.hero-image {
+  background-image: url("/static/images/daphne.png");
+  min-height: 400px;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* ---------------------- Buttons ---------------------- */
 
 .btn-green {
@@ -188,7 +199,7 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 
 @media only screen and (max-width : 414px) {
   body {
-    height: 736px;
+    height: 1250px;
   }
   .register {
     height: 736px;
