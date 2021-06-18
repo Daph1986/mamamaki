@@ -106,18 +106,11 @@ header {
 
 /* ---------------------- Register / Log in ---------------------- */
 
-.register {
-  background-image: url(/static/images/background_login.png);
-  height: 1295px;
-	width: 100%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	display:flexbox;
-	align-items: center;
-	justify-content: center;
-	position: relative;
+.bg-register {
+  height: 100vh;
+  min-height: 100%;
+  background-image: url("/static/images/background_login.png");
+  background-position: center, no-repeat;
 }
 
 .input-field .prefix {
@@ -177,9 +170,6 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .btn-green {
     font-size: 14px;
   }
-  .register {
-    height: 1250px;
-  }
   .flashes h4 {
     padding-left: 0px;
     line-height: 2;
@@ -199,10 +189,7 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 }
 
 @media only screen and (max-width : 414px) {
-  .register {
-    height: 736px;
-  }
-  .headers{
+  .top-margins{
     margin-top: 25px;
   }
   .btn-green {
