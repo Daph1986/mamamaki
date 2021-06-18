@@ -110,7 +110,13 @@ header {
   height: 100vh;
   min-height: 100%;
   background-image: url("/static/images/background_login.png");
-  background-position: center, no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.card-panel {
+  padding-bottom: 0px;
+  padding-top: 1px;
 }
 
 .input-field .prefix {
@@ -189,9 +195,6 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 }
 
 @media only screen and (max-width : 414px) {
-  .top-margins{
-    margin-top: 25px;
-  }
   .btn-green {
     font-size: 18px;
   }
