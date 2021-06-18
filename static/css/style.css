@@ -189,7 +189,6 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .flashes h4 {
     padding-left: 0px;
   }
-
   h4 {
     font-size: 25px;
   }
