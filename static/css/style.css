@@ -15,11 +15,6 @@ header, main, footer {
   padding-left: 300px;
 }
 
-header {
-  position: absolute;
-  z-index: 5;
-}
-
 .top-margins{
   margin-top: 75px;
 }
@@ -29,11 +24,15 @@ header {
 }
 
 .flashes h4 {
-  background-color: #df5b5bd3;
+  background-color: #fff;
   font-family: 'Chicle', sans-serif;
-  color: #fff;
-  padding-left: 300px;
-  line-height: 2;
+  color: #4880bc;
+}
+
+.flashes {
+  position: absolute;
+  z-index: 5;
+  margin-left: 50%;
 }
 
 /* ---------------------- Sidenav ---------------------- */
@@ -65,6 +64,8 @@ header {
   margin-top: 20px;
   margin-left: 30px;
   color: #fff;;
+  position: absolute;
+  z-index: 3;
 }
 
 .opaque-overlay {
@@ -176,9 +177,8 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .btn-green {
     font-size: 14px;
   }
-  .flashes h4 {
-    padding-left: 0px;
-    line-height: 2;
+  .flashes {
+    margin-left: 35%;
   }
   .custom-footer {
     padding-left: 0px;
@@ -203,5 +203,8 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   }
   .input-field .prefix {
     font-size: 1.5rem;
+  }
+  .flashes {
+    margin-left: 25%;
   }
 }
