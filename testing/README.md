@@ -17,6 +17,7 @@ Table of Contents
 </details>
 
 **<details><summary>Bugs</summary>**
+* [**_Background_**](#background)
 * [**_Mobile nav_**](#mobile-nav)
 * [**_Flash messages_**](#flash-messages)
 </details>
@@ -270,7 +271,7 @@ header {
 }
 ```
 Which resulted in this:<br>
-<img src="../testing/testing_images/flash_message_bug_1.png" alt="Mobile nav 1" width="30%" height="30%"><br><img src="../testing/testing_images/mobile_nav_2.png" alt="Mobile nav 2" width="30%" height="30%"><br>
+<img src="../testing/testing_images/mobile_nav_1.png" alt="Mobile nav 1" width="30%" height="30%"><br><br><img src="../testing/testing_images/mobile_nav_2.png" alt="Mobile nav 2" width="30%" height="30%"><br>
 But when the nav links were clicked, nothing happend, you stayed at the same page, the links weren't working anymore.
 After thoroughly checking the HTML code of the side nav and mobile nav, this was causing the problem:
 ```
@@ -296,7 +297,7 @@ After that the nav links worked again.
 <div align="right"><a href="#top">🔝</a></div>
 
 #### Flash messages
-Once the mobile nav bug was fixed, another problem arose:<br>
+Once the mobile nav bug was fixed, another bug arose:<br>
 <img src="../testing/testing_images/flash_message_bug_1.png" alt="Flash message bug 1" width="30%" height="30%"><br>
 The flash message pussed the background down.
 This was tried to fix with the following css:
