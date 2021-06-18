@@ -2,11 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chicle&family=Ubuntu&display=swap');
 
-
-body {
+html {
+  min-height: 100%;
   background-color: #f1dec2;
   background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
-  height: 1500px;
+  background-repeat:no-repeat;
   font-family: 'Ubuntu', sans-serif;
   color: #212121;
 }
@@ -15,21 +15,24 @@ header, main, footer {
   padding-left: 300px;
 }
 
-header {
-  position: absolute;
-  z-index: 5;
+.top-margins{
+  margin-top: 75px;
 }
 
-.headers{
-  margin-top: 100px;
+.bottom-margins {
+  margin-bottom: 125px;
 }
 
 .flashes h4 {
-  background-color: #df5b5bd3;
+  background-color: #fff;
   font-family: 'Chicle', sans-serif;
-  color: #fff;
-  padding-left: 300px;
-  line-height: 2;
+  color: #4880bc;
+}
+
+.flashes {
+  position: absolute;
+  z-index: 5;
+  margin-left: 50%;
 }
 
 /* ---------------------- Sidenav ---------------------- */
@@ -61,6 +64,8 @@ header {
   margin-top: 20px;
   margin-left: 30px;
   color: #fff;;
+  position: absolute;
+  z-index: 3;
 }
 
 .opaque-overlay {
@@ -102,18 +107,17 @@ header {
 
 /* ---------------------- Register / Log in ---------------------- */
 
-.register {
-  background-image: url(/static/images/background_login.png);
-  height: 1295px;
-	width: 100%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	display:flexbox;
-	align-items: center;
-	justify-content: center;
-	position: relative;
+.bg-register {
+  height: 100vh;
+  min-height: 100%;
+  background-image: url("/static/images/background_login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.card-panel {
+  padding-bottom: 0px;
+  padding-top: 1px;
 }
 
 .input-field .prefix {
@@ -167,21 +171,14 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 
 /* ------------------ Media queries ------------------- */
 @media only screen and (max-width : 1023.98px) {
-  body {
-    height: 1366px;
-  }
   header, main, footer {
     padding-left: 0;
   }
   .btn-green {
     font-size: 14px;
   }
-  .register {
-    height: 1250px;
-  }
-  .flashes h4 {
-    padding-left: 0px;
-    line-height: 2;
+  .flashes {
+    margin-left: 35%;
   }
   .custom-footer {
     padding-left: 0px;
@@ -198,15 +195,6 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
 }
 
 @media only screen and (max-width : 414px) {
-  body {
-    height: 1250px;
-  }
-  .register {
-    height: 736px;
-  }
-  .headers{
-    margin-top: 25px;
-  }
   .btn-green {
     font-size: 18px;
   }
@@ -215,5 +203,8 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   }
   .input-field .prefix {
     font-size: 1.5rem;
+  }
+  .flashes {
+    margin-left: 25%;
   }
 }

@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <body class="register">
+<section class="bg-register">
 
     <div class="container">
       <div class="row">
         <form class="col s12" method="POST" action="{{ url_for('register') }}">
-          <div class="card-panel headers">
+          <div class="card-panel top-margins">
             <div class="row">
               <h4 class="center-align">Tōroku</h4>
               <h4 class="center-align">Register</h4>
@@ -45,5 +45,5 @@
       </div>
     </div>
 
-  </body>
+</section>
 {% endblock %}

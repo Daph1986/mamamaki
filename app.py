@@ -32,7 +32,6 @@ def about():
     return render_template("about.html")
 
 
-
 # All recipes
 @app.route("/")
 @app.route("/get_recipes")  
