@@ -228,7 +228,10 @@ Register background:
   }
 } 
 ```
-This was used because otherwise both backgrounds would repeat. But the fixed height with px bothered me. After some searching I found a way on stack overflow to fix it for the gradient background and figured out how to fix it for the register background myself.
+This was used because otherwise the base background would repeat and the register page background would be cut off.<br>
+<img src="../testing/testing_images/gradient_background.png" alt="Mobile nav start" width="50%" height="50%"> <br>
+<img src="../testing/testing_images/register_background.png" alt="Mobile nav start" width="50%" height="50%"> <br>
+But the fixed height with px bothered me. After some searching I found a way on stack overflow to fix it for the gradient background and figured out how to fix it for the register background myself.
 Which resulted in the following CSS:<br>
 Base background:
 ```
@@ -258,7 +261,7 @@ The media queries were no longer necessary.
 
 #### Mobile nav
 Once the background images bug was fixed, the hamburger menu icon looked like this:<br>
-<img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/mobile_nav_start.png" alt="Mobile nav start" width="30%" height="30%"> <br>
+<img src="../testing/testing_images/mobile_nav_start.png" alt="Mobile nav start" width="30%" height="30%"> <br>
 The following CSS code was used to get it fixed:
 ```
 header {
@@ -267,7 +270,7 @@ header {
 }
 ```
 Which resulted in this:<br>
-<img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/mobile_nav_1.png" alt="Mobile nav 1" width="30%" height="30%"><br><img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/mobile_nav_2.png" alt="Mobile nav 2" width="30%" height="30%"><br>
+<img src="../testing/testing_images/flash_message_bug_1.png" alt="Mobile nav 1" width="30%" height="30%"><br><img src="../testing/testing_images/mobile_nav_2.png" alt="Mobile nav 2" width="30%" height="30%"><br>
 But when the nav links were clicked, nothing happend, you stayed at the same page, the links weren't working anymore.
 After thoroughly checking the HTML code of the side nav and mobile nav, this was causing the problem:
 ```
@@ -294,7 +297,7 @@ After that the nav links worked again.
 
 #### Flash messages
 Once the mobile nav bug was fixed, another problem arose:<br>
-<img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/flash_message_bug_1.png" alt="Flash message bug 1" width="30%" height="30%"><br>
+<img src="../testing/testing_images/flash_message_bug_1.png" alt="Flash message bug 1" width="30%" height="30%"><br>
 The flash message pussed the background down.
 This was tried to fix with the following css:
 ```
@@ -304,7 +307,7 @@ This was tried to fix with the following css:
 }
 ```
 Which resulted in:<br>
-<img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/flash_message_bug_2.png" alt="Flash message bug 2" width="30%" height="30%"><br>
+<img src="../testing/testing_images/flash_message_bug_2.png" alt="Flash message bug 2" width="30%" height="30%"><br>
 Of course this didn't look very nice.
 The CSS was adjusted to:
 ```
@@ -322,8 +325,8 @@ The CSS was adjusted to:
   top: 650px;
 }
 ```
-<img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/flash_message_bug_3.png" alt="Flash message bug 3" width="30%" height="30%"><br>
+<img src="../testing/testing_images/flash_message_bug_3.png" alt="Flash message bug 3" width="30%" height="30%"><br>
 The contrast of the pink text with the white background wasn't good enough, so it was changed to a blue color #4478b1 which has no problems with the contrast and fits nicely with the design.<br>
-<img src="/Users/postfly/Documents/Code Institute/mamamaki/testing/testing_images/flash_message_bug_4.png" alt="Flash message bug 4" width="30%" height="30%"><br>
+<img src="../testing/testing_images/flash_message_bug_4.png" alt="Flash message bug 4" width="30%" height="30%"><br>
 
 <div align="right"><a href="#top">🔝</a></div>
