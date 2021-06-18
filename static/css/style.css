@@ -24,15 +24,18 @@ header, main, footer {
 }
 
 .flashes h4 {
-  background-color: #fff;
   font-family: 'Chicle', sans-serif;
-  color: #4880bc;
+  color: #4478b1;
+  padding-left: 300px;
 }
 
 .flashes {
   position: absolute;
   z-index: 5;
-  margin-left: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  line-height: 1;
+  top: 650px;
 }
 
 /* ---------------------- Sidenav ---------------------- */
@@ -177,15 +180,16 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .btn-green {
     font-size: 14px;
   }
-  .flashes {
-    margin-left: 35%;
-  }
   .custom-footer {
     padding-left: 0px;
   }
   .btn-green {
     font-size: 20px;
   }
+  .flashes h4 {
+    padding-left: 0px;
+  }
+
   h4 {
     font-size: 25px;
   }
@@ -205,6 +209,6 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
     font-size: 1.5rem;
   }
   .flashes {
-    margin-left: 25%;
+    top: 575px;
   }
 }
