@@ -64,6 +64,7 @@ def register():
         # place new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully been registered with MAMAMAKI!")
+        return redirect(url_for("personal", username=session["user"]))
     return render_template("register.html")
 
 
@@ -80,8 +81,12 @@ def login():
             # checks if hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    session["user"] = request.form.get(
+                        "username").lower()
+                    flash("Welcome, {}".format(
+                        request.form.get("username")))
+                    return redirect(url_for(
+                        "personal", username=session["user"]))
             else:
                 # wrong password
                 flash("Sorry, this Username and/or Password is incorrect")
@@ -94,6 +99,14 @@ def login():
 
     return render_template("login.html")
 
+
+# Log in
+@app.route("/personal/<username>", methods=["GET", "POST"])
+def personal(username):
+    # get the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("personal.html", username=username)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
