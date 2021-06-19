@@ -26,14 +26,20 @@
 		<ul id="slide-out" class="sidenav sidenav-fixed">
 			<li>
 				<div class="user-view">
-					<a href="#user"><img class="logo" src="static/images/logo.png" alt="logo"></a>
+					<a href="#logo"><img class="logo" src="static/images/logo.png" alt="logo"></a>
 				</div>
 			</li>
 			<li><a href="{{ url_for('index') }}"><i class="fas fa-home menu-icons"></i>Home</a></li>
 			<li><a href="{{ url_for('about') }}"><i class="fas fa-info center-align"></i>About</a></li>
 			<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-book-open"></i>Recipes</a></li>
-			<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
-			<li><a href="{{ url_for('login') }}"><i class="fas fa-user-lock"></i>Log in</a></li>
+			{% if session.user %}
+				<li><a href="{{ url_for('personal', username=session['user']) }}"><i class="fas fa-user-check"></i>Personal recipe page</a></li>
+				<li><a href=""><i class="fas fa-plus"></i>Add recipe</a></li>
+				<li><a href="{{ url_for('logout') }}"><i class="fas fa-user-times"></i>Log out</a></li>
+			{% else %}
+				<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
+				<li><a href="{{ url_for('login') }}"><i class="fas fa-user-lock"></i>Log in</a></li>
+			{% endif %}
 		</ul>
 		<!-- mobile navbar-->
 		<a href="#" data-target="slide-out" class="sidenav-trigger">
