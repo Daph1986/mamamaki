@@ -1,4 +1,5 @@
 import os
+import re
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -64,6 +65,34 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("You have successfully been registered with MAMAMAKI!")
     return render_template("register.html")
+
+
+# Log in
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check in db if username already exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        # when username already exists
+        if existing_user:
+            # checks if hashed password matches user input
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                # wrong password
+                flash("Sorry, this Username and/or Password is incorrect")
+                return redirect(url_for("login"))
+
+        else:
+            # not an existing username
+            flash("Sorry, this Username and/or Password is incorrect")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
