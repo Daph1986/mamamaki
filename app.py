@@ -100,13 +100,27 @@ def login():
     return render_template("login.html")
 
 
-# Log in
+# Personal recipe page
 @app.route("/personal/<username>", methods=["GET", "POST"])
 def personal(username):
     # get the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("personal.html", username=username)
+
+    if session["user"]:
+        return render_template("personal.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+# Log out
+@app.route("/logout")
+def logout():
+    # removes the user from session cookies
+    flash("Goodbye / Sayōnara, you have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
