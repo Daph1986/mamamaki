@@ -5,16 +5,17 @@
   <div class="slider">
     <ul class="slides">
       <li>
-        <img src="static/images/sushi.png" alt="Sushi">
+        <img src="{{ url_for('static', filename='images/sushi.png') }}" alt="Sushi">
       </li>
       <li>
-        <img src="static/images/miso_soup.png" alt="Miso soup">
+        <img src="{{ url_for('static', filename='images/miso_soup.png') }}" alt="Miso soup">
       </li>
       <li>
-        <img src="static/images/tempura_udon.png" alt="Tempura udon">
+        <img src="{{ url_for('static', filename='images/tempura_udon.png') }}" alt="Tempura udon">
       </li>
       <li>
-        <img src="static/images/chicken_with_pepper_cooking.png" alt="Tori to pitman no item ni">
+        <img src="{{ url_for('static', filename='images/chicken_with_pepper_cooking.png') }}" 
+          alt="Tori to pitman no item ni">
       </li>
     </ul>
   </div>
