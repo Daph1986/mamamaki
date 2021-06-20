@@ -3,7 +3,7 @@ MAMAMAKI
 
 **[Code Institute](https://codeinstitute.net/)  Milestone Project 3: Python and Data Centric Development**
 
-<img src="static/readme images/logo.png" alt="Logo" width="65%" height="65%">
+<img src="static/readme images/logo.png" alt="Logo" width="55%" height="55%">
 
 MAMAMAKI is a site for Japanese home cooking recipes and when you are loged in, you can add and edit your own recipes.
 The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
@@ -300,7 +300,7 @@ All content has been written by me, but the original recipes come out of two boo
 1. [Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
 2. [Japans Koken - Harumi Kurihara](https://www.yutori.co.jp/en/index.html) 
 
-#### Code:
+### Code:
 
 1. [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) to create the gradient background with CSS.
 2. [Code Institute LMS Backend Development Task Manager Miniproject](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) this was used as the basis of the code and then modified to make it my own site.
@@ -354,6 +354,10 @@ All content has been written by me, but the original recipes come out of two boo
 - Special thanks to my colleagues, friends and family for their support, tips and for testing my site. -->
 - Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collabsable table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
-
+- Fellow student, Benjamin Kavanagh, for looking into my code and remind me to use also the 
+```
+{{ url_for('static', filename='images/logo.png') }}
+```
+for my images to prevent them from giving a 404.
 
 <div align="right"><a href="#top">🔝</a></div>
