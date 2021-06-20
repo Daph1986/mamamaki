@@ -1,5 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
+  <!-- Image slider -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{ url_for('static', filename='images/chicken_with_pepper.png') }}" 
+          alt="Tori to pitman no item ni result">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/teriyaki_beef.png') }}" alt="Teriyaki beef">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/yakitori_on_baking_tray.png') }}" 
+          alt="Yakitori on baking tray">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/gyoza_with_soy _vinegar_sauce_finished.png') }}" 
+          alt="Gyoza result">
+      </li>
+    </ul>
+  </div>
+
+  <!-- Recipes page content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+          <h5 class="center-align top-margins">Itadakimasu</h5>
+          <h5 class="center-align">I humbly receive</h5>
+          <p class="center-align">This is a phrase one says before starting to eat.</p>
+      </div>
+    </div>
+    <div class="row top-margins">
+      <div class="col s12 center-align">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{ url_for('static', filename='images/chicken_with_pepper.png') }}" 
+              alt="Tori to pitman no item ni result">
+            <span class="card-title center-align">Tori to pitman no item ni</span>
+          </div>
+          <div class="card-content">
+            <h5 class="center-align card-header">Chicken with green and red bell pepper</h5><br>
+            <p>A nice and easy dish. The red and green bell pepper create a nice color pallet.<br><br>
+                Preparation time about 20 minutes.<br><br>
+                Recipe for 4 persons.
+              </p>
+          </div>
+          <div class="row">
+            <button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align recipe-margins">
+              Go to recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {%for recipe in recipes %}
     {{ recipe.japanese_recipe_name}}<br>

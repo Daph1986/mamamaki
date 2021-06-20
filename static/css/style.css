@@ -96,6 +96,29 @@ header, main, footer {
   background-size: cover;
 }
 
+/* ---------------------- Recipes page ---------------------- */
+
+.card-title {
+  font-family: 'Chicle', sans-serif;
+  color: #fff;
+  width: 100%;
+  background: #00000063;
+}
+
+.card-header {
+  font-family: 'Chicle', sans-serif;
+  color: #212121;
+}
+
+.card-content {
+  max-height: 70%;
+}
+
+.recipe-margins {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
 /* ---------------------- Buttons ---------------------- */
 
 .btn-green {
