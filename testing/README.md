@@ -20,6 +20,7 @@ Table of Contents
 * [**_Background_**](#background)
 * [**_Mobile nav_**](#mobile-nav)
 * [**_Flash messages_**](#flash-messages)
+* [**_Logo in sidenav_**](#logo-in-sidenav)
 </details>
 <br>
 
@@ -329,5 +330,20 @@ The CSS was adjusted to:
 <img src="../testing/testing_images/flash_message_bug_3.png" alt="Flash message bug 3" width="30%" height="30%"><br>
 The contrast of the pink text with the white background wasn't good enough, so it was changed to a blue color #4478b1 which has no problems with the contrast and fits nicely with the design.<br>
 <img src="../testing/testing_images/flash_message_bug_4.png" alt="Flash message bug 4" width="30%" height="30%"><br>
+
+<div align="right"><a href="#top">🔝</a></div>
+
+#### Logo in sidenav
+Once the profile page was made I saw that when logged in and on the personal recipe page the logo in the sidenav disappeared and gave a 404 for the image.<br>
+<img src="../testing/testing_images/logo_logged_in_not_working.png" alt="Logo logged in not working" width="30%" height="30%"><img src="../testing/testing_images/img_404.png" alt="Logo 404" width="70%" height="70%"><br>
+It was only on this page, for example on the about page it gave no problem and as soon when you logged out it was also fine.<br>
+<img src="../testing/testing_images/logo_logged_in_working.png" alt="Logo logged in not working" width="30%" height="30%">
+<img src="../testing/testing_images/logo_logged_out_working.png" alt="Logo logged out working" width="30%" height="30%"><br>
+I didn't see what caused the problem and posted my question on Slack, fellow student Benjamin Kavanagh, looked into my code and reminded me to use also the 
+```
+{{ url_for('static', filename='images/logo.png') }}
+```
+for my images to prevent them from giving a 404. This solved the bug.
+<br>
 
 <div align="right"><a href="#top">🔝</a></div>
