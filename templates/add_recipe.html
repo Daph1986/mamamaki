@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h5 class="center-align top-margins">Reshipi o tsuika</h5>
+        <h5 class="center-align">Add recipe</h5>
+      </div>
+    </div>
+    <div class="row">
+      <form class="col s12" method="POST" action="">
+        <div class="card-panel top-margins">
+          <!-- Japanese name -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-pen-alt prefix"></i>
+              <input id="username" name="username" type="text" minlength="5" maxlength="25"
+                pattern="^[a-zA-Z0-9]{5,25}$" class="validate grey lighten-4" required>
+              <label for="username">Japanese recipe name</label>
+            </div>
+          </div>
+          <!-- English name -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-pen-alt prefix"></i>
+              <input id="password" name="password" type="password" minlength="5" maxlength="20"
+                pattern="^[a-zA-Z0-9]{5,20}$" class="validate grey lighten-4" required>
+              <label for="password">English recipe name</label>
+            </div>
+          </div>
+          <!-- Add recipe -->
+          <div class="row">
+            <button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align bottom-margins">
+              Add recipe
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
