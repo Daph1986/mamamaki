@@ -1,5 +1,6 @@
 import os
 import re
+from dns.resolver import query
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -39,6 +40,15 @@ def about():
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
+
+
+# Search
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+    
 
 
 # Registration

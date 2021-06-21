@@ -129,6 +129,17 @@ header, main, footer {
   margin-bottom: 40px;
 }
 
+.search-card {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.no-results-text {
+  font-family: 'Chicle', sans-serif;
+  font-size: 45px;
+  color: #fff;
+}
+
 /* ---------------------- Buttons ---------------------- */
 
 .btn-green {
@@ -137,8 +148,32 @@ header, main, footer {
   font-size: 22px;
 }
 
+.btn-red {
+  background-color: #C62828;
+  font-family: 'Chicle', sans-serif;
+  font-size: 22px;
+}
+
 .btn-large:hover {
   background-color:#439e46; 
+}
+
+.btn-large.btn-red:hover {
+  background-color: #6d1b1b;
+}
+
+.btn-small:hover {
+  background-color:#439e46; 
+}
+
+.btn-small.btn-red:hover {
+  background-color: #6d1b1b;
+}
+
+.btn-search{
+  display: table;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* ---------------------- Register / Log in ---------------------- */
@@ -211,13 +246,13 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
     padding-left: 0;
   }
   .btn-green {
-    font-size: 14px;
+    font-size: 20px;
+  }
+  .btn-red {
+    font-size: 20px;
   }
   .custom-footer {
     padding-left: 0px;
-  }
-  .btn-green {
-    font-size: 20px;
   }
   .flashes h4 {
     padding-left: 0px;
@@ -234,6 +269,9 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   .btn-green {
     font-size: 18px;
   }
+  .btn-red {
+    font-size: 18px;
+  }
   h4 {
     font-size: 20px;
   }
@@ -242,5 +280,8 @@ input[type=password]:not(.browser-default):focus:not([readonly])+label {
   }
   .flashes {
     top: 575px;
+  }
+  .no-results-text {
+    font-size: 35px;
   }
 }
