@@ -63,7 +63,7 @@
         <div class="card">
           {%for recipe in recipes %}
           <div class="card-image">
-            <img src="{{ recipe.recipe_image }}" alt="Image of {{ recipe.japanese_recipe_name }}">
+            <img src="{{ recipe.recipe_image_4 }}" alt="Image of {{ recipe.japanese_recipe_name }}">
             <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
           </div>
           <div class="card-content bg-white">
@@ -74,9 +74,8 @@
             </p>
           </div>
           <div class="row bg-white bottom-margins">
-            <button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align recipe-margins">
-              Go to recipe
-            </button>
+              <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" 
+                class="btn-large btn-green center-align recipe-margins">Go to recipe</a>
           </div>
           {% endfor %}
         </div>
