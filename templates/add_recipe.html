@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="row">
-      <form class="col s12" method="POST" action="">
+      <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
         <div class="card-panel">
           <!-- Japanese name -->
           <div class="row top-margins">
@@ -83,7 +83,7 @@
               <label for="recipe_image">Please place your image url here</label>
             </div>
           </div>
-          <!-- Switch -->
+          <!-- Switch for is vegetarian -->
           <div class="row">
             <div class="input-field col s12">
               <div class="switch">
@@ -96,11 +96,13 @@
               </div>
             </div>
           </div>
-          <!-- Add recipe -->
+          <!-- Add recipe button -->
           <div class="row bottom-margins">
-            <button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align bottom-margins">
-              Add recipe
-            </button>
+            <div class="col s12 m4 push-m4">
+              <button type="submit" class="btn-large btn-green center-align bottom-margins">
+                Add recipe
+              </button>
+            </div>
           </div>
         </div>
       </form>
