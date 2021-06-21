@@ -182,6 +182,36 @@ header, main, footer {
   color: #fff;
 }
 
+/* ---------------------- Single recipe ---------------------- */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsibles {
+  background-color: #efa79a;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsibles:hover, 
+button:focus  {
+  background-color: #df5b5bb0;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  text-align: center;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
 /* ---------------------- Add recipe ---------------------- */
 
 .switch label input[type=checkbox]:checked+.lever:after {
