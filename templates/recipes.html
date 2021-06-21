@@ -4,52 +4,73 @@
   <div class="slider">
     <ul class="slides">
       <li>
-        <img src="{{ url_for('static', filename='images/chicken_with_pepper.png') }}" 
+        <img src="{{ url_for('static', filename='images/chicken_with_pepper.png') }}"
           alt="Tori to pitman no item ni result">
       </li>
       <li>
         <img src="{{ url_for('static', filename='images/teriyaki_beef.png') }}" alt="Teriyaki beef">
       </li>
       <li>
-        <img src="{{ url_for('static', filename='images/yakitori_on_baking_tray.png') }}" 
-          alt="Yakitori on baking tray">
+        <img src="{{ url_for('static', filename='images/yakitori_on_baking_tray.png') }}" alt="Yakitori on baking tray">
       </li>
       <li>
-        <img src="{{ url_for('static', filename='images/gyoza_with_soy _vinegar_sauce_finished.png') }}" 
+        <img src="{{ url_for('static', filename='images/gyoza_with_soy _vinegar_sauce_finished.png') }}"
           alt="Gyoza result">
       </li>
     </ul>
   </div>
 
   <!-- Recipes page content -->
+  <div class="row">
+    <div class="col s12">
+      <h5 class="center-align top-margins">Itadakimasu</h5>
+      <h5 class="center-align">I humbly receive</h5>
+      <p class="center-align">This is a phrase one says before starting to eat.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <h5 class="center-align">All recipes</h5>
+    </div>
+  <div class="row center-align card-panel search-card">
+    <form class="col s12" method="POST" action="{{ url_for('search') }}">
+      <div class="row">
+        <div class="input-field col s12 top-margins">
+          <i class="fas fa-search prefix"></i>
+          <input type="text" name="query" id="query" minlength="3" class="validate" required>
+          <label for="query">Search recipes</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <button type="submit" class="btn-small btn-green">
+            <i class="fas fa-search prefix"></i>Go
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a href="{{ url_for('get_recipes') }}" class="btn-small btn-red">Reset</a>
+        </div>
+      </div>
+    </form>
+  </div>
   <div class="container">
-    <div class="row">
-      <div class="col s12">
-          <h5 class="center-align top-margins">Itadakimasu</h5>
-          <h5 class="center-align">I humbly receive</h5>
-          <p class="center-align">This is a phrase one says before starting to eat.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <h5 class="center-align">All recipes</h5>
-      </div>
-    </div>
-    <div class="row">
+    <div class="row top-margins">
       <div class="col s12 center-align">
+        {% if recipes|length > 0 %}
         <div class="card">
           {%for recipe in recipes %}
           <div class="card-image">
-            <img src="{{ recipe.recipe_image }}" 
-              alt="Image of {{ recipe.japanese_recipe_name }}">
+            <img src="{{ recipe.recipe_image }}" alt="Image of {{ recipe.japanese_recipe_name }}">
             <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
           </div>
           <div class="card-content bg-white">
             <h5 class="center-align card-header">{{ recipe.english_recipe_name }}</h5><br>
             <p>{{ recipe.recipe_introduction }}<br><br>
-                {{ recipe.recipe_preparation_time }}.<br><br>
-                {{ recipe.recipe_servings }}
-              </p>
+              {{ recipe.recipe_preparation_time }}.<br><br>
+              {{ recipe.recipe_servings }}
+            </p>
           </div>
           <div class="row bg-white bottom-margins">
             <button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align recipe-margins">
@@ -59,6 +80,9 @@
           {% endfor %}
         </div>
       </div>
+        {% else %}
+          <h3 class="bottom-margins no-results-text center-align">No recipes were found</h3>
+        {% endif %}
     </div>
   </div>
 
