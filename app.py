@@ -33,11 +33,11 @@ def about():
     return render_template("about.html")
 
 
-# All recipes
+# Recipes page
 @app.route("/")
 @app.route("/get_recipes")  
 def get_recipes():
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -120,6 +120,30 @@ def logout():
     flash("Goodbye / Sayōnara, you have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+# Add recipe
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    if request.method == "POST":
+        recipe_is_vegetarian = "on" if request.form.get("recipe_is_vegetarian") else "off"
+        recipe = {
+            "japanese_recipe_name": request.form.get("japanese_recipe_name"),
+            "english_recipe_name": request.form.get("english_recipe_name"),
+            "recipe_introduction": request.form.get("recipe_introduction"),
+            "recipe_preparation_time": request.form.get("recipe_preparation_time"),
+            "recipe_servings": request.form.get ("recipe_servings"),
+            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+            "recipe_instruction": request.form.getlist("recipe_instruction"),
+            "recipe_image": request.form.get("recipe_image"),
+            "recipe_is_vegetarian": recipe_is_vegetarian, 
+            "recipe_created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Your recipe is added successfully")
+        return redirect(url_for("get_recipes"))
+
+    return render_template("add_recipe.html")
 
 
 if __name__ == "__main__":

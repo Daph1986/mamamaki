@@ -79,6 +79,25 @@ header, main, footer {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* ---------------------- Buttons ---------------------- */
+
+.btn-green {
+  background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 22px;
+}
+
+.btn-green-ingredient {
+  background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 18px;
+}
+
+.btn-large:hover,
+.btn-small:hover {
+  background-color:#439e46; 
+}
+
 /* ---------------------- Homepage ---------------------- */
 
 .slider .indicators .indicator-item.active {
@@ -96,16 +115,47 @@ header, main, footer {
   background-size: cover;
 }
 
-/* ---------------------- Buttons ---------------------- */
+/* ---------------------- Recipes page ---------------------- */
 
-.btn-green {
-  background-color: #4CAF50;
+.card-title {
   font-family: 'Chicle', sans-serif;
-  font-size: 22px;
+  color: #fff;
+  width: 100%;
+  background: #00000063;
 }
 
-.btn-large:hover {
-  background-color:#439e46; 
+.card-header {
+  font-family: 'Chicle', sans-serif;
+  color: #212121;
+}
+
+.card {
+  background: none;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0%), 0 3px 1px -2px rgb(0 0 0 / 0%), 0 1px 5px 0 rgb(0 0 0 / 0%);
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.row.bg-white {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.recipe-margins {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* ---------------------- Add recipe ---------------------- */
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: #4CAF50;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #4caf4f86;
 }
 
 /* ---------------------- Register / Log in ---------------------- */
@@ -135,14 +185,18 @@ Those don't match the design so the css underneath is used to overwrite it.*/
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]), 
-input[type=password]:not(.browser-default):focus:not([readonly]) {
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #707070;
   -webkit-box-shadow: 0 1px 0 0 #707070;
   box-shadow: 0 1px 0 0 #707070;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly])+label, 
-input[type=password]:not(.browser-default):focus:not([readonly])+label {
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
   color: #707070;
 }
 
