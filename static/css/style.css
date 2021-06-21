@@ -79,6 +79,42 @@ header, main, footer {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* ---------------------- Buttons ---------------------- */
+
+.btn-green {
+  background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 22px;
+}
+
+.btn-red {
+  background-color: #C62828;
+  font-family: 'Chicle', sans-serif;
+  font-size: 22px;
+}
+
+.btn-large:hover {
+  background-color:#439e46; 
+}
+
+.btn-large.btn-red:hover {
+  background-color: #6d1b1b;
+}
+
+.btn-small:hover {
+  background-color:#439e46; 
+}
+
+.btn-small.btn-red:hover {
+  background-color: #6d1b1b;
+}
+
+.btn-search{
+  display: table;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* ---------------------- Homepage ---------------------- */
 
 .slider .indicators .indicator-item.active {
@@ -140,40 +176,14 @@ header, main, footer {
   color: #fff;
 }
 
-/* ---------------------- Buttons ---------------------- */
+/* ---------------------- Add recipe ---------------------- */
 
-.btn-green {
+.switch label input[type=checkbox]:checked+.lever:after {
   background-color: #4CAF50;
-  font-family: 'Chicle', sans-serif;
-  font-size: 22px;
 }
 
-.btn-red {
-  background-color: #C62828;
-  font-family: 'Chicle', sans-serif;
-  font-size: 22px;
-}
-
-.btn-large:hover {
-  background-color:#439e46; 
-}
-
-.btn-large.btn-red:hover {
-  background-color: #6d1b1b;
-}
-
-.btn-small:hover {
-  background-color:#439e46; 
-}
-
-.btn-small.btn-red:hover {
-  background-color: #6d1b1b;
-}
-
-.btn-search{
-  display: table;
-  align-items: center;
-  justify-content: space-between;
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #4caf4f86;
 }
 
 /* ---------------------- Register / Log in ---------------------- */
@@ -203,14 +213,18 @@ Those don't match the design so the css underneath is used to overwrite it.*/
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]), 
-input[type=password]:not(.browser-default):focus:not([readonly]) {
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #707070;
   -webkit-box-shadow: 0 1px 0 0 #707070;
   box-shadow: 0 1px 0 0 #707070;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly])+label, 
-input[type=password]:not(.browser-default):focus:not([readonly])+label {
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
   color: #707070;
 }
 
