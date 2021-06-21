@@ -115,6 +115,12 @@ header, main, footer {
   justify-content: space-between;
 }
 
+.btn-green-ingredient {
+  background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 18px;
+}
+
 /* ---------------------- Homepage ---------------------- */
 
 .slider .indicators .indicator-item.active {

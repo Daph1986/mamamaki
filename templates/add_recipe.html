@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h5 class="center-align top-margins">Reshipi o tsuika</h5>
+        <h5 class="center-align">Add recipe</h5>
+      </div>
+    </div>
+    <div class="row">
+      <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+        <div class="card-panel">
+          <!-- Japanese name -->
+          <div class="row top-margins">
+            <div class="input-field col s12">
+              <i class="fas fa-pen-alt prefix"></i>
+              <input id="japanese_recipe_name" name="japanese_recipe_name" type="text" data-length="50" minlength="5" 
+                maxlength="50" class="validate" required>
+              <label for="japanese_recipe_name">Japanese recipe name</label>
+            </div>
+          </div>
+          <!-- English name -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-pen-alt prefix"></i>
+              <input id="english_recipe_name" name="english_recipe_name" type="text" data-length="50" minlength="5" 
+                maxlength="50" class="validate" required>
+              <label for="english_recipe_name">English recipe name</label>
+            </div>
+          </div>
+          <!-- Introduction -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-book-open prefix"></i>
+              <textarea id="recipe_introduction" name="recipe_introduction"  data-length="200" minlength="5" maxlength="200"
+                class="materialize-textarea validate" required></textarea>
+              <label for="recipe_introduction">Introduction</label>
+            </div>
+          </div>
+          <!-- Preparation time -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-hourglass-start prefix"></i>
+              <input id="recipe_preparation_time" name="recipe_preparation_time" type="text" data-length="50" minlength="5" 
+                maxlength="50" class="validate" required>
+              <label for="recipe_preparation_time">Preparation time</label>
+            </div>
+          </div>
+          <!-- Servings -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-users prefix"></i>
+              <input id="recipe_servings" name="recipe_servings" type="text" data-length="50" minlength="5" maxlength="50"
+                class="validate" required>
+              <label for="recipe_servings">Servings</label>
+            </div>
+          </div>
+          <!-- Ingredients -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-cookie-bite prefix"></i>
+              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="500" minlength="5" 
+                maxlength="500" class="validate" required>
+              <label for="recipe_ingredients">Ingredients</label>
+            </div>
+          </div>
+          <!-- Instruction -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-utensil-spoon prefix"></i>
+              <textarea id="recipe_instruction" name="recipe_instruction"  data-length="500" minlength="5" maxlength="500"
+                class="materialize-textarea validate" required></textarea>
+              <label for="recipe_instruction">Instruction</label>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-image prefix"></i>
+              <input id="recipe_image" name="recipe_image" type="url"
+                class="validate" required>
+              <label for="recipe_image">Please place your image url here</label>
+            </div>
+          </div>
+          <!-- Switch for is vegetarian -->
+          <div class="row">
+            <div class="input-field col s12">
+              <div class="switch">
+                <i class="fas fa-leaf prefix"></i>
+                <label for="recipe_is_vegetarian">
+                  <input type="checkbox" id="recipe_is_vegetarian" name="recipe_is_vegetarian">
+                  <span class="lever"></span>
+                  Is vegetarian
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Add recipe button -->
+          <div class="row bottom-margins">
+            <div class="col s12 m4 push-m4">
+              <button type="submit" class="btn-large btn-green center-align bottom-margins">
+                Add recipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
