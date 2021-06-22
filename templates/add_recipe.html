@@ -65,6 +65,15 @@
               <label for="recipe_ingredients">Ingredients</label>
             </div>
           </div>
+          <!-- Remarks -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-comment-alt prefix"></i>
+              <input id="recipe_remarks" name="recipe_remarks" type="text" data-length="50" minlength="5" maxlength="50"
+                class="validate">
+              <label for="recipe_remarks">Remarks</label>
+            </div>
+          </div>
           <!-- Instruction -->
           <div class="row">
             <div class="input-field col s12">
@@ -74,13 +83,41 @@
               <label for="recipe_instruction">Instruction</label>
             </div>
           </div>
-          <!-- Image -->
+          <!-- Additonal notes -->
           <div class="row">
             <div class="input-field col s12">
+              <i class="fas fa-comment prefix"></i>
+              <input id="recipe_additonal_notes" name="recipe_additonal_notes" type="text" data-length="50" minlength="5" maxlength="50"
+                class="validate">
+              <label for="recipe_additonal_notes">Additonal notes</label>
+            </div>
+          </div>
+          <!-- Images -->
+          <div class="row">
+            <h6 class="center-align">You can upload max 4 images</h6>
+            <div class="input-field col s12">
               <i class="fas fa-image prefix"></i>
-              <input id="recipe_image" name="recipe_image" type="url"
+              <input id="recipe_image_1" name="recipe_image_1" type="url"
                 class="validate" required>
-              <label for="recipe_image">Please place your image url here</label>
+              <label for="recipe_image_1">Please place your first image url here</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="fas fa-image prefix"></i>
+              <input id="recipe_image_2" name="recipe_image_2" type="url"
+                class="validate">
+              <label for="recipe_image_2">Please place your second image url here</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="fas fa-image prefix"></i>
+              <input id="recipe_image_3" name="recipe_image_3" type="url"
+                class="validate">
+              <label for="recipe_image_3">Please place your third image url here</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="fas fa-image prefix"></i>
+              <input id="recipe_image_4" name="recipe_image_4" type="url"
+                class="validate">
+              <label for="recipe_image_4">Please place your fourth image url here</label>
             </div>
           </div>
           <!-- Switch for is vegetarian -->
@@ -98,7 +135,7 @@
           </div>
           <!-- Add recipe button -->
           <div class="row bottom-margins">
-            <div class="col s12 m4 push-m4">
+            <div class="col s12 center-align">
               <button type="submit" class="btn-large btn-green center-align bottom-margins">
                 Add recipe
               </button>
