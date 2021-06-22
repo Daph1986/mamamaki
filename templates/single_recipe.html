@@ -37,19 +37,30 @@
       </div>
     </div>
     <!-- Recipe is or is not vegetarian -->
-    <!-- {% if recipe.recipe_is_vegetarian == "on" %}
+    {% if recipe.recipe_is_vegetarian == "on" %}
     <div class="row">
       <div class="col s12 center-align">
         <i class="fas fa-leaf center-align prefix">Vegetarian</i>
       </div>
     </div>
-    {% endif %} FIND OUT WHY THIS IS NOT WORKING-->
+    {% endif %} 
+    <!-- FIND OUT WHY ABOVE CODE IS NOT WORKING -->
     <!-- Recipe ingredients -->
     <div class="row">
       <div class="col s12">
-        <button type="button" class="collapsibles">Ingredients <i class="fas fa-arrow-alt-circle-down prefix"></i></button>
-        <div class="content"><span>{{ recipe.recipe_ingredients }}</span></div>
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">Ingredients<i class="fas fa-hand-point-down prefix"></i></div>
+            <div class="collapsible-body"><span>{{ recipe.recipe_ingredients }}</span></div>
+          </li>
         </ul>
+      </div>
+    </div>
+    <!-- Recipe remarks -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_remarks }}
+        </p>
       </div>
     </div>
     <!-- Recipe instructions -->
@@ -57,18 +68,26 @@
       <div class="col s12">
         <ul class="collapsible">
           <li>
-            <div class="collapsible-header">Instructions</div>
+            <div class="collapsible-header">Instructions<i class="fas fa-hand-point-down prefix"></i></div>
             <div class="collapsible-body"><span>{{ recipe.recipe_instruction }}</span></div>
           </li>
         </ul>
       </div>
     </div>
-    <!-- Recipe created by -->
-    <!-- <div class="row">
+    <!-- Recipe notes -->
+    <div class="row">
       <div class="col s12 center-align">
-        <p>Recipe created by: {{ recipe.created_by }}</p>
+        <p>{{ recipe.recipe_additonal_notes }}
+        </p>
       </div>
-    </div> FIND OUT WHY THIS IS NOT WORKING -->
+    </div>
+    <!-- Recipe created by -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p><i>Recipe created by: {{ recipe.created_by }}</i></p>
+      </div>
+    </div> 
+     <!-- FIND OUT WHY ABOVE CODE IS NOT WORKING -->
     <!-- Return button -->
     <div class="row center-align bottom-margins">
       <div class="col s12">
