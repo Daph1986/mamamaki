@@ -14,7 +14,7 @@
           <!-- Japanese name -->
           <div class="row top-margins">
             <div class="input-field col s12">
-              <i class="fas fa-pen-alt prefix"></i>
+              <i class="fas fa-torii-gate prefix"></i>
               <input id="japanese_recipe_name" name="japanese_recipe_name" type="text" data-length="50" minlength="5" 
                 maxlength="50" class="validate" required>
               <label for="japanese_recipe_name">Japanese recipe name</label>
@@ -60,17 +60,22 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-cookie-bite prefix"></i>
-              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="500" minlength="5" 
-                maxlength="500" class="validate" required>
-              <label for="recipe_ingredients">Ingredients</label>
+              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="75" minlength="5" 
+                maxlength="75" class="validate" required>
+              <label for="recipe_ingredients">Ingredient 1. </label>
+              <a class="right btn-small btn-green-ingredient add_ingredient"><i
+                class="fas fa-plus"></i> Add ingredient</a>
             </div>
+          </div>
+          <div class="row list_of_ingredients">
+
           </div>
           <!-- Remarks -->
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-comment-alt prefix"></i>
-              <input id="recipe_remarks" name="recipe_remarks" type="text" data-length="50" minlength="5" maxlength="50"
-                class="validate">
+              <textarea id="recipe_remarks" name="recipe_remarks" data-length="50" minlength="5" maxlength="50"
+                class="materialize-textarea validate"></textarea>
               <label for="recipe_remarks">Remarks</label>
             </div>
           </div>
@@ -78,17 +83,22 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-utensil-spoon prefix"></i>
-              <textarea id="recipe_instruction" name="recipe_instruction"  data-length="500" minlength="5" maxlength="500"
-                class="materialize-textarea validate" required></textarea>
-              <label for="recipe_instruction">Instruction</label>
+              <input id="recipe_instruction" name="recipe_instruction" type="text" data-length="100" minlength="5" maxlength="100"
+                class="validate" required>
+              <label for="recipe_instruction">Instruction step 1. </label>
+              <a class="right btn-small btn-green-ingredient add_instruction_step"><i
+                class="fas fa-plus"></i> Add instruction step</a>
             </div>
+          </div>
+          <div class="row list_of_instruction_steps">
+
           </div>
           <!-- Additonal notes -->
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-comment prefix"></i>
-              <input id="recipe_additonal_notes" name="recipe_additonal_notes" type="text" data-length="50" minlength="5" maxlength="50"
-                class="validate">
+              <textarea id="recipe_additonal_notes" name="recipe_additonal_notes" data-length="25" minlength="5" maxlength="25"
+                class="materialize-textarea validate"></textarea>
               <label for="recipe_additonal_notes">Additonal notes</label>
             </div>
           </div>

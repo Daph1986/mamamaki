@@ -105,7 +105,8 @@ header, main, footer {
   background-color:#439e46; 
 }
 
-.btn-small.btn-red:hover {
+.btn-small.btn-red:hover,
+.btn-small.btn-red-ingredient:hover {
   background-color: #6d1b1b;
 }
 
@@ -117,6 +118,12 @@ header, main, footer {
 
 .btn-green-ingredient {
   background-color: #4CAF50;
+  font-family: 'Chicle', sans-serif;
+  font-size: 18px;
+}
+
+.btn-red-ingredient {
+  background-color: #C62828;
   font-family: 'Chicle', sans-serif;
   font-size: 18px;
 }
