@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Image slider -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{ recipe.recipe_image_1 }}" alt="First image of {{ recipe.japanese_recipe_name }}">
+      </li>
+      <li>
+        <img src="{{ recipe.recipe_image_2 }}" alt="Second image of {{ recipe.japanese_recipe_name }}">
+      </li>
+      <li>
+        <img src="{{ recipe.recipe_image_3 }}" alt="Third image of {{ recipe.japanese_recipe_name }}">
+      </li>
+      <li>
+        <img src="{{ recipe.recipe_image_4 }}" alt="Fourth image of {{ recipe.japanese_recipe_name }}">
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <!-- Recipe header -->
+    <div class="row">
+      <div class="col s12">
+        <h5 class="center-align top-margins">{{ recipe.japanese_recipe_name }}</h5>
+        <h5 class="center-align">{{ recipe.english_recipe_name }}</h5>
+      </div>
+    </div>
+    <!-- Recipe short description -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_introduction }}<br><br>
+            {{ recipe.recipe_preparation_time }}<br><br>
+            {{ recipe.recipe_servings }}
+        </p>
+      </div>
+    </div>
+    <!-- Recipe is or is not vegetarian -->
+    {% if recipe.recipe_is_vegetarian == "on" %}
+    <div class="row">
+      <div class="col s12 center-align">
+        <i class="fas fa-leaf center-align prefix">Vegetarian</i>
+      </div>
+    </div>
+    {% endif %} 
+    <!-- FIND OUT WHY ABOVE CODE IS NOT WORKING -->
+    <!-- Recipe ingredients -->
+    <div class="row">
+      <div class="col s12">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">Ingredients<i class="fas fa-hand-point-down prefix"></i></div>
+            <div class="collapsible-body"><span>{{ recipe.recipe_ingredients }}</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Recipe remarks -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_remarks }}
+        </p>
+      </div>
+    </div>
+    <!-- Recipe instructions -->
+    <div class="row">
+      <div class="col s12">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">Instructions<i class="fas fa-hand-point-down prefix"></i></div>
+            <div class="collapsible-body"><span>{{ recipe.recipe_instruction }}</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Recipe notes -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_additonal_notes }}
+        </p>
+      </div>
+    </div>
+    <!-- Recipe created by -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p><i>Recipe created by: {{ recipe.created_by }}</i></p>
+      </div>
+    </div> 
+     <!-- FIND OUT WHY ABOVE CODE IS NOT WORKING -->
+    <!-- Return button -->
+    <div class="row center-align bottom-margins">
+      <div class="col s12">
+        <a href="{{ url_for('get_recipes') }}" class="btn-large btn-green">Go back to recipes <i class="fas fa-arrow-alt-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

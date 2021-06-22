@@ -42,6 +42,13 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Single recipe page
+@app.route("/single_recipe/<recipe_id>")  
+def single_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("single_recipe.html", recipe=recipe)
+
+
 # Search
 @app.route("/search", methods=["GET", "POST"])
 def search():
