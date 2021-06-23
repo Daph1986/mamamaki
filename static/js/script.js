@@ -1,11 +1,10 @@
-// ---------------------- Side nav, image sliders, collapsible and character counter  -----------------------
+// ---------------------- Side nav, image sliders and character counter  -----------------------
 
 // From materialize documentation to initialise with jQuery
 
 $(document).ready(function () {
   $('.sidenav').sidenav();
   $('.slider').slider();
-  $('.collapsible').collapsible();
   $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_preparation_time, input#recipe_servings, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additonal_notes, textarea#recipe_remarks').characterCounter();
 });
 
@@ -63,3 +62,25 @@ $("main").on('click', ".remove_instruction_step", function () {
   $(this).parent('div').remove();
   instruction_step--;
 });
+
+// ---------------------- Collapsible ingredients and instructions lists  -----------------------
+
+/* 
+From https://www.w3schools.com/howto/howto_js_collapsible.asp 
+modified for my own purpose
+*/
+
+var list = document.getElementsByClassName("collapsible-list");
+var i;
+
+for (i = 0; i < list.length; i++) {
+  list[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
