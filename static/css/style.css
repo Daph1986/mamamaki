@@ -207,6 +207,44 @@ header, main, footer {
   margin-right: 10px;
 }
 
+/* ---------------------- Single recipe ---------------------- */
+
+.collapsible-list {
+  background-color: #fff;
+  height: 50px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+button.col.s12.collapsible-list,
+button.col.s12.collapsible-list.active {
+  padding-left: 20px;
+}
+
+.lists {
+  padding-left: 20px;
+}
+
+button:focus {
+  background-color: #fff;
+}
+
+.fa-hand-point-down {
+  font-size: large;
+  margin-left: 10px;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: transparent;
+  transition: max-height 0.2s ease-out;
+}
 
 /* ---------------------- Register / Log in ---------------------- */
 
