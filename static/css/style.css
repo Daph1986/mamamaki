@@ -274,6 +274,7 @@ Those don't match the design so the css underneath is used to overwrite it.*/
 
 input[type=text]:not(.browser-default):focus:not([readonly]), 
 input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=url]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #707070;
@@ -283,6 +284,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 input[type=text]:not(.browser-default):focus:not([readonly])+label, 
 input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
 input[type=url]:not(.browser-default):focus:not([readonly])+label,
 textarea.materialize-textarea:focus:not([readonly])+label {
   color: #707070;

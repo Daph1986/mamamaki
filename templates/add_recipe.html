@@ -42,16 +42,16 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-hourglass-start prefix"></i>
-              <input id="recipe_preparation_time" name="recipe_preparation_time" type="text" data-length="5" minlength="1" 
-                maxlength="5" class="validate" required>
-              <label for="recipe_preparation_time">Preparation time</label>
+              <input id="recipe_preparation_time" name="recipe_preparation_time" type="number" min="1" 
+                max="120" class="validate" required>
+              <label for="recipe_preparation_time">Preparation time in minutes</label>
             </div>
           </div>
           <!-- Servings -->
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-users prefix"></i>
-              <input id="recipe_servings" name="recipe_servings" type="text" data-length="50" minlength="5" maxlength="50"
+              <input id="recipe_servings" name="recipe_servings" type="number" min="1" max="20"
                 class="validate" required>
               <label for="recipe_servings">Servings</label>
             </div>

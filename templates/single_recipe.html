@@ -30,10 +30,9 @@
     <!-- Recipe short description -->
     <div class="row">
       <div class="col s12 center-align">
-        <p>{{ recipe.recipe_introduction }}<br><br>
-            About {{ recipe.recipe_preparation_time }} minutes.<br><br>
-            {{ recipe.recipe_servings }}
-        </p>
+        <p>{{ recipe.recipe_introduction }}</p>
+        <p><b>About {{ recipe.recipe_preparation_time }} minutes.</b></p>
+        <p><b>Recipe for {{ recipe.recipe_servings }} persons.</b></p>
       </div>
     </div>
     <!-- Recipe is or is not vegetarian -->
@@ -88,10 +87,9 @@
     <!-- Recipe created by -->
     <div class="row">
       <div class="col s12 center-align">
-        <p><i>Recipe created by: {{ recipe.created_by }}</i></p>
+        <p><i>Recipe created by: {{ recipe.recipe_created_by }}</i></p>
       </div>
     </div> 
-     <!-- FIND OUT WHY ABOVE CODE IS NOT WORKING -->
     <!-- Return button -->
     <div class="row center-align bottom-margins">
       <div class="col s12">
