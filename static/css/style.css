@@ -24,7 +24,7 @@ header, main, footer {
 }
 
 .flashes h4 {
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   color: #4478b1;
   padding-left: 300px;
 }
@@ -49,7 +49,7 @@ header, main, footer {
 }
 
 .sidenav li>a {
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   font-size: 18px;
   color: #fff;
 }
@@ -81,15 +81,19 @@ header, main, footer {
 
 /* ---------------------- Buttons ---------------------- */
 
+.btn, .btn-large, .btn-small {
+  text-transform: none;
+}
+
 .btn-green {
   background-color: #4CAF50;
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   font-size: 22px;
 }
 
 .btn-red {
   background-color: #C62828;
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   font-size: 22px;
 }
 
@@ -105,7 +109,8 @@ header, main, footer {
   background-color:#439e46; 
 }
 
-.btn-small.btn-red:hover {
+.btn-small.btn-red:hover,
+.btn-small.btn-red-ingredient:hover {
   background-color: #6d1b1b;
 }
 
@@ -117,7 +122,13 @@ header, main, footer {
 
 .btn-green-ingredient {
   background-color: #4CAF50;
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
+  font-size: 18px;
+}
+
+.btn-red-ingredient {
+  background-color: #C62828;
+  font-family: 'Chicle', cursive;
   font-size: 18px;
 }
 
@@ -141,14 +152,14 @@ header, main, footer {
 /* ---------------------- Recipes page ---------------------- */
 
 .card-title {
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   color: #fff;
   width: 100%;
   background: #00000063;
 }
 
 .card-header {
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   color: #212121;
 }
 
@@ -177,39 +188,9 @@ header, main, footer {
 }
 
 .no-results-text {
-  font-family: 'Chicle', sans-serif;
+  font-family: 'Chicle', cursive;
   font-size: 45px;
   color: #fff;
-}
-
-/* ---------------------- Single recipe ---------------------- */
-
-/* Style the button that is used to open and close the collapsible content */
-.collapsibles {
-  background-color: #efa79a;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsibles:hover, 
-button:focus  {
-  background-color: #df5b5bb0;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  text-align: center;
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: transparent;
 }
 
 /* ---------------------- Add recipe ---------------------- */
@@ -221,6 +202,11 @@ button:focus  {
 .switch label input[type=checkbox]:checked+.lever {
   background-color: #4caf4f86;
 }
+
+.character-counter {
+  margin-right: 10px;
+}
+
 
 /* ---------------------- Register / Log in ---------------------- */
 

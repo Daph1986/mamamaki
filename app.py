@@ -143,6 +143,15 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        recipe_ingredients = request.form.getlist("recipe_ingredients")
+        recipe_ingredients_list = []
+        for recipe_ingredient in recipe_ingredients:
+            recipe_ingredients_list.append(recipe_ingredient)
+
+        recipe_instructions = request.form.getlist("recipe_instruction")
+        recipe_instruction_list = []
+        for recipe_instruction in recipe_instructions:
+            recipe_instruction_list.append(recipe_instruction)
         recipe_is_vegetarian = "on" if request.form.get("recipe_is_vegetarian") else "off"
         recipe = {
             "japanese_recipe_name": request.form.get("japanese_recipe_name"),
@@ -150,9 +159,14 @@ def add_recipe():
             "recipe_introduction": request.form.get("recipe_introduction"),
             "recipe_preparation_time": request.form.get("recipe_preparation_time"),
             "recipe_servings": request.form.get ("recipe_servings"),
-            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
-            "recipe_instruction": request.form.getlist("recipe_instruction"),
-            "recipe_image": request.form.get("recipe_image"),
+            "recipe_ingredients": recipe_ingredients_list,
+            "recipe_instruction": recipe_instruction_list,
+            "recipe_remarks": request.form.get("recipe_remarks"),
+            "recipe_image_1": request.form.get("recipe_image_1"),
+            "recipe_image_2": request.form.get("recipe_image_2"),
+            "recipe_image_3": request.form.get("recipe_image_3"),
+            "recipe_image_4": request.form.get("recipe_image_4"),
+            "recipe_additonal_notes": request.form.get("recipe_additonal_notes"),
             "recipe_is_vegetarian": recipe_is_vegetarian, 
             "recipe_created_by": session["user"]
         }
@@ -161,7 +175,6 @@ def add_recipe():
         return redirect(url_for("get_recipes"))
 
     return render_template("add_recipe.html")
-
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
