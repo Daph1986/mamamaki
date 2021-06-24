@@ -6,7 +6,7 @@
       <div class="col s12">
         <h5 class="center-align top-margins">Reshipi o henshū suru</h5>
         <h5 class="center-align">Edit recipe</h5>
-        <p>If you want updated or correct you recipe, feel free to do that here.</p>
+        <p class="center-align">If you want updated or correct you recipe, feel free to do that here.</p>
       </div>
     </div>
     <div class="row">
@@ -17,7 +17,7 @@
             <div class="input-field col s12">
               <i class="fas fa-torii-gate prefix"></i>
               <input id="japanese_recipe_name" name="japanese_recipe_name" type="text" data-length="50" minlength="5" 
-                maxlength="50" class="validate" required>
+                maxlength="50" value="{{ recipe.japanese_recipe_name }}" class="validate" required>
               <label for="japanese_recipe_name">Japanese recipe name</label>
             </div>
           </div>
@@ -26,7 +26,7 @@
             <div class="input-field col s12">
               <i class="fas fa-pen-alt prefix"></i>
               <input id="english_recipe_name" name="english_recipe_name" type="text" data-length="50" minlength="5" 
-                maxlength="50" class="validate" required>
+                maxlength="50" value="{{ recipe.english_recipe_name }}" class="validate" required>
               <label for="english_recipe_name">English recipe name</label>
             </div>
           </div>
@@ -35,7 +35,7 @@
             <div class="input-field col s12">
               <i class="fas fa-book-open prefix"></i>
               <textarea id="recipe_introduction" name="recipe_introduction"  data-length="200" minlength="5" maxlength="200"
-                class="materialize-textarea validate" required></textarea>
+                class="materialize-textarea validate" required>{{ recipe.recipe_introduction }}</textarea>
               <label for="recipe_introduction">Introduction</label>
             </div>
           </div>
@@ -44,7 +44,7 @@
             <div class="input-field col s12">
               <i class="fas fa-hourglass-start prefix"></i>
               <input id="recipe_preparation_time" name="recipe_preparation_time" type="number" min="1" 
-                max="120" class="validate" required>
+                max="120" value="{{ recipe.recipe_preparation_time }}" class="validate" required>
               <label for="recipe_preparation_time">Preparation time in minutes</label>
             </div>
           </div>
@@ -53,21 +53,29 @@
             <div class="input-field col s12">
               <i class="fas fa-users prefix"></i>
               <input id="recipe_servings" name="recipe_servings" type="number" min="1" max="20"
-                class="validate" required>
+                value="{{ recipe.recipe_servings }}" class="validate" required>
               <label for="recipe_servings">Servings</label>
             </div>
           </div>
           <!-- Ingredients -->
           <div class="row">
             <div class="input-field col s12">
-              <i class="fas fa-cookie-bite prefix"></i>
-              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="150" minlength="5" 
-                maxlength="150" class="validate" required>
-              <label for="recipe_ingredients">Ingredient 1. </label>
               <a class="right btn-small btn-green-ingredient add_ingredient"><i
                 class="fas fa-plus"></i> Add ingredient</a>
             </div>
           </div>
+          {% for ingredient in recipe.recipe_ingredients %}
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-cookie-bite prefix"></i>
+              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="150" minlength="5" 
+                value="{{ ingredient }}" maxlength="150" class="validate" required>
+              <label for="recipe_ingredients{{ loop.index }}">Ingredient</label>
+              <a type="button" class="right btn-small btn-red-ingredient remove_ingredient">
+                <i class="fas fa-minus"></i> Remove ingredient</a>
+            </div>
+          </div>
+          {% endfor %}
           <div class="row list_of_ingredients">
 
           </div>
@@ -76,21 +84,30 @@
             <div class="input-field col s12">
               <i class="fas fa-comment-alt prefix"></i>
               <textarea id="recipe_remarks" name="recipe_remarks" data-length="300" minlength="5" maxlength="300"
-                class="materialize-textarea validate"></textarea>
+                class="materialize-textarea validate">{{ recipe.recipe_remarks }}</textarea>
               <label for="recipe_remarks">Remarks</label>
             </div>
           </div>
           <!-- Instruction -->
           <div class="row">
             <div class="input-field col s12">
-              <i class="fas fa-utensil-spoon prefix"></i>
-              <input id="recipe_instruction" name="recipe_instruction" type="text" data-length="500" minlength="5" maxlength="500"
-                class="validate" required>
-              <label for="recipe_instruction">Instruction step 1. </label>
-              <a class="right btn-small btn-green-ingredient add_instruction_step"><i
-                class="fas fa-plus"></i> Add instruction step</a>
+              <a class="right btn-small btn-green-ingredient add_instruction_step">
+                <i class="fas fa-plus"></i> Add instruction step</a>
             </div>
           </div>
+
+          {% for step in recipe.recipe_instruction %}
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-utensil-spoon prefix"></i>
+              <input id="recipe_instruction" name="recipe_instruction" type="text" data-length="500" minlength="5"
+                value="{{ step }}" maxlength="500" class="validate" required>
+              <label for="recipe_instruction{{ loop.index }}">Instruction</label>
+              <a type="button" class="right btn-small btn-red-ingredient remove_instruction_step">
+                <i class="fas fa-minus"></i> Remove instruction step</a>
+            </div>
+          </div>
+          {% endfor %}
           <div class="row list_of_instruction_steps">
 
           </div>
@@ -98,8 +115,8 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-comment prefix"></i>
-              <textarea id="recipe_additonal_notes" name="recipe_additonal_notes" data-length="115" minlength="5" maxlength="115"
-                class="materialize-textarea validate"></textarea>
+              <textarea id="recipe_additonal_notes" name="recipe_additonal_notes" data-length="115" minlength="5" 
+                maxlength="115" class="materialize-textarea validate">{{ recipe.recipe_additonal_notes }}</textarea>
               <label for="recipe_additonal_notes">Additonal notes</label>
             </div>
           </div>
@@ -109,25 +126,25 @@
             <div class="input-field col s12">
               <i class="fas fa-image prefix"></i>
               <input id="recipe_image_1" name="recipe_image_1" type="url"
-                class="validate" required>
+                value="{{ recipe.recipe_image_1 }}" class="validate" required>
               <label for="recipe_image_1">Please place your first image url here</label>
             </div>
             <div class="input-field col s12">
               <i class="fas fa-image prefix"></i>
               <input id="recipe_image_2" name="recipe_image_2" type="url"
-                class="validate">
+                value="{{ recipe.recipe_image_2 }}" class="validate">
               <label for="recipe_image_2">Please place your second image url here</label>
             </div>
             <div class="input-field col s12">
               <i class="fas fa-image prefix"></i>
               <input id="recipe_image_3" name="recipe_image_3" type="url"
-                class="validate">
+                value="{{ recipe.recipe_image_3 }}" class="validate">
               <label for="recipe_image_3">Please place your third image url here</label>
             </div>
             <div class="input-field col s12">
               <i class="fas fa-image prefix"></i>
               <input id="recipe_image_4" name="recipe_image_4" type="url"
-                class="validate">
+                value="{{ recipe.recipe_image_4 }}" class="validate">
               <label for="recipe_image_4">Please place your fourth image url here</label>
             </div>
           </div>
@@ -137,7 +154,11 @@
               <div class="switch">
                 <i class="fas fa-leaf prefix"></i>
                 <label for="recipe_is_vegetarian">
-                  <input type="checkbox" id="recipe_is_vegetarian" name="recipe_is_vegetarian">
+                  {% if recipe.recipe_is_vegetarian == "on" %}
+                    <input type="checkbox" id="recipe_is_vegetarian" name="recipe_is_vegetarian" checked>
+                  {% else %}
+                    <input type="checkbox" id="recipe_is_vegetarian" name="recipe_is_vegetarian">
+                  {% endif %}
                   <span class="lever"></span>
                   Is vegetarian
                 </label>
@@ -150,6 +171,10 @@
               <button type="submit" class="btn-large btn-blue center-align bottom-margins">
                 Save edited recipe <i class="fas fa-check prefix"></i>
               </button>
+              <!-- Cancel button -->
+              <a href="{{ url_for('get_recipes') }}" class="btn-large btn-red center-align bottom-margins">
+                Cancel <i class="fas fa-times prefix"></i>
+              </a>
             </div>
           </div>
         </div>
