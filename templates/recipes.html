@@ -76,7 +76,7 @@
           <div class="row bg-white bottom-margins">
               <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" 
                 class="btn-large btn-green center-align recipe-margins">Go to recipe</a>
-              <a href="" 
+              <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" 
                 class="btn-spacing btn-large btn-blue center-align recipe-margins">Edit recipe <i class="fas fa-edit prefix"></i></a>
           </div>
           {% endfor %}
