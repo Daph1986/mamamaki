@@ -146,6 +146,20 @@ header, main, footer {
   font-size: 18px;
 }
 
+/* ---------------------- Modal ---------------------- */
+
+.text-delete {
+  color: #C62828;
+  font-family: 'Chicle', cursive;
+  font-size: 22px;
+}
+
+.text-keep {
+  color: #4CAF50;
+  font-family: 'Chicle', cursive;
+  font-size: 22px;
+}
+
 /* ---------------------- Homepage ---------------------- */
 
 .slider .indicators .indicator-item.active {
