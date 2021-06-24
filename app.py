@@ -169,6 +169,29 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+
+    if request.method == "POST":
+        recipe_is_vegetarian = "on" if request.form.get("recipe_is_vegetarian") else "off"
+        save = {
+            "japanese_recipe_name": request.form.get("japanese_recipe_name"),
+            "english_recipe_name": request.form.get("english_recipe_name"),
+            "recipe_introduction": request.form.get("recipe_introduction"),
+            "recipe_preparation_time": request.form.get("recipe_preparation_time"),
+            "recipe_servings": request.form.get ("recipe_servings"),
+            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+            "recipe_instruction": request.form.getlist("recipe_instruction"),
+            "recipe_remarks": request.form.get("recipe_remarks"),
+            "recipe_image_1": request.form.get("recipe_image_1"),
+            "recipe_image_2": request.form.get("recipe_image_2"),
+            "recipe_image_3": request.form.get("recipe_image_3"),
+            "recipe_image_4": request.form.get("recipe_image_4"),
+            "recipe_additonal_notes": request.form.get("recipe_additonal_notes"),
+            "recipe_is_vegetarian": recipe_is_vegetarian, 
+            "recipe_created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, save)
+        flash("Your recipe is updated successfully")
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_recipe.html", recipe=recipe)
 
