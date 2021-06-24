@@ -91,6 +91,12 @@ header, main, footer {
   font-size: 22px;
 }
 
+.btn-blue {
+  background-color: #4478b1;
+  font-family: 'Chicle', cursive;
+  font-size: 22px;
+}
+
 .btn-red {
   background-color: #C62828;
   font-family: 'Chicle', cursive;
@@ -98,7 +104,7 @@ header, main, footer {
 }
 
 .btn-large:hover {
-  background-color:#439e46; 
+  background-color:#1a581c; 
 }
 
 .btn-large.btn-red:hover {
@@ -106,7 +112,11 @@ header, main, footer {
 }
 
 .btn-small:hover {
-  background-color:#439e46; 
+  background-color:#1a581c; 
+}
+
+.btn-large.btn-blue:hover {
+  background-color: #103d6d;
 }
 
 .btn-small.btn-red:hover,
@@ -118,6 +128,10 @@ header, main, footer {
   display: table;
   align-items: center;
   justify-content: space-between;
+}
+
+.btn-spacing {
+  margin-left: 10px;
 }
 
 .btn-green-ingredient {
