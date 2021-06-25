@@ -122,9 +122,11 @@ def personal(username):
     # get the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    recipes = list(mongo.db.recipes.find())
 
     if session["user"]:
-        return render_template("personal.html", username=username)
+        return render_template(
+            "personal.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
