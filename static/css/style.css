@@ -85,6 +85,10 @@ header, main, footer {
   text-transform: none;
 }
 
+.btn-large i {
+  font-size: 1.3rem;
+}
+
 .btn-green {
   background-color: #4CAF50;
   font-family: 'Chicle', cursive;
@@ -355,6 +359,9 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   .btn-red {
     font-size: 20px;
   }
+  .btn-blue {
+    font-size: 20px;
+  }
   .custom-footer {
     padding-left: 0px;
   }
@@ -376,6 +383,9 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   .btn-red {
     font-size: 18px;
   }
+  .btn-blue {
+    font-size: 18px;
+  }
   h4 {
     font-size: 20px;
   }
@@ -383,9 +393,16 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     font-size: 1.5rem;
   }
   .flashes {
-    top: 575px;
+    top: 200px;
   }
   .no-results-text {
     font-size: 35px;
+  }
+  .btn-large i {
+    font-size: 1rem;
+  }
+  .btn-spacing {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

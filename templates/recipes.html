@@ -44,14 +44,16 @@
       </div>
       <div class="row">
         <div class="col s12">
-          <button type="submit" class="btn-small btn-green">
-            <i class="fas fa-search prefix"></i>Go
+          <button type="submit" class="btn-large btn-green">
+            <i class="fas fa-search prefix"></i> Go
           </button>
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <a href="{{ url_for('get_recipes') }}" class="btn-small btn-red">Reset</a>
+          <a href="{{ url_for('get_recipes') }}" class="btn-large btn-red">
+            <i class="fas fa-redo"></i> Reset
+          </a>
         </div>
       </div>
     </form>
@@ -75,7 +77,9 @@
           </div>
           <div class="row bg-white bottom-margins">
               <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" 
-                class="btn-large btn-green center-align recipe-margins">Go to recipe</a>
+                class="btn-spacing btn-large btn-green center-align recipe-margins">
+                Go to recipe <i class="fas fa-arrow-alt-circle-right prefix"></i>
+              </a>
               {% if session.user|lower == recipe.recipe_created_by|lower %}
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" 
                   class="btn-spacing btn-large btn-blue center-align recipe-margins">
@@ -96,11 +100,11 @@
                 </div>
                 <div class="modal-footer">
                   <a href="#!" class="modal-action modal-close btn-flat">
-                    <span class="text-keep">No, I changed my mind!</span>
+                    <span class="text-keep">No, cancel!</span>
                   </a>
                   <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                     data-target="{{ recipe._id }}" class="modal-action modal-close btn-flat">
-                    <span class="text-delete">Yes, delete the recipe!</span>
+                    <span class="text-delete">Yes, delete!</span>
                   </a>
                 </div>
               {% endif %}

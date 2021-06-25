@@ -156,7 +156,7 @@ def add_recipe():
             "recipe_image_2": request.form.get("recipe_image_2"),
             "recipe_image_3": request.form.get("recipe_image_3"),
             "recipe_image_4": request.form.get("recipe_image_4"),
-            "recipe_additonal_notes": request.form.get("recipe_additonal_notes"),
+            "recipe_additional_notes": request.form.get("recipe_additional_notes"),
             "recipe_is_vegetarian": recipe_is_vegetarian, 
             "recipe_created_by": session["user"]
         }
@@ -185,7 +185,7 @@ def edit_recipe(recipe_id):
             "recipe_image_2": request.form.get("recipe_image_2"),
             "recipe_image_3": request.form.get("recipe_image_3"),
             "recipe_image_4": request.form.get("recipe_image_4"),
-            "recipe_additonal_notes": request.form.get("recipe_additonal_notes"),
+            "recipe_additional_notes": request.form.get("recipe_additional_notes"),
             "recipe_is_vegetarian": recipe_is_vegetarian, 
             "recipe_created_by": session["user"]
         }
