@@ -100,6 +100,8 @@ header, main, footer {
 
 .btn, .btn-large, .btn-small {
   text-transform: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .btn-large i {
@@ -149,10 +151,6 @@ header, main, footer {
   display: table;
   align-items: center;
   justify-content: space-between;
-}
-
-.btn-spacing {
-  margin-left: 10px;
 }
 
 .btn-green-ingredient {
