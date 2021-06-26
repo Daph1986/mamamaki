@@ -185,6 +185,10 @@ header, main, footer {
   background-color: #C62828;
 }
 
+.redirect-text {
+  color: #fff;
+}
+
 /* ---------------------- About page ---------------------- */
 
 .hero-image {
