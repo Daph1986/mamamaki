@@ -9,6 +9,32 @@ $(document).ready(function () {
   $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additional_notes, textarea#recipe_remarks').characterCounter();
 });
 
+// -------------- Validation for EmailJS -------------- 
+document.onload = function () {
+  emailjs.init("user_341YHLcR0K48KFIHl0TNg");
+}();
+
+// ------------- Mail form ------------- 
+function sendMail(mailForm) {
+  emailjs.send("service_re41zx8", "send contact mail", {
+    "from_name": mailForm.name.value,
+    "from_email": mailForm.email.value,
+    "message": mailForm.message.value,
+  })
+    .then(
+      function (response) {
+        M.toast({ html: 'Thank you, your message has been sent successfully!', displayLength: '3000', response });
+        window.setTimeout(function () {
+          location.reload();
+        }, 4000);
+      },
+      function (error) {
+        M.toast({ html: 'Sorry, something went wrong :-(', displayLength: '3000', error});
+      }
+    );
+  return false;
+}
+
 // ---------------------- Adding an ingredient dynamically  -----------------------
 
 let ingredient = 1;

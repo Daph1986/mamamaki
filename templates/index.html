@@ -27,6 +27,7 @@
         <h5 class="center-align top-margins">MAMAMAKIA e yōkoso</h5>
         <h5 class="center-align">Welcome to MAMAMAKI</h5>
       </div>
+    </div>
       <div class="row">
         <div class="col s12 center-align">
           <p>
@@ -39,7 +40,7 @@
       </div>
       <div class="row">
         <div class="col s12 center-align">
-          <p class="center-align">
+          <p>
             Don’t have an account yet? 
             <a href="{{ url_for('register') }}" class="redirect-text">Please, register here!</a>
           </p>
@@ -50,8 +51,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 center-align bottom-margins">
-          <p class="center-align">
+        <div class="col s12 center-align">
+          <p>
             Already have an account?
             <a href="{{ url_for('login') }}" class="redirect-text">Please log in here!</a>
           </p>
@@ -61,7 +62,55 @@
           </a>
         </div>
       </div>
-    </div>
+      <div class="row top-margins bottom-margins">
+        <div class="col s12 center-align">
+          <p>
+            Do you have a question or any additional information that you would like?
+            Please send me a message through the form below.
+          </p>
+        </div>
+        <form class="col s12" name="form" action="#" onsubmit="return sendMail(this);">
+          <div class="card-panel">
+            <div class="row">
+              <div class="col s12">
+                <h5 class="center-align top-margins">Watashi ni renraku shite</h5>
+                <h5 class="center-align">Contact me</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-signature prefix"></i>
+                <input id="name" name="name" type="text" minlength="2" maxlength="50"
+                  class="validate" required>
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-at prefix"></i>
+                <input id="email" name="email" type="email" minlength="5" maxlength="50"
+                  class="validate" required>
+                <label for="email">Email address</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-comment-alt prefix"></i>
+                <textarea id="message" name="message" minlength="5" maxlength="500"
+                  class="materialize-textarea validate"></textarea>
+                <label for="message">Message</label>
+              </div>
+            </div>
+            <div class="row bottom-margins">
+              <div class="col s12 center-align">
+                <button type="submit" class="btn-large btn-blue center-align bottom-margins">
+                  Send <i class="fas fa-paper-plane prefix"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
   </div>
 
 {% endblock %}
