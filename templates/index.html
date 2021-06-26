@@ -28,13 +28,37 @@
         <h5 class="center-align">Welcome to MAMAMAKI</h5>
       </div>
       <div class="row">
-        <div class="col s12 center-align bottom-margins">
+        <div class="col s12 center-align">
           <p>
             This site contains Japanese recipes that can easily be created
             at your own home.
             If you yourself have a nice recipe you are most welcome to
             share it here!
           </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <p class="center-align">
+            Don’t have an account yet? 
+            <a href="{{ url_for('register') }}" class="redirect-text">Please, register here!</a>
+          </p>
+          <a href="{{ url_for('register') }}"
+              class="col m4 push-m4 s12 btn-large btn-blue center-align">
+              Register <i class="fas fa-user"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align bottom-margins">
+          <p class="center-align">
+            Already have an account?
+            <a href="{{ url_for('login') }}" class="redirect-text">Please log in here!</a>
+          </p>
+          <a href="{{ url_for('login') }}"
+              class="col m4 push-m4 s12 btn-large btn-blue center-align">
+              Log in <i class="fas fa-user-lock"></i>
+          </a>
         </div>
       </div>
     </div>
