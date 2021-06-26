@@ -11,11 +11,6 @@ $(document).ready(function () {
 
 // ---------------------- Adding an ingredient dynamically  -----------------------
 
-/* 
-From https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery 
-modified for my own purpose, for adding ingredients and instruction steps
-*/
-
 let ingredient = 1;
 let max_ingredients = 20;
 
@@ -66,22 +61,36 @@ $("main").on('click', ".remove_instruction_step", function () {
 
 // ---------------------- Collapsible ingredients and instructions lists  -----------------------
 
-/* 
-From https://www.w3schools.com/howto/howto_js_collapsible.asp 
-modified for my own purpose
-*/
-
-var list = document.getElementsByClassName("collapsible-list");
-var i;
+let list = document.getElementsByClassName("collapsible-list");
+let i;
 
 for (i = 0; i < list.length; i++) {
   list[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+    let content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
+
+// ---------------------- Scroll to top button  -----------------------
+
+let topbutton = document.getElementById("goToTopBtn");
+
+window.onscroll = function() {scrollPage();};
+
+function scrollPage() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topbutton.style.display = "block";
+  } else {
+    topbutton.style.display = "none";
+  }
+}
+
+function goToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

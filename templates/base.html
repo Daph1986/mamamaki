@@ -29,7 +29,7 @@
 					<a href="#logo"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
 				</div>
 			</li>
-			<li><a href="{{ url_for('index') }}"><i class="fas fa-home menu-icons"></i>Home</a></li>
+			<li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i>Home</a></li>
 			<li><a href="{{ url_for('about') }}"><i class="fas fa-info center-align"></i>About</a></li>
 			<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-book-open"></i>Recipes</a></li>
 			{% if session.user %}
@@ -65,6 +65,7 @@
 	</section>
 
 	<main>
+		<button onclick="goToTop()" class="btn-small" id="goToTopBtn" title="Go to top"><i class="fas fa-hand-point-up"></i></button>
 		{% block content %}
 		{% endblock %}
 	</main>
