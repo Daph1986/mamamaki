@@ -432,7 +432,4 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     margin-left: 20px;
     margin-right: 20px;
   }
-  .bottom-margins {
-    margin-bottom: 50px;
-  }
 }
