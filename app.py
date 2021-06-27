@@ -67,7 +67,7 @@ def register():
         
         # when username already exists
         if existing_user:
-            flash("This username is taken already!")
+            flash("This username is not available!")
             return redirect(url_for("register"))
 
         # creating the username and password
@@ -164,7 +164,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Your recipe is added successfully")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("personal", username=session["user"]))
 
     return render_template("add_recipe.html")
 
