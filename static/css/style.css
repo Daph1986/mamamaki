@@ -353,6 +353,27 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   color: #707070;
 }
 
+/* ---------------------- Error pages ---------------------- */
+
+.error {
+  height: 100vh;
+  min-height: 100%;
+  background-image: url("/static/images/error.png");
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.error-text {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: #fff;
+}
+
+.top-margin-error {
+  margin-top: 400px;
+}
+
 /* ---------------------- Footer ---------------------- */
 
 .custom-footer {
@@ -431,5 +452,8 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   .btn-spacing {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .top-margin-error {
+    margin-top: 125px;
   }
 }
