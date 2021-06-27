@@ -25,7 +25,7 @@
       {% for recipe in recipes if session.user|lower == recipe.recipe_created_by|lower %}
       <div class="card bottom-margins">
         <div class="card-image">
-          <img src="{{ recipe.recipe_image_4 }}" alt="Image of {{ recipe.japanese_recipe_name }}">
+          <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}">
           <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
         </div>
         <div class="card-content bg-white">
@@ -72,7 +72,8 @@
         {% endif %}
       </div>
       {% else %}
-      <h3 class="bottom-margins no-results-text center-align">You haven't added any recipes yet!</h3>
+      <h3 class="no-results-text center-align">You haven't added any recipes yet!</h3>
+      <h5><a href="{{ url_for('add_recipe') }}" class="btn-large btn-blue bottom-margins top-margins"><i class="fas fa-plus prefix"></i> Start adding your recipes here!</a></h5>
       {% endfor %}
     </div>
   </div>
