@@ -189,6 +189,16 @@ header, main, footer {
   color: #fff;
 }
 
+.toast {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chicle', cursive;
+  font-size: 35px;
+  color: #4478b1;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+}
+
 /* ---------------------- About page ---------------------- */
 
 .hero-image {
@@ -327,6 +337,7 @@ input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #707070;
   -webkit-box-shadow: 0 1px 0 0 #707070;
@@ -337,6 +348,7 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label,
 input[type=password]:not(.browser-default):focus:not([readonly])+label,
 input[type=number]:not(.browser-default):focus:not([readonly])+label,
 input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
 textarea.materialize-textarea:focus:not([readonly])+label {
   color: #707070;
 }

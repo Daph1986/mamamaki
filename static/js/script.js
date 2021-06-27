@@ -6,7 +6,7 @@ $(document).ready(function () {
   $('.sidenav').sidenav();
   $('.slider').slider();
   $('.modal').modal();
-  $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additional_notes, textarea#recipe_remarks').characterCounter();
+  $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additional_notes, textarea#recipe_remarks, textarea#message').characterCounter();
 });
 
 // -------------- Validation for EmailJS -------------- 
