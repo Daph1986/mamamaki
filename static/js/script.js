@@ -120,3 +120,11 @@ function goToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// ---------------------- Fade for flash messages  -----------------------
+
+$(document).ready(function() {
+  setTimeout(function() {
+      $('.flashes').fadeOut('slow');
+  }, 3000);
+});

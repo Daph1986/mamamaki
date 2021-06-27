@@ -9,8 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png" sizes="32x32">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+		referrerpolicy="no-referrer" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 		type="text/css">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -30,7 +29,7 @@
 		<ul id="slide-out" class="sidenav sidenav-fixed">
 			<li>
 				<div class="user-view">
-					<a href="#logo"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+					<a href="{{ url_for('index') }}"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
 				</div>
 			</li>
 			<li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i>Home</a></li>
@@ -99,8 +98,7 @@
 		</div>
 	</footer>
 
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
 		<script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 		{% block scripts %}
