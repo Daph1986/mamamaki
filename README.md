@@ -139,11 +139,11 @@ What was changed is:
 
 1. <br>
 On the register page the headers were outside the white block, but this gave a problem with the flash messages. They pushed the content down, the headers text becaume hard. <br>
-<img src="static/readme images/headers_with_flash_message_1.png" alt="Headers with Flash message before" width="45%" height="45%"> <br>
+<img src="static/readme images/headers_with_flash_message_1.png" alt="Headers with Flash message before" width="30%" height="30%"> <br>
 
 So it was decided to put the headers in the white register block to solve this. And in the end it was decided to put the flash message in a white bar with blue text, to put it more downwards and to give it a fade out. This is better for the end user because the text disappears without the page having to be reloaded.<br>
 
-<img src="static/readme images/headers_with_flash_message_2.png" alt="Headers with Flash message after" width="45%" height="45%"> <br>
+<img src="static/readme images/headers_with_flash_message_2.png" alt="Headers with Flash message after" width="30%" height="30%"> <br>
 
 2. <br>
 Originally the texts were aligned left, but in the actual design this didn't look right. Also for the footer it looked better when everything was centered.<br>
@@ -164,7 +164,7 @@ On the about page the words "register page" have been linked to go directly to t
 On the single recipe page, the ingredients list and the instruction list have been made collapsible to make it easier during cooking, when you have the ingredients ready, just close it and keep only the instruction list open. Because not all the recipes show the calories, it has been decided to omit that and instead put down which user has added the recipe.
 
 7. <br>
-Some additional text has been added to the personal recipe page to indicate what it displays.
+Some additional text has been added to the personal recipe page to indicate what it displays and the white block was removed, the content is merged with the header.
 
 8. <br>
 Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
@@ -286,7 +286,7 @@ git clone https://github.com/Daph1986/mamamaki.git
 9. Press enter and the clone will be created.
 10. Create a new `Cluster` and a new `Database` in your MongoDB account.
 In this cases the database is called `mamamaki_recipe_manager`, two collections are used:<br>
-<img src="static/readme images/db_1.png" alt="MongoDB 1" width="50%" height="50%"/> <br> 
+<img src="static/readme images/db_1.png" alt="MongoDB 1" width="25%" height="25%"/> <br> 
 and they are filled out like this:<br> 
 <img src="static/readme images/db_2.png" alt="MongoDB 1" width="50%" height="50%"/> <br> 
 <img src="static/readme images/db_3.png" alt="MongoDB 1" width="50%" height="50%"/>
@@ -379,9 +379,9 @@ You can click the view button to launch your app.
 <img src="static/readme images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/>
 3. Save and click on Email Templates. <br>
 <img src="static/readme images/emailjs_2.png" alt="EmailJS new template" width="50%" height="50%"/>
-4. Make a template and give it the id names of `send contact mail`to ensure they work with the function in this code. <br>
+4. Make a template and give it the id names of `send contact mail` to ensure they work with the function in this code. <br>
 <img src="static/readme images/emailjs_3.png" alt="Template settings" width="50%" height="50%"/>
-5. Copy the service id as shown at step 2.
+5. Copy the service id as shown at step 2.<br>
 6. Replace the id in the code for your own id. <br>
 <img src="static/readme images/scriptjs.png" alt="JS file" width="50%" height="50%"/>
 7. Go to Integration and copy the user id and replace your id for the id in the JavaScript file.<br>
@@ -444,10 +444,9 @@ All content has been written by me,some of the recipes I edited to my own liking
 - My husband, thank you Django for taking care of our son more so I can work on my education, thank you for your patience.
 - Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collabsable table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
-- Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the 
+- Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the url_for also my images to prevent them from giving a 404.
 ```
 {{ url_for('static', filename='images/logo.png') }}
 ```
-for my images to prevent them from giving a 404.
 
 <div align="right"><a href="#top">🔝</a></div>
