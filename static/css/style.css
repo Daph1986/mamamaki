@@ -1,10 +1,11 @@
-/* ------------- Styling for gerneral use ------------- */
+/* ------------------ Styling for gerneral use ------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Chicle&family=Ubuntu&display=swap');
 
 html {
   min-height: 100%;
   background-color: #f1dec2;
+  background-image: -o-linear-gradient(315deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
   background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
   background-repeat:no-repeat;
   font-family: 'Ubuntu', sans-serif;
@@ -43,7 +44,15 @@ header, main, footer {
   top: 650px;
 }
 
-/* ---------------------- Sidenav ---------------------- */
+.slider .indicators .indicator-item.active {
+  background-color: #C62828;
+}
+
+.redirect-text {
+  color: #fff;
+}
+
+/* --------------------------- Sidenav --------------------------- */
 
 .logo {
   width: 150px;
@@ -85,7 +94,7 @@ header, main, footer {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* ---------------------- Buttons ---------------------- */
+/* --------------------------- Buttons --------------------------- */
 
 #goToTopBtn {
   display: none;
@@ -104,7 +113,9 @@ header, main, footer {
   background-color: #fff;
 }
 
-.btn, .btn-large, .btn-small {
+.btn, 
+.btn-large, 
+.btn-small {
   text-transform: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -157,8 +168,12 @@ header, main, footer {
 
 .btn-search{
   display: table;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .btn-green-ingredient {
@@ -173,8 +188,7 @@ header, main, footer {
   font-size: 18px;
 }
 
-
-/* ---------------------- Modal ---------------------- */
+/* --------------------------- Modals ---------------------------- */
 
 .text-delete {
   color: #C62828;
@@ -196,27 +210,21 @@ span.text-keep:hover {
   color: #1a581c;
 }
 
-/* ---------------------- Homepage ---------------------- */
-
-.slider .indicators .indicator-item.active {
-  background-color: #C62828;
-}
-
-.redirect-text {
-  color: #fff;
-}
+/* -------------------------- Homepage --------------------------- */
 
 .toast {
   background-color: rgba(255, 255, 255, 0.9);
   font-family: 'Chicle', cursive;
   font-size: 35px;
   color: #4478b1;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 100px;
   position: relative;
 }
 
-/* ---------------------- About page ---------------------- */
+/* ------------------------- About page -------------------------- */
 
 .hero-image {
   background-image: url("/static/images/daphne.png");
@@ -227,7 +235,7 @@ span.text-keep:hover {
   background-size: cover;
 }
 
-/* ---------------------- Recipes page ---------------------- */
+/* ------------------------ Recipes page ------------------------- */
 
 .card-title {
   font-family: 'Chicle', cursive;
@@ -243,7 +251,8 @@ span.text-keep:hover {
 
 .card {
   background: none;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0%), 0 3px 1px -2px rgb(0 0 0 / 0%), 0 1px 5px 0 rgb(0 0 0 / 0%);
+  -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0%), 0 3px 1px -2px rgb(0 0 0 / 0%), 0 1px 5px 0 rgb(0 0 0 / 0%);
+          box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0%), 0 3px 1px -2px rgb(0 0 0 / 0%), 0 1px 5px 0 rgb(0 0 0 / 0%);
 }
 
 .bg-white {
@@ -271,7 +280,7 @@ span.text-keep:hover {
   color: #4478b1;
 }
 
-/* ---------------------- Add recipe ---------------------- */
+/* ------------------------- Add recipe -------------------------- */
 
 .switch label input[type=checkbox]:checked+.lever:after {
   background-color: #4CAF50;
@@ -285,7 +294,7 @@ span.text-keep:hover {
   margin-right: 10px;
 }
 
-/* ---------------------- Single recipe ---------------------- */
+/* ------------------------ Single recipe ------------------------ */
 
 .collapsible-list {
   background-color: #fff;
@@ -325,6 +334,8 @@ button:focus {
   max-height: 0;
   overflow: hidden;
   background-color: transparent;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
 }
 
@@ -348,7 +359,7 @@ div.card-panel {
 }
 
 /* Materialize uses active / focus colors in green for it's forms. 
-Those don't match the design so the css underneath is used to overwrite it.*/
+Those don't match the design so the CSS underneath is used to overwrite it.*/
 
 .input-field .prefix.active {
   color: #212121;
@@ -374,7 +385,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   color: #707070;
 }
 
-/* ---------------------- Error pages ---------------------- */
+/* ------------------------- Error pages ------------------------- */
 
 .error {
   height: 100vh;
@@ -395,7 +406,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   margin-top: 400px;
 }
 
-/* ---------------------- Footer ---------------------- */
+/* --------------------------- Footer ---------------------------- */
 
 .custom-footer {
   background-color: #fff;
@@ -417,7 +428,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   color: #212121;
 }
 
-/* ------------------ Media queries ------------------- */
+/* ----------------------- Media queries ------------------------- */
 @media only screen and (max-width : 1023.98px) {
   header, main, footer {
     padding-left: 0;
