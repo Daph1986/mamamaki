@@ -227,13 +227,14 @@ Technologies
 ### Tools
 
 - Adobe Photoshop: to resize the images.
+- [tinypng](https://tinypng.com/): was used to downsize the images.
+- [Cloudinary](https://cloudinary.com/): was used to store the images and get an url-link for them which are used in my recipes.
 - Adobe Illustrator: to create the logo.
 - VSCode: to write the code in.
-- EmailJS: for receiving the content of the contact form
-- MongoDB Atlas: as a database for this project
-- Heroku: as a host for the deployed site
-- GitHub: for the repository
-- Cloudinary: to store most of the images for this project
+- [EmailJS](https://www.emailjs.com/): for receiving the content of the contact form
+- [MongoDB Atlas](https://www.mongodb.com/): as a database for this project
+- [Heroku](https://www.heroku.com/): as a host for the deployed site
+- [GitHub](https://github.com/): for the repository
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -314,6 +315,7 @@ Choose the option in the middle<br>
 Set it to `Python` and version `3.6 or later`. Copy the code you see here:<br>
 <img src="static/readme images/mongo_db_4.png" alt="MongoDB 4" width="75%" height="50%"/> <br>
 Replace the password with your own and replace the database name for your own.
+For more information about MongoDB Atlas you can look [here](https://docs.atlas.mongodb.com/).
 
 12. Create a `.gitignore` file type
 ```
@@ -353,13 +355,16 @@ To deploy the website with Heroku the following steps were made:
 <img src="static/readme images/heroku_deployment_4.png" alt="Deployment to Heroku 4" width="75%" height="50%"/>
 
 7. Fill in the vars with your own username, password, database name and secretkey which you have in your `env.py` file: <br>
+
 | Key | Value |
-| --- | --- |
-| IP | 0.0.0.0 |
-| MONGO_DBNAME | `<your_mongodb_database_name` |
-| MONGO_URI | `mongodb+srv://<username>:<password>@myfirstcluster.z7l4s.mongodb.net/<database_name>?retryWrites=true&w=majority` |
-| PORT | 5000 |
-| SECRET_KEY | `<your_secret_key>`|
+ --- | ---
+IP | 0.0.0.0
+MONGO_DBNAME | `<your_mongodb_database_name>`
+MONGO_URI | `mongodb+srv://<username>:<password>@myfirstcluster.z7l4s.mongodb.net/<database_name>?retryWrites=true&w=majority`
+PORT | 5000
+SECRET_KEY | `<your_secret_key>`
+
+For more information about your MONGO_URI in MongoDB Atlas you can look [here](https://docs.atlas.mongodb.com/).
 <br>
 
 8. Now click on `Enable Automatic Deploys` and then `Deploy Branch`
@@ -388,29 +393,25 @@ Credits
 ======
 
 ### Content
-All content has been written by me, but the original recipes come out of two books which are:
-1. [Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
-2. [Japans Koken - Harumi Kurihara](https://www.yutori.co.jp/en/index.html) 
+All content has been written by me,some of the recipes I edited to my own liking during cooking, but the original recipes come out of two books and two websites which are:
+
+1. [Tori to piman no itame ni - Japans Koken - Harumi Kurihara](https://www.yutori.co.jp/en/index.html) 
+2. [Tamago - SUSHITOTAAL.NL](https://www.sushitotaal.nl/tamago_bereiden) 
+3. [Miso soup - THE SUSHI TIMES](https://www.thesushitimes.com/recept-miso-soep-onmisbaar-japanse-keuken/) 
+4. [All the other recipes - Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
+
 
 ### Code:
 
-1. [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) to create the gradient background with CSS.
-2. [Code Institute LMS Backend Development Task Manager Miniproject](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) this was used as the basis of the code and then modified to make it my own site.
-
+1. [CSS Gradient](https://cssgradient.io/gradient-backgrounds/) to create the gradient background with CSS.
+2. [Code Institute LMS Backend Development Task Manager Miniproject by Tim Nelson](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) this was used as the basis of the code and then modified to make it my own site.
 3. [Stack Overflow](https://stackoverflow.com/questions/16841323/making-gradient-background-fill-page-with-css/16841457) to prevent the gradient background from repeating and without having to use a fixed height value with px.
-
-<!-- 1. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
-2. Adding the defer attribute to the script files in html was a tip given by my mentor Narender, this ensures that the script files are executed when the page has finished loading.
-3. [Codegrepper](https://www.codegrepper.com/code-examples/javascript/getting+value+from+radio+button+javascript) for getting the value of the checked radio buttons instead of using for loops.
-4. [W3schools](https://www.w3schools.com/howto/howto_js_media_queries.asp) to get an idea of how to do a media query in JavaScript.
-5. [Code Institute LMS Sending Emails Using EmailJS](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+IFD101+2017_T3/courseware/03d3f6524ad249d9b33e3336d156dfd0/e4710f80cdf34bffbd607bc102482d5c/) to get understanding on how to EmailJS works, the used EmailJS are based on what waslearned in the course material. -->
-
-<!-- #### For research when I forgot how things worked again: -->
-
-<!-- 1. [Code Institute LMS](https://learn.codeinstitute.net/login)
-2. [W3schools](https://www.w3schools.com/)
-3. [Stack Overflow](https://stackoverflow.com/)
-4. [Materialize](https://materializecss.com/) -->
+4. [Sanwebe.com](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery) as help to let JQuery add en remove extra fields for the ingredients list and the instruction list.
+5. [Stack Overflow](https://stackoverflow.com/questions/20233721/how-do-you-index-on-a-jinja-template) to help me figure out how to loop over the ingredients list and the instruction list and get them displayed.
+6. [W3schools](https://www.w3schools.com/howto/howto_js_collapsible.asp) to help me make a collapsible with HTML and JavaScript.
+7. [W3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) to help me make a scroll back to the top button.
+8. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
+9. [Materialize](https://materializecss.com/) as a reference work on the framework.
 
 ### Media 
 
@@ -426,27 +427,24 @@ All content has been written by me, but the original recipes come out of two boo
 
 5. [favicon.io](https://favicon.io/emoji-favicons/sushi/) was used to get an existing favicon for the site.
 
+6. [Rawpixel](https://www.rawpixel.com/image/2400897/free-illustration-png-japan-japanese-culture-art-torii-gate) Japanese torii gate sticker with white border by Tvzsu was used as a background for the error pages.
+
+
 ### Other
 
-1. [creately](https://creately.com/) to create the raw data diagram.
+1. [creately](https://creately.com/) to create the data diagrams.
 2. [RandomKeygen](https://randomkeygen.com/) to get a value for the secret key.
 3. [cdnjs](https://cdnjs.com/) to get the fontawsome cdn from.
 4. [jQuery](https://code.jquery.com/) to get the jquery cdn from.
-<!-- 5. [Our Code World](https://ourcodeworld.com/articles/read/1016/how-to-create-your-own-t-shirt-designer-using-fabricjs-in-javascript) this example was used as an inspiration for the business card creator tool.
-6. [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) this creates a table of contents for Markdown, many thanks to follow student Aukje (byIlsa_lead) for sharing this.
-7. [Am I Responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Fdaph1986.github.io%2FPostfly-business-card-creator%2Findex.html) to check the responsiveness and make the mockups. -->
+5. [Am I Responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Fdaph1986.github.io%2FPostfly-business-card-creator%2Findex.html) to check the responsiveness and make the mockups.
 
 ### Acknowledgements
-<!-- 
+
 - My mentor from Code Institute, thank you Narender for your time and guidance.
-- My husband, thank you Django for taking care of our son more so I can work on my education, thank you for your patience, thank you for your extra explanation about JavaScript and thank you for checking my project!
-- My colleague Bart Lauwaert for helping with the translation of the correct English names for the paper types.
-- Aukje (byIlsa_lead) thank you for hosting a "Preparing for your Second Milestone Project" call on zoom, it was really helpful! Also thank you for your time and effort to go through my code in order to help me with my question about my form.
-- Cormac, Johann and Scott from Code Institute tutor assistance, thank you for helping me with my questions.
-- Special thanks to my colleagues, friends and family for their support, tips and for testing my site. -->
+- My husband, thank you Django for taking care of our son more so I can work on my education, thank you for your patience.
 - Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collabsable table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
-- Fellow student, Benjamin Kavanagh, for looking into my code and remind me to use also the 
+- Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the 
 ```
 {{ url_for('static', filename='images/logo.png') }}
 ```
