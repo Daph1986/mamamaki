@@ -1,4 +1,4 @@
-// ---------------------- Side nav, image sliders and character counter  -----------------------
+// ---------- Side nav, image sliders and character counter  ----------
 
 // From materialize documentation to initialise with jQuery
 
@@ -9,12 +9,14 @@ $(document).ready(function () {
   $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additional_notes, textarea#recipe_remarks, textarea#message').characterCounter();
 });
 
-// -------------- Validation for EmailJS -------------- 
+// ---------------------- Validation for EmailJS ----------------------
+
 document.onload = function () {
   emailjs.init("user_341YHLcR0K48KFIHl0TNg");
 }();
 
-// ------------- Mail form ------------- 
+// ---------------------------- Mail form -----------------------------
+
 function sendMail(mailForm) {
   emailjs.send("service_re41zx8", "send contact mail", {
     "from_name": mailForm.name.value,
@@ -35,7 +37,7 @@ function sendMail(mailForm) {
   return false;
 }
 
-// ---------------------- Adding an ingredient dynamically  -----------------------
+// ----------------- Adding an ingredient dynamically -----------------
 
 let ingredient = 1;
 let max_ingredients = 20;
@@ -60,7 +62,7 @@ $("main").on('click', ".remove_ingredient", function () {
   ingredient--;
 });
 
-// ---------------------- Adding a step dynamically  -----------------------
+// -------------------- Adding a step dynamically ---------------------
 
 let instruction_step = 1;
 let max_instruction_steps = 20;
@@ -85,7 +87,7 @@ $("main").on('click', ".remove_instruction_step", function () {
   instruction_step--;
 });
 
-// ---------------------- Collapsible ingredients and instructions lists  -----------------------
+// ---------- Collapsible ingredients and instructions lists ----------
 
 let list = document.getElementsByClassName("collapsible-list");
 let i;
@@ -102,7 +104,7 @@ for (i = 0; i < list.length; i++) {
   });
 }
 
-// ---------------------- Scroll to top button  -----------------------
+// ----------------------- Scroll to top button -----------------------
 
 let topbutton = document.getElementById("goToTopBtn");
 
@@ -121,7 +123,7 @@ function goToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-// ---------------------- Fade for flash messages  -----------------------
+// --------------------- Fade for flash messages ----------------------
 
 $(document).ready(function() {
   setTimeout(function() {
