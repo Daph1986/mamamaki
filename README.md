@@ -5,7 +5,7 @@ MAMAMAKI
 
 <img src="static/readme images/logo.png" alt="Logo" width="55%" height="55%">
 
-MAMAMAKI is a site for Japanese home cooking recipes and when you are loged in, you can add and edit your own recipes.
+MAMAMAKI is a site for Japanese home cooking recipes and when you are logged in, you can add, edit and delete your own recipes.
 The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
 
 Demo
@@ -13,8 +13,8 @@ Demo
 
 By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version will be visible.
 
-<!-- <img src="assets/images/readme_images/mockup1.png" alt="Mockup 1" width="65%" height="65%">
-<img src="assets/images/readme_images/mockup2.png" alt="Mockup 2" width="65%" height="65%"> -->
+<img src="static/readme images/mockup_1.png" alt="Mockup 1" width="65%" height="65%">
+<img src="static/readme images/mockup_2.png" alt="Mockup 2" width="65%" height="65%">
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -35,9 +35,10 @@ Table of Contents
 </details>
 
 **<details><summary>Technologies</summary>**
-* [**_Code languages, libraries and frameworks_**](#code-languages-libraries-and-frameworks)
+* [**_Languages_**](#languages)
+* [**_Libraries and frameworks_**](#libraries-and-frameworks)
 * [**_Wireframes_**](#wireframes)
-* [**_Others_**](#others)
+* [**_Tools_**](#tools)
 </details>
 
 **<details><summary>Testing and Bugs</summary>**
@@ -72,9 +73,9 @@ This is meant to be a B2C site which targets visitors who are interested in Japa
 
 ##### Visitor Goals
 
-- To be able to see different recipes and search for them.
+- To be able to see different recipes and search for them using keywords.
 - To create an account and log in on that account.
-- To create, read, update and delete own recipes.
+- To create, read, update and delete my own recipes.
 
 ##### Site Owners Goals
 
@@ -83,12 +84,12 @@ This is meant to be a B2C site which targets visitors who are interested in Japa
 
 ### Strategy
 
-The design goal is to make a clear, accessible, structured site so that visitors can easily see the recipes, navigate on the site and add + edit their own recipes.
+The design goal is to make a clear, accessible, structured site so that visitors can easily see the recipes, navigate on the site and add, edit and delete their own recipes.
 
 ### Scope
 
-The site shows a home page with a small introduction. Second is the about page which tells a bit about the creator of the site and why the site was created. Furthermore, the site contains a recipe page on which you can you choose to go to a specific recipe. It also contains a register page, a log in page, a profile page and a add recipe page.
-The profile page and add recipe page will only be visible when you are logged in.
+The site shows a homepage with a small introduction. Second is the about page which tells a bit about the creator of the site and why the site was created. Furthermore, the site contains a recipes page on which you can you choose to go to a specific recipe. It also contains a register page, a log in page, a personal recipe page and a add recipe page.
+The personal recipe page and add recipe page will only be visible when you are logged in.
 
 ### Structure
 
@@ -109,7 +110,9 @@ Mobile wireframes<br>
 
 Raw data diagram<br>
 
-<img src="static/readme images/raw_data_diagram.png" alt="Data Overview" width="65%" height="65%">
+<img src="static/readme images/raw_data_diagram.png" alt="Data Overview" width="65%" height="65%"><br>
+Eventually some items were added to the diagram and it has been simplified.
+<img src="static/readme images/updated_data_diagram.png" alt="Data Overview" width="65%" height="65%">
 
 **Surface**
 
@@ -138,26 +141,33 @@ What was changed is:
 On the register page the headers were outside the white block, but this gave a problem with the flash messages. They pushed the content down, the headers text becaume hard. <br>
 <img src="static/readme images/headers_with_flash_message_1.png" alt="Headers with Flash message before" width="45%" height="45%"> <br>
 
-So it was decided to put the headers in the white register block to solve this. <br>
+So it was decided to put the headers in the white register block to solve this. And in the end it was decided to put the flash message in a white bar with blue text, to put it more downwards and to give it a fade out. This is better for the end user because the text disappears without the page having to be reloaded.<br>
 
 <img src="static/readme images/headers_with_flash_message_2.png" alt="Headers with Flash message after" width="45%" height="45%"> <br>
 
 2. <br>
-Originally the texts were aligned left, but in the actual design this didn't look right.<br>
+Originally the texts were aligned left, but in the actual design this didn't look right. Also for the footer it looked better when everything was centered.<br>
 <img src="static/readme images/text_align_left.png" alt="Text align left" width="45%" height="45%"> <br>
 So centering the text seemed better.<br>
 <img src="static/readme images/text_align_center.png" alt="Text align center" width="45%" height="45%"> <br>
 
-<!-- 1. The color for the red headers and buttons were changed from #e73b3b to #e72f4c and #e02a51 because during testing #e73b3b did not give a good enough contrast.
-2. The icon for the website was added, because it would be logical to refer to the main website of the company.
-3. On the sample kit request form and the quotation request form a checkbox was added to reduce spam by checking if the user is a robot.
-4. The layout for desktop view on the creator.html for the card selectors was changed a bit to make it look more appealing on smaller screens and to make it more logical to follow the steps.
-5. The Select Size and Select Printing Method options were combined to give it a UX friendly experience.
-6. The buttons for adding a text field, downloading the preview file and resetting the made choices are grouped together to present a better and UX friendly experience.
-7. The button to upload an own file was separated from the other selectors and made pulsing to give it better attention.
-8. The legend which explains all the lines (bleed etc.) of the templates has been put above the template to give it a UX friendly experience.
-9. On the bottom of the page above the input fields for name and email address a small explanation was added to create a more UX friendly experience.
-10. After testing the user-friendliness was experienced as not good enough, because only the logo could be used to return to the homepage. That is why on the page for requesting the sample kit and for designing the business card, 2 buttons have been added at the top to switch between the other pages. Cancel buttons have also been added to the bottom of the forms and the request quotation button was changed to send. This increases user-friendliness. -->
+3. <br>
+Two call to action buttons have been added to the homepage to make it more user-friendly and to register or log in right away. A contact form has also been added, again to increase user-friendliness.
+
+4. <br>
+Scroll to the top buttons have been added on all pages, because you don't have to scroll all the way up again, this improves user-friendliness. They will appear automatically as soon as you have to scroll down.
+
+5. <br>
+On the about page the words "register page" have been linked to go directly to that page.
+
+6. <br>
+On the single recipe page, the ingredients list and the instruction list have been made collapsible to make it easier during cooking, when you have the ingredients ready, just close it and keep only the instruction list open. Because not all the recipes show the calories, it has been decided to omit that and instead put down which user has added the recipe.
+
+7. <br>
+Some additional text has been added to the personal recipe page to indicate what it displays.
+
+8. <br>
+Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
 
 ### Fonts and icons
 
@@ -177,7 +187,7 @@ The site contains the following features:
 - Have clear and easy to use page navigation.
 - Register an account.
 - Log in to that account and log out of it.
-- Add and edit one’s own recipes.
+- Add, edit and delete your own recipes.
 
 ### Features for the future 
 
@@ -193,32 +203,45 @@ The following items can be added:
 Technologies
 ======
 
-### Code languages, libraries and frameworks
+### Languages
 
-<!-- - HTML5
-- CSS3
-- Materialize 1.0.0
+- HTML
+- CSS
+- Python
 - JavaScript
-- Fabric
-- EmailJS -->
+
+### Libraries and Frameworks
+
+- Materialize 1.0.0
+- JQuery
+- PyMongo
+- Flask
+- Jinja
+- Werkzeug
+
 
 ### Wireframes
 
 - Adobe XD
 
-### Others
+### Tools
 
 - Adobe Photoshop: to resize the images.
 - Adobe Illustrator: to create the logo.
 - VSCode: to write the code in.
+- EmailJS: for receiving the content of the contact form
+- MongoDB Atlas: as a database for this project
+- Heroku: as a host for the deployed site
+- GitHub: for the repository
+- Cloudinary: to store most of the images for this project
 
 <div align="right"><a href="#top">🔝</a></div>
 
 Testing and Bugs
 ======
 
-<!-- The tests have been done on multiple devices and browsers, in the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
-For more details about testing and bugs please view this [file](testing/README.md). -->
+The tests have been done on multiple devices and browsers, in the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
+For more details about testing and bugs please view this [file](testing/README.md).
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -232,7 +255,7 @@ Deployment
 1. Go to [GitHub](https://github.com/)
 2. Find Daph1986's [page](https://github.com/Daph1986)
 3. Select repositories.
-4. Select the Postfly-business-card-creator repository.
+4. Select the mamamaki repository.
 5. Click on the link on the right side or on the link under "Demo".
 By clicking that link the live demo version will be visible. <br>
 
