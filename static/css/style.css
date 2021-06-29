@@ -45,7 +45,7 @@ header, main, footer {
 }
 
 .slider .indicators .indicator-item.active {
-  background-color: #C62828;
+  background-color: #c62828;
 }
 
 .redirect-text {
@@ -60,7 +60,7 @@ header, main, footer {
 }
 
 .sidenav {
-  background-color: #DF5B5B;
+  background-color: #eb6161;
 }
 
 .sidenav li>a {
@@ -126,7 +126,7 @@ header, main, footer {
 }
 
 .btn-green {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   font-family: 'Chicle', cursive;
   font-size: 22px;
 }
@@ -138,7 +138,7 @@ header, main, footer {
 }
 
 .btn-red {
-  background-color: #C62828;
+  background-color: #c62828;
   font-family: 'Chicle', cursive;
   font-size: 22px;
 }
@@ -177,13 +177,13 @@ header, main, footer {
 }
 
 .btn-green-ingredient {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   font-family: 'Chicle', cursive;
   font-size: 18px;
 }
 
 .btn-red-ingredient {
-  background-color: #C62828;
+  background-color: #c62828;
   font-family: 'Chicle', cursive;
   font-size: 18px;
 }
@@ -191,7 +191,7 @@ header, main, footer {
 /* --------------------------- Modals ---------------------------- */
 
 .text-delete {
-  color: #C62828;
+  color: #c62828;
   font-family: 'Chicle', cursive;
   font-size: 20px;
 }
@@ -201,7 +201,7 @@ span.text-delete:hover {
 }
 
 .text-keep {
-  color: #4CAF50;
+  color: #4caf50;
   font-family: 'Chicle', cursive;
   font-size: 20px;
 }
@@ -283,7 +283,7 @@ span.text-keep:hover {
 /* ------------------------- Add recipe -------------------------- */
 
 .switch label input[type=checkbox]:checked+.lever:after {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .switch label input[type=checkbox]:checked+.lever {
@@ -308,7 +308,7 @@ span.text-keep:hover {
 }
 
 .collapsible-list:hover {
-  color: #DF5B5B;
+  color: #eb6161;
 }
 
 button.col.s12.collapsible-list,
