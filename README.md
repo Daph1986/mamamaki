@@ -118,7 +118,7 @@ Eventually some items were added to the diagram and it has been simplified.
 
 The following colors will be used:
 
-<img src="static/readme images/hex_DF5B5B.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color"  width="25%" height="25%"> <br>
+<img src="static/readme images/hex_EB6161.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color"  width="25%" height="25%"> <br>
 
 And for a gradient background: <br>
 <img src="static/readme images/hex_DE5959.png" alt="Gradient 1"  width="25%" height="25%"> <img src="static/readme images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
@@ -168,6 +168,9 @@ Some additional text has been added to the personal recipe page to indicate what
 
 8. <br>
 Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
+
+9. <br>
+Initially the color of the sidenav was #df5b5b but this has been changed to #eb6161 to ensure that even when a page has a lot of content there is always a color difference between the sidenav and the background.
 
 ### Fonts and icons
 
