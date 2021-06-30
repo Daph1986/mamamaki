@@ -33,7 +33,7 @@ def about():
 # Recipes page
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("_id", -1))
     return render_template("recipes/recipes.html", recipes=recipes)
 
 
@@ -106,7 +106,7 @@ def login():
 def personal(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("_id", -1))
 
     if session["user"]:
         return render_template(
@@ -183,6 +183,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, save)
         flash("Your recipe is updated successfully")
+        return redirect(url_for("personal", username=session["user"]))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipes/edit_recipe.html", recipe=recipe)
