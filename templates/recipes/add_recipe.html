@@ -43,7 +43,7 @@
             <div class="input-field col s12">
               <i class="fas fa-hourglass-start prefix"></i>
               <input id="recipe_preparation_time" name="recipe_preparation_time" type="number" min="1" 
-                max="120" class="validate" required>
+                max="180" class="validate" required>
               <label for="recipe_preparation_time">Preparation time in minutes</label>
             </div>
           </div>
@@ -63,12 +63,18 @@
               <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="150" minlength="2" 
                 maxlength="150" class="validate" required>
               <label for="recipe_ingredients">Ingredient 1. </label>
-              <a class="right btn-small btn-green-ingredient add_ingredient"><i
-                class="fas fa-plus"></i> Add ingredient</a>
             </div>
           </div>
           <div class="row list_of_ingredients">
 
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <a class="right btn-small btn-green-ingredient add_ingredient">
+                <i class="fas fa-plus"></i> 
+                Add ingredient
+              </a>
+            </div>
           </div>
           <!-- Remarks -->
           <div class="row">
@@ -86,12 +92,18 @@
               <input id="recipe_instruction" name="recipe_instruction" type="text" data-length="500" minlength="5" maxlength="500"
                 class="validate" required>
               <label for="recipe_instruction">Instruction step 1. </label>
-              <a class="right btn-small btn-green-ingredient add_instruction_step"><i
-                class="fas fa-plus"></i> Add instruction step</a>
             </div>
           </div>
           <div class="row list_of_instruction_steps">
 
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <a class="right btn-small btn-green-ingredient add_instruction_step">
+                <i class="fas fa-plus"></i> 
+                Add instruction step
+              </a>
+            </div>
           </div>
           <!-- Additional notes -->
           <div class="row">

@@ -50,12 +50,11 @@ $(".add_ingredient").click(function (e) {
     <div class="input-field col s12">
     <i class="fas fa-cookie-bite prefix"></i>
     <input id="recipe_ingredients${ingredient}" name="recipe_ingredients" type="text" data-length="150" 
-      minlength="5" maxlength="150" class="validate" required>
+      minlength="2" maxlength="150" class="validate" required>
     <label for="recipe_ingredients${ingredient}">Ingredient ${ingredient}.</label>
     <a type="button" class="right btn-small btn-red-ingredient remove_ingredient"><i class="fas fa-minus"></i> Remove ingredient</a></div>`);
   }
 });
-
 
 $("main").on('click', ".remove_ingredient", function () {
   $(this).parent('div').remove();
@@ -80,7 +79,6 @@ $(".add_instruction_step").click(function (e) {
     <a type="button" class="right btn-small btn-red-ingredient remove_instruction_step"><i class="fas fa-minus"></i> Remove instruction step</a></div>`);
   }
 });
-
 
 $("main").on('click', ".remove_instruction_step", function () {
   $(this).parent('div').remove();
