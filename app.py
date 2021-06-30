@@ -20,31 +20,28 @@ mongo = PyMongo(app)
 
 # Index / homepage
 @app.route("/")
-@app.route("/index")
 def index():
     return render_template("index.html")
 
 
 # About page
-@app.route("/")
 @app.route("/about")
 def about():
     return render_template("about.html")
 
 
 # Recipes page
-@app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("recipes/recipes.html", recipes=recipes)
 
 
 # Single recipe page
 @app.route("/single_recipe/<recipe_id>")
 def single_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("single_recipe.html", recipe=recipe)
+    return render_template("recipes/single_recipe.html", recipe=recipe)
 
 
 # Search
@@ -52,7 +49,7 @@ def single_recipe(recipe_id):
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("recipes/recipes.html", recipes=recipes)
 
 
 # Registration
@@ -75,7 +72,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("You have successfully been registered with MAMAMAKI!")
         return redirect(url_for("personal", username=session["user"]))
-    return render_template("register.html")
+    return render_template("user/register.html")
 
 
 # Log in
@@ -101,7 +98,7 @@ def login():
             flash("Sorry, this Username and/or Password is incorrect")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("user/login.html")
 
 
 # Personal recipe page
@@ -113,7 +110,7 @@ def personal(username):
 
     if session["user"]:
         return render_template(
-            "personal.html", username=username, recipes=recipes)
+            "user/personal.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
@@ -155,7 +152,7 @@ def add_recipe():
         flash("Your recipe is added successfully")
         return redirect(url_for("personal", username=session["user"]))
 
-    return render_template("add_recipe.html")
+    return render_template("recipes/add_recipe.html")
 
 
 # Edit recipe
@@ -188,7 +185,7 @@ def edit_recipe(recipe_id):
         flash("Your recipe is updated successfully")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("edit_recipe.html", recipe=recipe)
+    return render_template("recipes/edit_recipe.html", recipe=recipe)
 
 
 # Delete recipe
@@ -202,12 +199,12 @@ def delete_recipe(recipe_id):
 # Error handling
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('404.html'), 404
+    return render_template('errors/404.html'), 404
 
 
 @app.errorhandler(500)
 def server_error(error):
-    return render_template('500.html'), 500
+    return render_template('errors/500.html'), 500
 
 
 if __name__ == "__main__":
