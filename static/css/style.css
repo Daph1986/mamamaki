@@ -9,6 +9,7 @@ html {
   background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
   background-repeat:no-repeat;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
   color: #212121;
 }
 
@@ -441,6 +442,9 @@ div.card-panel {
 @media only screen and (max-width : 1023.98px) {
   header, main, footer {
     padding-left: 0;
+  }
+  html {
+    font-size: 16px;
   }
   .btn-green {
     font-size: 20px;
