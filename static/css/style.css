@@ -113,6 +113,10 @@ header, main, footer {
   background-color: #fff;
 }
 
+button:focus {
+  background-color: #fff;
+}
+
 .btn, 
 .btn-large, 
 .btn-small {
@@ -186,6 +190,56 @@ header, main, footer {
   background-color: #c62828;
   font-family: 'Chicle', cursive;
   font-size: 18px;
+}
+
+/* ---------------------------- Forms ---------------------------- */
+
+/* Materialize uses active / focus colors in green for it's forms. 
+Those don't match the design so the CSS underneath is used to overwrite it.*/
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  border-right: 2px solid #eb6161;
+  border-bottom: 2px solid #eb6161;
+}
+
+.input-field .prefix.active {
+  color: #212121;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #707070;
+  -webkit-box-shadow: 0 1px 0 0 #707070;
+  box-shadow: 0 1px 0 0 #707070;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label, 
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #707070;
+}
+
+.input-field .prefix {
+  font-size: 1.7rem;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: #4caf50;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #4caf4f86;
+}
+
+.character-counter {
+  margin-right: 10px;
 }
 
 /* --------------------------- Modals ---------------------------- */
@@ -280,20 +334,6 @@ span.text-keep:hover {
   color: #4478b1;
 }
 
-/* ------------------------- Add recipe -------------------------- */
-
-.switch label input[type=checkbox]:checked+.lever:after {
-  background-color: #4caf50;
-}
-
-.switch label input[type=checkbox]:checked+.lever {
-  background-color: #4caf4f86;
-}
-
-.character-counter {
-  margin-right: 10px;
-}
-
 /* ------------------------ Single recipe ------------------------ */
 
 .collapsible-list {
@@ -318,10 +358,6 @@ button.col.s12.collapsible-list.active {
 
 .lists {
   padding-left: 20px;
-}
-
-button:focus {
-  background-color: #fff;
 }
 
 .fa-hand-point-down {
@@ -352,37 +388,6 @@ button:focus {
 div.card-panel {
   padding-bottom: 0px;
   padding-top: 1px;
-}
-
-.input-field .prefix {
-  font-size: 1.7rem;
-}
-
-/* Materialize uses active / focus colors in green for it's forms. 
-Those don't match the design so the CSS underneath is used to overwrite it.*/
-
-.input-field .prefix.active {
-  color: #212121;
-}
-
-input[type=text]:not(.browser-default):focus:not([readonly]), 
-input[type=password]:not(.browser-default):focus:not([readonly]),
-input[type=number]:not(.browser-default):focus:not([readonly]),
-input[type=url]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #707070;
-  -webkit-box-shadow: 0 1px 0 0 #707070;
-  box-shadow: 0 1px 0 0 #707070;
-}
-
-input[type=text]:not(.browser-default):focus:not([readonly])+label, 
-input[type=password]:not(.browser-default):focus:not([readonly])+label,
-input[type=number]:not(.browser-default):focus:not([readonly])+label,
-input[type=url]:not(.browser-default):focus:not([readonly])+label,
-input[type=email]:not(.browser-default):focus:not([readonly])+label,
-textarea.materialize-textarea:focus:not([readonly])+label {
-  color: #707070;
 }
 
 /* ------------------------- Error pages ------------------------- */

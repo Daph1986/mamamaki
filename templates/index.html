@@ -95,6 +95,9 @@
                 <input id="email" name="email" type="email" minlength="5" maxlength="50"
                   class="validate" required>
                 <label for="email">Email address</label>
+                <span class="helper-text" data-error="wrong" data-success="right">
+                  Please use a valid email address
+                </span>
               </div>
             </div>
             <div class="row">
@@ -103,6 +106,16 @@
                 <textarea id="message" name="message" data-length="500" minlength="5" maxlength="500"
                   class="materialize-textarea validate" required></textarea>
                 <label for="message">Message</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p>
+                  <label id="checkbox">
+                    <input type="checkbox" required="" aria-required="true" />
+                    <span>I'm not a robot!</span>
+                  </label>
+                </p>
               </div>
             </div>
             <div class="row bottom-margins">
