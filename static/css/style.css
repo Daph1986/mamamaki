@@ -390,6 +390,10 @@ div.card-panel {
   padding-top: 1px;
 }
 
+.top-margin-register {
+  margin-top: 250px;
+}
+
 /* ------------------------- Error pages ------------------------- */
 
 .error {
@@ -491,6 +495,9 @@ div.card-panel {
     margin-right: 20px;
   }
   .top-margin-error {
+    margin-top: 125px;
+  }
+  .top-margin-register {
     margin-top: 125px;
   }
 }
