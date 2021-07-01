@@ -31,14 +31,14 @@ def about():
 
 
 # Recipes page
-@app.route("/get_recipes")
+@app.route("/recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find().sort("_id", -1))
     return render_template("recipes/recipes.html", recipes=recipes)
 
 
 # Single recipe page
-@app.route("/single_recipe/<recipe_id>")
+@app.route("/recipe/<recipe_id>")
 def single_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipes/single_recipe.html", recipe=recipe)
@@ -56,10 +56,7 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
+        if existing_user():
             flash("This username is not available!")
             return redirect(url_for("register"))
 
@@ -79,26 +76,27 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
+        user = existing_user()
+        if user:
+            if password_is_valid(user):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(
-                    request.form.get("username")))
-                return redirect(url_for(
-                    "personal", username=session["user"]))
-            else:
-                flash("Sorry, this Username and/or Password is incorrect")
-                return redirect(url_for("login"))
-
-        else:
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("personal", username=session["user"]))
             flash("Sorry, this Username and/or Password is incorrect")
             return redirect(url_for("login"))
-
+        flash("Sorry, this Username and/or Password is incorrect")
+        return redirect(url_for("login"))
     return render_template("user/login.html")
+
+
+def existing_user():
+    return mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+
+def password_is_valid(existing_user):
+    return check_password_hash(
+        existing_user["password"], request.form.get("password"))
 
 
 # Personal recipe page
