@@ -27,9 +27,8 @@ def login_required(f):
         if "user" in session:
             return f(*args, **kwargs)
         else:
-            flash("You need to login first")
+            flash("You must be logged in for this part of the site!")
             return redirect(url_for("login"))
-
     return wrap
 
 
@@ -95,6 +94,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("You have successfully been registered with MAMAMAKI!")
         return redirect(url_for("personal", username=session["user"]))
+
     return render_template("user/register.html")
 
 
@@ -103,6 +103,7 @@ def register():
 def login():
     if request.method == "POST":
         user = existing_user()
+
         if user:
             if password_is_valid(user):
                 session["user"] = request.form.get("username").lower()
@@ -112,6 +113,7 @@ def login():
             return redirect(url_for("login"))
         flash("Sorry, this Username and/or Password is incorrect")
         return redirect(url_for("login"))
+
     return render_template("user/login.html")
 
 
@@ -139,14 +141,11 @@ def logout():
     return redirect(url_for("login"))
 
 
-# Add recipe
-@app.route("/add_recipe", methods=["GET", "POST"])
-@login_required
-def add_recipe():
-    if request.method == "POST":
-        recipe_is_vegetarian = "on" if request.form.get(
+# Reusable function for displaying recipes
+def display_recipes(request):
+    recipe_is_vegetarian = "on" if request.form.get(
             "recipe_is_vegetarian") else "off"
-        recipe = {
+    return {
             "japanese_recipe_name": request.form.get("japanese_recipe_name"),
             "english_recipe_name": request.form.get("english_recipe_name"),
             "recipe_introduction": request.form.get("recipe_introduction"),
@@ -165,50 +164,35 @@ def add_recipe():
             "recipe_is_vegetarian": recipe_is_vegetarian,
             "recipe_created_by": session["user"]
         }
+
+
+# Add recipe
+@app.route("/recipe/add", methods=["GET", "POST"])
+@login_required
+def add_recipe():
+    if request.method == "POST":
+        recipe = display_recipes(request)
         mongo.db.recipes.insert_one(recipe)
         flash("Your recipe is added successfully")
         return redirect(url_for("personal", username=session["user"]))
-
     return render_template("recipes/add_recipe.html")
 
 
 # Edit recipe
-@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@app.route("/recipe/update/<recipe_id>", methods=["GET", "POST"])
 @login_required
 def edit_recipe(recipe_id):
-
     if request.method == "POST":
-        recipe_is_vegetarian = "on" if request.form.get(
-            "recipe_is_vegetarian") else "off"
-        save = {
-            "japanese_recipe_name": request.form.get("japanese_recipe_name"),
-            "english_recipe_name": request.form.get("english_recipe_name"),
-            "recipe_introduction": request.form.get("recipe_introduction"),
-            "recipe_preparation_time": request.form.get(
-                "recipe_preparation_time"),
-            "recipe_servings": request.form.get("recipe_servings"),
-            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
-            "recipe_instruction": request.form.getlist("recipe_instruction"),
-            "recipe_remarks": request.form.get("recipe_remarks"),
-            "recipe_image_1": request.form.get("recipe_image_1"),
-            "recipe_image_2": request.form.get("recipe_image_2"),
-            "recipe_image_3": request.form.get("recipe_image_3"),
-            "recipe_image_4": request.form.get("recipe_image_4"),
-            "recipe_additional_notes": request.form.get(
-                "recipe_additional_notes"),
-            "recipe_is_vegetarian": recipe_is_vegetarian,
-            "recipe_created_by": session["user"]
-        }
+        save = display_recipes(request)
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, save)
         flash("Your recipe is updated successfully")
         return redirect(url_for("personal", username=session["user"]))
-
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipes/edit_recipe.html", recipe=recipe)
 
 
 # Delete recipe
-@app.route("/delete_recipe/<recipe_id>")
+@app.route("/recipe/delete/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Your recipe is deleted successfully")
