@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -16,6 +17,20 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+
+# Requires that a user is logged in for certain pages,
+# otherwise directs to login page
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if "user" in session:
+            return f(*args, **kwargs)
+        else:
+            flash("You need to login first")
+            return redirect(url_for("login"))
+
+    return wrap
 
 
 # Index / homepage
@@ -50,6 +65,17 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes/recipes.html", recipes=recipes)
+
+
+# Reusable function for registration and login part
+def existing_user():
+    return mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+
+def password_is_valid(existing_user):
+    return check_password_hash(
+        existing_user["password"], request.form.get("password"))
 
 
 # Registration
@@ -89,24 +115,15 @@ def login():
     return render_template("user/login.html")
 
 
-def existing_user():
-    return mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-
-def password_is_valid(existing_user):
-    return check_password_hash(
-        existing_user["password"], request.form.get("password"))
-
-
 # Personal recipe page
-@app.route("/personal/<username>", methods=["GET", "POST"])
+@app.route("/user/<username>", methods=["GET", "POST"])
+@login_required
 def personal(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    recipes = list(mongo.db.recipes.find().sort("_id", -1))
 
-    if session["user"]:
+    if session.get("user"):
+        recipes = list(mongo.db.recipes.find().sort("_id", -1))
         return render_template(
             "user/personal.html", username=username, recipes=recipes)
 
@@ -115,6 +132,7 @@ def personal(username):
 
 # Log out
 @app.route("/logout")
+@login_required
 def logout():
     flash("Goodbye / Sayōnara, you have been logged out")
     session.pop("user")
@@ -123,6 +141,7 @@ def logout():
 
 # Add recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
+@login_required
 def add_recipe():
     if request.method == "POST":
         recipe_is_vegetarian = "on" if request.form.get(
@@ -155,6 +174,7 @@ def add_recipe():
 
 # Edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@login_required
 def edit_recipe(recipe_id):
 
     if request.method == "POST":
