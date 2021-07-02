@@ -1,12 +1,27 @@
-// ---------- Side nav, image sliders and character counter  ----------
-
+// ---------- Side nav, image sliders and character counter -----------
 // From materialize documentation to initialise with jQuery
+
+// --------------------- Fade for flash messages ----------------------
+
+function bindCharacterCounter (){
+  $('input#japanese_recipe_name').characterCounter();
+  $('input#english_recipe_name').characterCounter();
+  $('textarea#recipe_introduction').characterCounter();
+  $('input#recipe_ingredients').characterCounter();
+  $('input#recipe_instruction').characterCounter();
+  $('textarea#recipe_additional_notes').characterCounter();
+  $('textarea#recipe_remarks').characterCounter();
+  $('textarea#message').characterCounter();
+}
 
 $(document).ready(function () {
   $('.sidenav').sidenav();
   $('.slider').slider();
   $('.modal').modal();
-  $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additional_notes, textarea#recipe_remarks, textarea#message').characterCounter();
+  bindCharacterCounter ();
+  setTimeout(function() {
+    $('.flashes').fadeOut('slow');
+  }, 3000);
 });
 
 // ---------------------- Validation for EmailJS ----------------------
@@ -120,11 +135,3 @@ function goToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-// --------------------- Fade for flash messages ----------------------
-
-$(document).ready(function() {
-  setTimeout(function() {
-      $('.flashes').fadeOut('slow');
-  }, 3000);
-});
