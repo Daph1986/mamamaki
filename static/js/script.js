@@ -1,12 +1,27 @@
-// ---------- Side nav, image sliders and character counter  ----------
-
+// ---------- Side nav, image sliders and character counter -----------
 // From materialize documentation to initialise with jQuery
+
+// --------------------- Fade for flash messages ----------------------
+
+function bindCharacterCounter (){
+  $('input#japanese_recipe_name').characterCounter();
+  $('input#english_recipe_name').characterCounter();
+  $('textarea#recipe_introduction').characterCounter();
+  $('input#recipe_ingredients').characterCounter();
+  $('input#recipe_instruction').characterCounter();
+  $('textarea#recipe_additional_notes').characterCounter();
+  $('textarea#recipe_remarks').characterCounter();
+  $('textarea#message').characterCounter();
+}
 
 $(document).ready(function () {
   $('.sidenav').sidenav();
   $('.slider').slider();
   $('.modal').modal();
-  $('input#japanese_recipe_name, input#english_recipe_name, textarea#recipe_introduction, input#recipe_ingredients, input#recipe_instruction, textarea#recipe_additional_notes, textarea#recipe_remarks, textarea#message').characterCounter();
+  bindCharacterCounter ();
+  setTimeout(function() {
+    $('.flashes').fadeOut('slow');
+  }, 3000);
 });
 
 // ---------------------- Validation for EmailJS ----------------------
@@ -50,12 +65,11 @@ $(".add_ingredient").click(function (e) {
     <div class="input-field col s12">
     <i class="fas fa-cookie-bite prefix"></i>
     <input id="recipe_ingredients${ingredient}" name="recipe_ingredients" type="text" data-length="150" 
-      minlength="5" maxlength="150" class="validate" required>
+      minlength="2" maxlength="150" class="validate" required>
     <label for="recipe_ingredients${ingredient}">Ingredient ${ingredient}.</label>
     <a type="button" class="right btn-small btn-red-ingredient remove_ingredient"><i class="fas fa-minus"></i> Remove ingredient</a></div>`);
   }
 });
-
 
 $("main").on('click', ".remove_ingredient", function () {
   $(this).parent('div').remove();
@@ -80,7 +94,6 @@ $(".add_instruction_step").click(function (e) {
     <a type="button" class="right btn-small btn-red-ingredient remove_instruction_step"><i class="fas fa-minus"></i> Remove instruction step</a></div>`);
   }
 });
-
 
 $("main").on('click', ".remove_instruction_step", function () {
   $(this).parent('div').remove();
@@ -122,11 +135,3 @@ function goToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-// --------------------- Fade for flash messages ----------------------
-
-$(document).ready(function() {
-  setTimeout(function() {
-      $('.flashes').fadeOut('slow');
-  }, 3000);
-});

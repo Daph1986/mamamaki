@@ -43,7 +43,7 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-hourglass-start prefix"></i>
-              <input id="recipe_preparation_time" name="recipe_preparation_time" type="number" min="1" max="120"
+              <input id="recipe_preparation_time" name="recipe_preparation_time" type="number" min="1" max="180"
                 value="{{ recipe.recipe_preparation_time }}" class="validate" required>
               <label for="recipe_preparation_time">Preparation time in minutes</label>
             </div>
@@ -58,17 +58,11 @@
             </div>
           </div>
           <!-- Ingredients -->
-          <div class="row">
-            <div class="input-field col s12">
-              <a class="right btn-small btn-green-ingredient add_ingredient"><i class="fas fa-plus"></i> Add
-                ingredient</a>
-            </div>
-          </div>
           {% for ingredient in recipe.recipe_ingredients %}
           <div class="row">
             <div class="input-field col s12">
               <i class="fas fa-cookie-bite prefix"></i>
-              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="150" minlength="5"
+              <input id="recipe_ingredients" name="recipe_ingredients" type="text" data-length="150" minlength="2"
                 value="{{ ingredient }}" maxlength="150" class="validate" required>
               <label for="recipe_ingredients{{ loop.index }}">Ingredient</label>
               <a type="button" class="right btn-small btn-red-ingredient remove_ingredient">
@@ -78,6 +72,14 @@
           {% endfor %}
           <div class="row list_of_ingredients">
 
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <a class="right btn-small btn-green-ingredient add_ingredient">
+                <i class="fas fa-plus"></i> 
+                Add ingredient
+              </a>
+            </div>
           </div>
           <!-- Remarks -->
           <div class="row">
@@ -89,12 +91,6 @@
             </div>
           </div>
           <!-- Instruction -->
-          <div class="row">
-            <div class="input-field col s12">
-              <a class="right btn-small btn-green-ingredient add_instruction_step">
-                <i class="fas fa-plus"></i> Add instruction step</a>
-            </div>
-          </div>
           {% for step in recipe.recipe_instruction %}
           <div class="row">
             <div class="input-field col s12">
@@ -109,6 +105,14 @@
           {% endfor %}
           <div class="row list_of_instruction_steps">
 
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <a class="right btn-small btn-green-ingredient add_instruction_step">
+                <i class="fas fa-plus"></i> 
+                Add instruction step
+              </a>
+            </div>
           </div>
           <!-- Additional notes -->
           <div class="row">
@@ -177,7 +181,7 @@
                 class="modal-trigger btn-spacing btn-large btn-red center-align recipe-margins">
                 Cancel <i class="fas fa-times prefix"></i>
               </button>
-              <!-- Delete Recipe Modal -->
+              <!-- Edit Recipe Modal -->
               <div id="{{ recipe._id }}" class="modal">
                 <div class="modal-content">
                   <h4 class="card-header">Pay attention!</h4>

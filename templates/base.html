@@ -42,7 +42,27 @@
 					</a>
 			  </li>
 				<li><a href="{{ url_for('add_recipe') }}"><i class="fas fa-plus"></i>Add recipe</a></li>
-				<li><a href="{{ url_for('logout') }}"><i class="fas fa-user-times"></i>Log out</a></li>
+				<li>
+					<a href="#log-out-modal" class="modal-trigger"><i class="fas fa-user-times"></i>Log out</a>
+					<!-- Log out Modal -->
+					<div id="log-out-modal" class="modal">
+						<div class="modal-content center-align">
+							<h4 class="card-header">Pay attention!</h4>
+							<p>
+								Are you sure you want to log out?
+							</p>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class="modal-action modal-close btn-flat">
+								<span class="text-keep">No!</span>
+							</a>
+							<a href="{{ url_for('logout') }}"
+								class="modal-action modal-close btn-flat">
+								<span class="text-delete">Yes!</span>
+							</a>
+						</div>
+					</div>
+				</li>
 			{% else %}
 				<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
 				<li><a href="{{ url_for('login') }}"><i class="fas fa-user-lock"></i>Log in</a></li>
