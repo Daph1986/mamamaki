@@ -44,24 +44,6 @@
 				<li><a href="{{ url_for('add_recipe') }}"><i class="fas fa-plus"></i>Add recipe</a></li>
 				<li>
 					<a href="#log-out-modal" class="modal-trigger"><i class="fas fa-user-times"></i>Log out</a>
-					<!-- Log out Modal -->
-					<div id="log-out-modal" class="modal">
-						<div class="modal-content center-align">
-							<h4 class="card-header">Pay attention!</h4>
-							<p>
-								Are you sure you want to log out?
-							</p>
-						</div>
-						<div class="modal-footer">
-							<a href="#!" class="modal-action modal-close btn-flat">
-								<span class="text-keep">No!</span>
-							</a>
-							<a href="{{ url_for('logout') }}"
-								class="modal-action modal-close btn-flat">
-								<span class="text-delete">Yes!</span>
-							</a>
-						</div>
-					</div>
 				</li>
 			{% else %}
 				<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
@@ -117,6 +99,25 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Log out Modal -->
+	<div id="log-out-modal" class="modal">
+		<div class="modal-content center-align">
+			<h4 class="card-header">Pay attention!</h4>
+			<p>
+				Are you sure you want to log out?
+			</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close btn-flat">
+				<span class="text-keep">No, I'll stay!</span>
+			</a>
+			<a href="{{ url_for('logout') }}"
+				class="modal-action modal-close btn-flat">
+				<span class="text-delete">Yes, log me out!</span>
+			</a>
+		</div>
+	</div>
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
