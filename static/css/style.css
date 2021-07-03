@@ -61,12 +61,12 @@ header, main, footer {
 }
 
 .sidenav {
-  background-color: #eb6161;
+  background-color: #ea5757;
 }
 
 .sidenav li>a {
   font-family: 'Chicle', cursive;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -131,7 +131,7 @@ button:focus {
 }
 
 .btn-green {
-  background-color: #4caf50;
+  background-color: #338436;
   font-family: 'Chicle', cursive;
   font-size: 22px;
 }
@@ -182,7 +182,7 @@ button:focus {
 }
 
 .btn-green-ingredient {
-  background-color: #4caf50;
+  background-color: #338436;
   font-family: 'Chicle', cursive;
   font-size: 18px;
 }
@@ -203,8 +203,16 @@ Those don't match the design so the CSS underneath is used to overwrite it.*/
   border-bottom: 2px solid #eb6161;
 }
 
+label#checkbox {
+  color: #757575;
+}
+
 .input-field .prefix.active {
   color: #212121;
+}
+
+.input-field>label {
+  color: #757575;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]), 
