@@ -29,7 +29,7 @@
 		<ul id="slide-out" class="sidenav sidenav-fixed">
 			<li>
 				<div class="user-view">
-					<a href="{{ url_for('index') }}"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+					<a href="{{ url_for('index') }}"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" loading="lazy"></a>
 				</div>
 			</li>
 			<li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i>Home</a></li>
@@ -51,7 +51,7 @@
 			{% endif %}
 		</ul>
 		<!-- mobile navbar-->
-		<a href="#" data-target="slide-out" class="sidenav-trigger">
+		<a href="#" data-target="slide-out" class="sidenav-trigger" aria-label="Hamburger menu">
 			<i class="fas fa-bars hamburger-menu opaque-overlay hide-on-large-only"></i>
 		</a>
 	</header>
