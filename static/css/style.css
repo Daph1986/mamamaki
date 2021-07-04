@@ -30,7 +30,7 @@ header, main, footer {
   margin-bottom: 100px;
 }
 
-.flashes h4 {
+.flashes h2 {
   font-family: 'Chicle', cursive;
   color: #4478b1;
   padding-left: 300px;
@@ -470,10 +470,10 @@ div.card-panel {
   .custom-footer {
     padding-left: 0px;
   }
-  .flashes h4 {
+  .flashes h2 {
     padding-left: 0px;
   }
-  h4 {
+  h2 {
     font-size: 25px;
   }
   .input-field .prefix {
