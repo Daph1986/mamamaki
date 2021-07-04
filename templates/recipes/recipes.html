@@ -6,17 +6,16 @@
     <ul class="slides">
       <li>
         <img src="{{ url_for('static', filename='images/tonkatsu_pork.png') }}"
-          alt="Tonkatsu pork">
+          alt="Tonkatsu pork" loading="lazy">
       </li>
       <li>
-        <img src="{{ url_for('static', filename='images/yakitori_on_baking_tray.png') }}" alt="Yakitori on baking tray">
+        <img src="{{ url_for('static', filename='images/yakitori_on_baking_tray.png') }}" alt="Yakitori on baking tray" loading="lazy">
       </li>
       <li>
-        <img src="{{ url_for('static', filename='images/teriyaki_beef.png') }}" alt="Teriyaki beef">
+        <img src="{{ url_for('static', filename='images/teriyaki_beef.png') }}" alt="Teriyaki beef" loading="lazy">
       </li>
       <li>
-        <img src="{{ url_for('static', filename='images/gyoza.png') }}"
-          alt="Gyoza">
+        <img src="{{ url_for('static', filename='images/gyoza.png') }}" alt="Gyoza" loading="lazy">
       </li>
     </ul>
   </div>
@@ -69,7 +68,7 @@
         {%for recipe in recipes %}
         <div class="card">
           <div class="card-image">
-            <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}">
+            <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}" loading="lazy">
             <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
           </div>
           <div class="card-content bg-white">

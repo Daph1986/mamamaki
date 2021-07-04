@@ -16,7 +16,7 @@ function bindCharacterCounter (){
 
 $(document).ready(function () {
   $('.sidenav').sidenav();
-  $('.slider').slider();
+  $('.slider').slider({height: 500,});
   $('.modal').modal();
   bindCharacterCounter ();
   setTimeout(function() {

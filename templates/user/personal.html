@@ -25,7 +25,7 @@
         {% for recipe in recipes if session.user|lower == recipe.recipe_created_by|lower %}
         <div class="card bottom-margins">
           <div class="card-image">
-            <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}">
+            <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}" loading="lazy">
             <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
           </div>
           <div class="card-content bg-white">

@@ -88,7 +88,7 @@ header, main, footer {
 }
 
 .opaque-overlay {
-  padding-left: 6px;
+  padding-left: 7px;
   padding-top: 6px;
   height: 40px;
   width: 40px;
@@ -204,6 +204,10 @@ Those don't match the design so the CSS underneath is used to overwrite it.*/
 }
 
 label#checkbox {
+  color: #757575;
+}
+
+.switch label {
   color: #757575;
 }
 
