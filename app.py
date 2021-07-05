@@ -1,3 +1,4 @@
+# -------- Imports and configuration --------
 import os
 from flask import (
     Flask, flash, render_template,
@@ -19,6 +20,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# --------- Login required security ---------
 # Requires that a user is logged in for certain pages,
 # otherwise directs to login page
 def login_required(f):
@@ -32,33 +34,33 @@ def login_required(f):
     return wrap
 
 
-# Index / homepage
+# ------------ Index / homepage -------------
 @app.route("/")
 def index():
     return render_template("index.html")
 
 
-# About page
+# --------------- About page ----------------
 @app.route("/about")
 def about():
     return render_template("about.html")
 
 
-# Recipes page
+# -------------- Recipes page ---------------
 @app.route("/recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find().sort("_id", -1))
     return render_template("recipes/recipes.html", recipes=recipes)
 
 
-# Single recipe page
+# ----------- Single recipe page ------------
 @app.route("/recipe/<recipe_id>")
 def single_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipes/single_recipe.html", recipe=recipe)
 
 
-# Search
+# ------------------ Search -----------------
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -66,6 +68,7 @@ def search():
     return render_template("recipes/recipes.html", recipes=recipes)
 
 
+# ------ User and password validation -------
 # Reusable function for registration and login part
 def existing_user():
     return mongo.db.users.find_one(
@@ -77,7 +80,7 @@ def password_is_valid(existing_user):
         existing_user["password"], request.form.get("password"))
 
 
-# Registration
+# -------------- Registration ---------------
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -98,7 +101,7 @@ def register():
     return render_template("user/register.html")
 
 
-# Log in
+# ------------------ Log in ------------------
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -117,7 +120,7 @@ def login():
     return render_template("user/login.html")
 
 
-# Personal recipe page
+# ---------- Personal recipe page -----------
 @app.route("/user/<username>", methods=["GET", "POST"])
 @login_required
 def personal(username):
@@ -132,7 +135,7 @@ def personal(username):
     return redirect(url_for("login"))
 
 
-# Log out
+# ----------------- Log out -----------------
 @app.route("/logout")
 @login_required
 def logout():
@@ -141,6 +144,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# ------------- Display recipes -------------
 # Reusable function for displaying recipes
 def display_recipes(request):
     recipe_is_vegetarian = "on" if request.form.get(
@@ -166,7 +170,7 @@ def display_recipes(request):
         }
 
 
-# Add recipe
+# --------------- Add recipe ----------------
 @app.route("/recipe/add", methods=["GET", "POST"])
 @login_required
 def add_recipe():
@@ -178,7 +182,7 @@ def add_recipe():
     return render_template("recipes/add_recipe.html")
 
 
-# Edit recipe
+# --------------- Edit recipe ---------------
 @app.route("/recipe/update/<recipe_id>", methods=["GET", "POST"])
 @login_required
 def edit_recipe(recipe_id):
@@ -191,7 +195,7 @@ def edit_recipe(recipe_id):
     return render_template("recipes/edit_recipe.html", recipe=recipe)
 
 
-# Delete recipe
+# -------------- Delete recipe --------------
 @app.route("/recipe/delete/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -199,7 +203,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
-# Error handling
+# -------------- Error handling -------------
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('errors/404.html'), 404
