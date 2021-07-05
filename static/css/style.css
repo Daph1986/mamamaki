@@ -398,7 +398,7 @@ button.col.s12.collapsible-list.active {
   background-image: url("/static/images/background_login.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 105vh;
   min-height: 100%;
 }
 
@@ -407,20 +407,20 @@ div.card-panel {
   padding-top: 1px;
 }
 
-.margins-register {
-  margin-top: 250px;
+.margin-top-register  {
+  margin-top: 200px;
 }
 
 /* ------------------------- Error pages ------------------------- */
 
 .error {
-  height: 100vh;
-  min-height: 100%;
   background-image: url("/static/images/error.png");
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  min-height: 100%;
 }
 
 .error-text {
@@ -455,15 +455,19 @@ div.card-panel {
 }
 
 /* ----------------------- Media queries ------------------------- */
+
+@media only screen and (max-width : 1440px) {
+  .margin-top-register {
+    margin-top: 100px;
+  }
+}
+
 @media only screen and (max-width : 1023.98px) {
   header, main, footer {
     padding-left: 0;
   }
   html {
     font-size: 16px;
-  }
-  .margins-register {
-    margin-top: 100px;
   }
   .btn-green {
     font-size: 20px;
@@ -488,16 +492,12 @@ div.card-panel {
   }
 }
 
-@media only screen and (max-width : 540px) {
-  .margins-register {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}
-
 @media only screen and (max-width : 414px) {
-  .bg-register {
-    height: 110vh;
+  .margin-bottom-register {
+    margin-bottom: 75px;
+  }
+  .margin-top-register {
+    margin-top: 75px;
   }
   .btn-green {
     font-size: 18px;
@@ -551,13 +551,6 @@ div.card-panel {
   }
   .btn-blue {
     font-size: 16px;
-  }
-  .bg-register {
-    height: 126vh;
-  }
-  .margins-register {
-    margin-top: 75px;
-    margin-bottom: 85px;
   }
   .text-delete {
     font-size: 16px;
