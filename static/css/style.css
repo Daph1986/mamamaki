@@ -395,7 +395,7 @@ button.col.s12.collapsible-list.active {
 /* ---------------------- Register / Log in ---------------------- */
 
 .bg-register {
-  height: 110vh;
+  height: 100vh;
   min-height: 100%;
   background-image: url("/static/images/background_login.png");
   background-repeat: no-repeat;
@@ -514,6 +514,9 @@ div.card-panel {
   }
   .top-margin-register {
     margin-top: 125px;
+  }
+  .bg-register {
+    height: 125vh;
   }
   .card-image img {
     height: 200px;
