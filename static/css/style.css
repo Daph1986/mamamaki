@@ -199,8 +199,8 @@ button:focus {
 Those don't match the design so the CSS underneath is used to overwrite it.*/
 
 [type="checkbox"]:checked+span:not(.lever):before {
-  border-right: 2px solid #eb6161;
-  border-bottom: 2px solid #eb6161;
+  border-right: 2px solid #ea5757;
+  border-bottom: 2px solid #ea5757;
 }
 
 label#checkbox {
@@ -244,11 +244,11 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
-  background-color: #4caf50;
+  background-color: #338436;
 }
 
 .switch label input[type=checkbox]:checked+.lever {
-  background-color: #4caf4f86;
+  background-color: #3384368a;
 }
 
 .character-counter {
@@ -268,7 +268,7 @@ span.text-delete:hover {
 }
 
 .text-keep {
-  color: #4caf50;
+  color: #338436;
   font-family: 'Chicle', cursive;
   font-size: 20px;
 }
@@ -395,11 +395,11 @@ button.col.s12.collapsible-list.active {
 /* ---------------------- Register / Log in ---------------------- */
 
 .bg-register {
-  height: 100vh;
-  min-height: 100%;
   background-image: url("/static/images/background_login.png");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  min-height: 100%;
 }
 
 div.card-panel {
@@ -407,7 +407,7 @@ div.card-panel {
   padding-top: 1px;
 }
 
-.top-margin-register {
+.margins-register {
   margin-top: 250px;
 }
 
@@ -455,13 +455,15 @@ div.card-panel {
 }
 
 /* ----------------------- Media queries ------------------------- */
-
 @media only screen and (max-width : 1023.98px) {
   header, main, footer {
     padding-left: 0;
   }
   html {
     font-size: 16px;
+  }
+  .margins-register {
+    margin-top: 100px;
   }
   .btn-green {
     font-size: 20px;
@@ -487,12 +489,16 @@ div.card-panel {
 }
 
 @media only screen and (max-width : 540px) {
-  .top-margin-register {
+  .margins-register {
     margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
 @media only screen and (max-width : 414px) {
+  .bg-register {
+    height: 110vh;
+  }
   .btn-green {
     font-size: 18px;
   }
@@ -511,12 +517,6 @@ div.card-panel {
   }
   .top-margin-error {
     margin-top: 125px;
-  }
-  .top-margin-register {
-    margin-top: 125px;
-  }
-  .bg-register {
-    height: 125vh;
   }
   .card-image img {
     height: 200px;
@@ -540,7 +540,29 @@ div.card-panel {
 }
 
 @media only screen and (max-width : 360px) {
-  .top-margin-register {
+  html {
+    font-size: 13px;
+  }
+  .btn-green {
+    font-size: 16px;
+  }
+  .btn-red {
+    font-size: 16px;
+  }
+  .btn-blue {
+    font-size: 16px;
+  }
+  .bg-register {
+    height: 126vh;
+  }
+  .margins-register {
     margin-top: 75px;
+    margin-bottom: 85px;
+  }
+  .text-delete {
+    font-size: 16px;
+  }
+  .text-keep {
+    font-size: 16px;
   }
 }
