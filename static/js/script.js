@@ -1,7 +1,4 @@
-// ---------- Side nav, image sliders and character counter -----------
-// From materialize documentation to initialise with jQuery
-
-// --------------------- Fade for flash messages ----------------------
+// ------------- Function to bind character counter parts -------------
 
 function bindCharacterCounter (){
   $('input#japanese_recipe_name').characterCounter();
@@ -14,9 +11,30 @@ function bindCharacterCounter (){
   $('textarea#message').characterCounter();
 }
 
+// ---------------- Media query for image slider hight ----------------
+
+const sreenWidth = window.matchMedia('(min-width: 1025px)');
+
+function sliderHeight (){
+  if (sreenWidth.matches) { 
+  $('.slider').slider({height: 650,});
+  }
+  else { 
+    $('.slider').slider({height: 450,});
+    }
+}
+
+// -------------------------- Initialization --------------------------
+
+/*
+Initialization for side nav, image sliders, character counter in forms
+and fade out function for flashes with jQuery partially
+from materialize documentation.
+*/
+
 $(document).ready(function () {
   $('.sidenav').sidenav();
-  $('.slider').slider({height: 500,});
+  sliderHeight ();
   $('.modal').modal();
   bindCharacterCounter ();
   setTimeout(function() {
@@ -52,7 +70,7 @@ function sendMail(mailForm) {
   return false;
 }
 
-// ----------------- Adding an ingredient dynamically -----------------
+// ----------------- Dynamically adding an ingredient -----------------
 
 let ingredient = 1;
 let max_ingredients = 20;
@@ -76,7 +94,7 @@ $("main").on('click', ".remove_ingredient", function () {
   ingredient--;
 });
 
-// -------------------- Adding a step dynamically ---------------------
+// -------------------- Dynamically adding a step ---------------------
 
 let instruction_step = 1;
 let max_instruction_steps = 20;
