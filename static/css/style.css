@@ -395,7 +395,7 @@ button.col.s12.collapsible-list.active {
 /* ---------------------- Register / Log in ---------------------- */
 
 .bg-register {
-  height: 100vh;
+  height: 110vh;
   min-height: 100%;
   background-image: url("/static/images/background_login.png");
   background-repeat: no-repeat;
@@ -486,6 +486,12 @@ div.card-panel {
   }
 }
 
+@media only screen and (max-width : 540px) {
+  .top-margin-register {
+    margin-top: 100px;
+  }
+}
+
 @media only screen and (max-width : 414px) {
   .btn-green {
     font-size: 18px;
@@ -512,6 +518,10 @@ div.card-panel {
   .card-image img {
     height: 200px;
   }
+  .search-card {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
   .input-field .prefix {
     font-size: 1.5rem;
   }
@@ -523,5 +533,11 @@ div.card-panel {
   }
   .flashes {
     top: 150px;
+  }
+}
+
+@media only screen and (max-width : 360px) {
+  .top-margin-register {
+    margin-top: 75px;
   }
 }
