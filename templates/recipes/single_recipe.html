@@ -4,18 +4,26 @@
   <!-- Image slider -->
   <div class="slider">
     <ul class="slides">
+      {% if recipe.recipe_image_1 %}
       <li>
         <img src="{{ recipe.recipe_image_1 }}" alt="First image of {{ recipe.japanese_recipe_name }}" loading="lazy">
       </li>
+      {% endif %}
+      {% if recipe.recipe_image_2 %}
       <li>
         <img src="{{ recipe.recipe_image_2 }}" alt="Second image of {{ recipe.japanese_recipe_name }}" loading="lazy">
       </li>
+      {% endif %}
+      {% if recipe.recipe_image_3 %}
       <li>
         <img src="{{ recipe.recipe_image_3 }}" alt="Third image of {{ recipe.japanese_recipe_name }}" loading="lazy">
       </li>
+      {% endif %}
+      {% if recipe.recipe_image_4 %}
       <li>
         <img src="{{ recipe.recipe_image_4 }}" alt="Fourth image of {{ recipe.japanese_recipe_name }}" loading="lazy">
       </li>
+      {% endif %}
     </ul>
   </div>
 
