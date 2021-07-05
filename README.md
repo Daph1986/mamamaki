@@ -42,7 +42,7 @@ Table of Contents
 </details>
 
 **<details><summary>Testing and Bugs</summary>**
-* [**_Preface_**](#preface)
+* [**_Testing file_**](#testing-file)
 </details>
 
 **<details><summary>Deployment</summary>**
@@ -51,7 +51,6 @@ Table of Contents
 * [**_Heroku_**](#heroku)
 * [**_Setting EmailJS up_**](#setting-emailjs-up)
 </details>
-
 
 **<details><summary>Credits</summary>**
 * [**_Content_**](#content)
@@ -116,11 +115,17 @@ Eventually some items were added to the diagram and it has been simplified.
 
 **Surface**
 
-The following colors will be used:
+The following main colors will be used:
 
-<img src="static/readme images/hex_EB6161.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color"  width="25%" height="25%"> <br>
+<img src="static/readme images/hex_EA5757.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color"  width="25%" height="25%"> <br>
 
-And for a gradient background: <br>
+For the buttons and forms the following colors will be used:
+
+<img src="static/readme images/hex_1A581C.png" alt="Green btn" width="25%" height="25%"> <img src="static/readme images/hex_338436.png" alt="Green btn hover" width="25%" height="25%"> <img src="static/readme images/hex_C62828.png" alt="Red btn" width="25%" height="25%"> <br>
+<img src="static/readme images/hex_6D1B1B.png" alt="Red btn hover"  width="25%" height="25%"> <img src="static/readme images/hex_4478B1.png" alt="Blue btn" width="25%" height="25%"> <img src="static/readme images/hex_103D6D.png" alt="Blue btn hover" width="25%" height="25%"><br>
+<img src="static/readme images/hex_707070.png" alt="Form color 1"  width="25%" height="25%"> <img src="static/readme images/hex_757575.png" alt="Form color 2" width="25%" height="25%"> <br>
+
+For a gradient background: <br>
 <img src="static/readme images/hex_DE5959.png" alt="Gradient 1"  width="25%" height="25%"> <img src="static/readme images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
 
 Which results in this: <br>
@@ -222,7 +227,6 @@ Technologies
 - Jinja
 - Werkzeug
 
-
 ### Wireframes
 
 - Adobe XD
@@ -243,6 +247,8 @@ Technologies
 
 Testing and Bugs
 ======
+
+### Testing file
 
 The tests have been done on multiple devices and browsers, in the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
 For more details about testing and bugs please view this [file](testing/README.md).
@@ -291,8 +297,8 @@ git clone https://github.com/Daph1986/mamamaki.git
 In this cases the database is called `mamamaki_recipe_manager`, two collections are used:<br>
 <img src="static/readme images/db_1.png" alt="MongoDB 1" width="25%" height="25%"/> <br> 
 and they are filled out like this:<br> 
-<img src="static/readme images/db_2.png" alt="MongoDB 1" width="50%" height="50%"/> <br> 
-<img src="static/readme images/db_3.png" alt="MongoDB 1" width="50%" height="50%"/>
+<img src="static/readme images/db_2.png" alt="MongoDB 1" width="75%" height="75%"/> <br> 
+<img src="static/readme images/db_3.png" alt="MongoDB 1" width="75%" height="75%"/>
 
 11. Create an `env.py` file, type
 ```
@@ -391,7 +397,6 @@ You can click the view button to launch your app.
 <img src="static/readme images/integration.png" alt="Integration" width="50%" height="50%"/>
 8. The EmailJS service is set up and everything should work.
 
-
 Credits
 ======
 
@@ -402,7 +407,6 @@ All content has been written by me,some of the recipes I edited to my own liking
 2. [Tamago - SUSHITOTAAL.NL](https://www.sushitotaal.nl/tamago_bereiden) 
 3. [Miso soup - THE SUSHI TIMES](https://www.thesushitimes.com/recept-miso-soep-onmisbaar-japanse-keuken/) 
 4. [All the other recipes - Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
-
 
 ### Code:
 
@@ -415,6 +419,7 @@ All content has been written by me,some of the recipes I edited to my own liking
 7. [W3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) to help me make a scroll back to the top button.
 8. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
 9. [Materialize](https://materializecss.com/) as a reference work on the framework.
+10. [Python Programming](https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/) as how to use the Login_Required decorator.
 
 ### Media 
 
@@ -432,13 +437,12 @@ All content has been written by me,some of the recipes I edited to my own liking
 
 6. [Rawpixel](https://www.rawpixel.com/image/2400897/free-illustration-png-japan-japanese-culture-art-torii-gate) Japanese torii gate sticker with white border by Tvzsu was used as a background for the error pages.
 
-
 ### Other
 
 1. [creately](https://creately.com/) to create the data diagrams.
 2. [RandomKeygen](https://randomkeygen.com/) to get a value for the secret key.
 3. [cdnjs](https://cdnjs.com/) to get the fontawsome cdn from.
-4. [jQuery](https://code.jquery.com/) to get the jquery cdn from.
+4. [jQuery](https://code.jquery.com/) to get the jQuery cdn from.
 5. [Am I Responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Fdaph1986.github.io%2FPostfly-business-card-creator%2Findex.html) to check the responsiveness and make the mockups.
 
 ### Acknowledgements
@@ -451,5 +455,6 @@ All content has been written by me,some of the recipes I edited to my own liking
 ```
 {{ url_for('static', filename='images/logo.png') }}
 ```
+- Fellow slack members, Andrew Dempsey, Mike Avgeros and Pete Baker for extensive testing my project.
 
 <div align="right"><a href="#top">🔝</a></div>
