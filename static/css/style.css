@@ -207,10 +207,6 @@ label#checkbox {
   color: #757575;
 }
 
-.switch label {
-  color: #757575;
-}
-
 .input-field .prefix.active {
   color: #212121;
 }
@@ -241,6 +237,10 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 
 .input-field .prefix {
   font-size: 1.7rem;
+}
+
+.switch label {
+  color: #757575;
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
@@ -451,6 +451,7 @@ div.card-panel {
 }
 
 /* ----------------------- Media queries ------------------------- */
+
 @media only screen and (max-width : 1023.98px) {
   header, main, footer {
     padding-left: 0;
@@ -467,8 +468,8 @@ div.card-panel {
   .btn-blue {
     font-size: 20px;
   }
-  .custom-footer {
-    padding-left: 0px;
+  .input-field .prefix {
+    font-size: 1.5rem;
   }
   .flashes h4 {
     padding-left: 0px;
@@ -476,8 +477,8 @@ div.card-panel {
   h4 {
     font-size: 25px;
   }
-  .input-field .prefix {
-    font-size: 1.5rem;
+  .custom-footer {
+    padding-left: 0px;
   }
 }
 
@@ -491,18 +492,6 @@ div.card-panel {
   .btn-blue {
     font-size: 18px;
   }
-  h4 {
-    font-size: 20px;
-  }
-  .input-field .prefix {
-    font-size: 1.5rem;
-  }
-  .flashes {
-    top: 150px;
-  }
-  .no-results-text {
-    font-size: 35px;
-  }
   .btn-large i {
     font-size: 1rem;
   }
@@ -515,5 +504,20 @@ div.card-panel {
   }
   .top-margin-register {
     margin-top: 125px;
+  }
+  .card-image img {
+    height: 200px;
+  }
+  .input-field .prefix {
+    font-size: 1.5rem;
+  }
+  .no-results-text {
+    font-size: 35px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .flashes {
+    top: 150px;
   }
 }
