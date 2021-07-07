@@ -1,4 +1,4 @@
-Table of Contents
+:open_file_folder: Table of Contents
 ======
 
 **<details><summary>Manual testing</summary>**
@@ -22,11 +22,10 @@ Table of Contents
 * [**_Flash messages_**](#flash-messages)
 * [**_Logo in sidenav_**](#logo-in-sidenav)
 </details>
-<br>
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Manual testing
+:construction_worker_woman: :construction_worker_man: Manual testing
 ======
 
 <!-- The design goal is to make a clear, accessible, structured site so that visitors can easily design their own business cards. <br>
@@ -68,53 +67,48 @@ It can be concluded that all goals have been achieved. <br>
 <br>
 The project has been tested on the available DevTools for phone and tablet sizes as well as on multiple responsive sizes and it was made sure that it looks good and works well on all. It was also tested on multiple devices among others an OnePlus Nord, an iMac (Retina 5K, 27-inch, 2017), a MacBook-Air (Retina M1, 13.3-inch, 2020) and a Samsung Galaxy Tab4 (10.1-inch 2014), everything works as it should. -->
 
-<br>
-
 <div align="right"><a href="#top">🔝</a></div>
 
-HTML
+![HTML5](https://img.shields.io/badge/HTML5%20-%23E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=FFFFFF) HTML
 ======
 
-<!-- HTML code was tested with a [HTML](https://validator.w3.org/#validate_by_input) validator, all the pages were checked. <br>
+HTML code was tested with a [HTML](https://validator.w3.org/nu/?doc=http%3A%2F%2Fmamamaki.herokuapp.com%2F) validator. <br>
 <img src="../testing/testing_images/html_check.png" alt="HTML check" width="55%" height="55%"> <br>
-No errors or warnings were found. -->
-
-<br>
+No errors or warnings were found.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-CSS
+![CSS3](https://img.shields.io/badge/CSS3%20-%231572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=FFFFFF) CSS
 ======
 
-<!-- CSS code was tested with a [CSS](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) validator. <br>
-<img src="../testing/testing_images/css_check.png" alt="CSS check" width="55%" height="55%"> <br>
-Only warnings were found, but nothing that needs to be fixed or effects the code in a wrong way. -->
+CSS code was tested with a [CSS](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) validator. <br>
+<img src="../testing/testing_images/css_check_1.png" alt="CSS check" width="55%" height="55%"> <img src="../testing/testing_images/css_check_2.png" alt="CSS check" width="55%" height="55%"> <br>
 
-<br>
+Only warnings were found, but nothing that needs to be fixed or effects the code in a wrong way.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-JavaScript
+![JavaScript](https://img.shields.io/badge/JavaScript%20-%23323330.svg?&style=for-the-badge&logo=JavaScript&logoColor=F7DF1E) JavaScript
 ======
 
-<!-- JavaScript was tested with a [JavaScript](https://jshint.com/) linter. <br>
-<img src="../testing/testing_images/js_check1.png" alt="JS check 1" width="55%" height="55%">
-<img src="../testing/testing_images/js_check2.png" alt="JS check 2" width="55%" height="55%"><br>
-<img src="../testing/testing_images/js_check3.png" alt="JS check 3" width="55%" height="55%"><br>
-Only warnings were found, but nothing that needs to be fixed or effects the code in a wrong way. -->
+JavaScript was tested with a [JavaScript](https://jshint.com/) linter. <br>
+<img src="../testing/testing_images/js_check_1.png" alt="JS check 1" width="55%" height="55%">
+<img src="../testing/testing_images/js_check_2.png" alt="JS check 2" width="55%" height="55%"><br>
 
-<br>
+Only warnings were found, but nothing that needs to be fixed or effects the code in a wrong way.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Python
+![PYTHON](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) Python
 ======
 
-<br>
+Python was tested with a [PEP8](http://pep8online.com/) linter. <br>
+<img src="../testing/testing_images/python_check.png" alt="Python check" width="55%" height="55%"><br>
+No errors or warnings were found.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Lighthouse
+:traffic_light: Lighthouse
 ======
 
 <!-- All pages have passed through Lighthouse in Chrome DevTools, the results for desktop can found here: <br>
@@ -126,11 +120,9 @@ After doing the Lighthouse checks one warning became visible, namely: <br>
 This was not there in previous testing and is likely due to changes to Google's privacy policy, tutor assistance has been contacted and this warning can be ignored.
 The results of the Lighthouse tests are satisfactory, so no adjustments are needed at this time. -->
 
-<br>
-
 <div align="right"><a href="#top">🔝</a></div>
 
-GTmetrix
+:bar_chart: GTmetrix
 ====== 
 
 <!-- The site was tested with [GTmetrix](https://gtmetrix.com/). The reports can be found here:<br>  
@@ -138,11 +130,9 @@ GTmetrix
 [Sample kit form](https://gtmetrix.com/reports/daph1986.github.io/iiv3HDsB/) <br>
 [Creator page](https://gtmetrix.com/reports/daph1986.github.io/nJoX5M9e/) -->
 
-<br>
-
 <div align="right"><a href="#top">🔝</a></div>
 
-Color blindness
+:eyeglasses: Color blindness
 ======
 
 <!-- Color blindness was tested on this [site](https://www.toptal.com/designers/colorfilter/) to ensure you would still be able to read the website when you have different types of color blindness. Here you will find screenshots off the homepage tests, but of course all pages were tested. <br>
@@ -151,11 +141,9 @@ Color blindness
 <img src="../testing/testing_images/tritanopia.png" alt="Tritanopia" width="25%" height="25%"/>
 <img src="../testing/testing_images/greyscale_achromatopsia.png" alt="Greyscale / Achromatopsia" width="25%" height="25%"/> -->
 
-<br>
-
 <div align="right"><a href="#top">🔝</a></div>
 
-Other tests
+:test_tube: Other tests
 ======
 
 <!-- A lot of different people were asked to check the project to ensure it works on different systems and devices. The website was tested on Samsung Galaxy TabA (10.1-inch 2019), OnePlus 5, Xiaomi Redmi Note 7, Xiaomi Redmi Note 8 Pro, Motorola G9, Motorola G5 and iPhone 12 Pro Max among others. It has been tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. One bug was found and fixed, please see Bugs section for the found text bug.
@@ -165,11 +153,9 @@ Other tests
 1. Some spelling and grammar changes have been made after reviews from my husband, brother-in-law and sister-in-law.
 2. My husband, Django, did not think the user-friendliness was good enough, because only the logo could be used to return to the homepage. That is why on the page for requesting the sample kit and for designing the business card, 2 buttons have been added at the top to switch between the other pages. Cancel buttons have also been added to the bottom of the forms. This increases user-friendliness. -->
 
-<br>
-
 <div align="right"><a href="#top">🔝</a></div>
 
-Bugs
+:bug: Bugs
 ======
 
 #### Background
@@ -344,6 +330,5 @@ I didn't see what caused the problem and posted my question on Slack, fellow stu
 {{ url_for('static', filename='images/logo.png') }}
 ```
 for my images to prevent them from giving a 404. This solved the bug.
-<br>
 
 <div align="right"><a href="#top">🔝</a></div>
