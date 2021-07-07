@@ -88,7 +88,27 @@ The design goal is to make a clear, accessible, structured site so that visitors
 ### Scope
 
 The site shows a homepage with a small introduction. Second is the about page which tells a bit about the creator of the site and why the site was created. Furthermore, the site contains a recipes page on which you can you choose to go to a specific recipe. It also contains a register page, a log in page, a personal recipe page and a add recipe page.
-The personal recipe page and add recipe page will only be visible when you are logged in.
+The personal recipe page, add recipe page and the log out option will only be visible when you are logged in. 
+| Sidenav | Logged in User | Logged out User |
+ --- | --- | ---
+Home| &#9989; | &#9989; |
+About |&#9989; | &#9989; |
+Recipes|&#9989; | &#9989; |
+Register| &#10060; | &#9989; |
+Log in| &#10060; | &#9989; |
+Personal recipe page| &#9989; | &#10060; |
+Add recipe| &#9989; | &#10060; |
+Log out| &#9989; | &#10060; |
+
+A difference has also been made in user rights:
+| Recipe options | Standard User Account | Admin User Account |
+ --- | --- | ---
+Add own recipe| &#9989; | &#9989; |
+Edit own recipe |&#9989; | &#9989; |
+Delete own recipe |&#9989; | &#9989; |
+Edit recipes of other users| &#10060; | &#9989; |
+Delete recipes of other users| &#10060; | &#9989; |
+
 
 ### Structure
 
@@ -117,11 +137,11 @@ Eventually some items were added to the diagram and it has been simplified.
 
 **Surface**
 
-The following main colors will be used:
+The following main colors have been used:
 
 <img src="static/readme images/hex_EA5757.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color" width="25%" height="25%"> <br>
 
-For the buttons and forms the following colors will be used:
+For the buttons and forms the following colors have been used:
 
 <img src="static/readme images/hex_1A581C.png" alt="Green btn" width="25%" height="25%"> <img src="static/readme images/hex_338436.png" alt="Green btn hover" width="25%" height="25%"> <img src="static/readme images/hex_C62828.png" alt="Red btn" width="25%" height="25%"> <br>
 <img src="static/readme images/hex_6D1B1B.png" alt="Red btn hover" width="25%" height="25%"> <img src="static/readme images/hex_4478B1.png" alt="Blue btn" width="25%" height="25%"> <img src="static/readme images/hex_103D6D.png" alt="Blue btn hover" width="25%" height="25%"><br>
