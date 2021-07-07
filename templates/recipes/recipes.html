@@ -62,10 +62,10 @@
 
   <!-- Recipe cards -->
   <div class="container">
+    {% if recipes|length > 0 %}
+    {%for recipe in recipes %}
     <div class="row top-margins">
       <div class="col s12 center-align">
-        {% if recipes|length > 0 %}
-        {%for recipe in recipes %}
         <div class="card">
           <div class="card-image">
             <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}" loading="lazy">
@@ -78,7 +78,7 @@
               Recipe for {{ recipe.recipe_servings }} persons.
             </p>
           </div>
-          <div class="row bg-white bottom-margins">
+          <div class="row bg-white">
             <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"
               class="btn-spacing btn-large btn-green center-align recipe-margins">
               Go to recipe <i class="fas fa-arrow-alt-circle-right prefix"></i>
@@ -92,6 +92,7 @@
               class="modal-trigger btn-spacing btn-large btn-red center-align recipe-margins">
               Delete recipe <i class="fas fa-trash-alt prefix"></i>
             </button>
+            {% endif %}
           </div>
         </div>
         <!-- Delete Recipe Modal -->
@@ -112,14 +113,13 @@
               <span class="text-delete">Yes, delete!</span>
             </a>
           </div>
-          {% endif %}
         </div>
-        {% endfor %}
-        {% else %}
-        <h3 class="bottom-margins no-results-text center-align">No recipes were found</h3>
-        {% endif %}
       </div>
     </div>
+    {% endfor %}
+    {% else %}
+      <h3 class="bottom-margins no-results-text center-align">No recipes were found</h3>
+    {% endif %}
   </div>
 
 {% endblock %}
