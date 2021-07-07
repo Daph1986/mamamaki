@@ -28,6 +28,8 @@
 :construction_worker_woman: :construction_worker_man: Manual testing
 ======
 
+### User stories
+
 <!-- The design goal is to make a clear, accessible, structured site so that visitors can easily design their own business cards. <br>
 When landing on the page there is an explanation on how things work: <br>
 <img src="../testing/testing_images/explanation.png" alt="Explanation" width="25%" height="25%"> 
@@ -69,8 +71,9 @@ The project has been tested on the available DevTools for phone and tablet sizes
 
 <div align="right"><a href="#top">🔝</a></div>
 
-![HTML5](https://img.shields.io/badge/HTML5%20-%23E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=FFFFFF) HTML
+![HTML5](https://img.shields.io/badge/HTML5%20-%23E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=FFFFFF)
 ======
+### HTML
 
 HTML code was tested with a [HTML](https://validator.w3.org/nu/?doc=http%3A%2F%2Fmamamaki.herokuapp.com%2F) validator. <br>
 <img src="../testing/testing_images/html_check.png" alt="HTML check" width="55%" height="55%"> <br>
@@ -78,8 +81,10 @@ No errors or warnings were found.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-![CSS3](https://img.shields.io/badge/CSS3%20-%231572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=FFFFFF) CSS
+![CSS3](https://img.shields.io/badge/CSS3%20-%231572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=FFFFFF)
 ======
+
+### CSS
 
 CSS code was tested with a [CSS](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) validator. <br>
 <img src="../testing/testing_images/css_check_1.png" alt="CSS check" width="55%" height="55%"> <img src="../testing/testing_images/css_check_2.png" alt="CSS check" width="55%" height="55%"> <br>
@@ -99,8 +104,10 @@ Only warnings were found, but nothing that needs to be fixed or effects the code
 
 <div align="right"><a href="#top">🔝</a></div>
 
-![PYTHON](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) Python
+![PYTHON](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ======
+
+### Python
 
 Python was tested with a [PEP8](http://pep8online.com/) linter. <br>
 <img src="../testing/testing_images/python_check.png" alt="Python check" width="55%" height="55%"><br>
@@ -110,6 +117,8 @@ No errors or warnings were found.
 
 :traffic_light: Lighthouse
 ======
+
+### Lighthouse
 
 <!-- All pages have passed through Lighthouse in Chrome DevTools, the results for desktop can found here: <br>
 <img src="../testing/testing_images/lighthouse_desktop.png" alt="Lighthouse desktop" width="70%" height="70%"><br>
@@ -125,6 +134,8 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 :bar_chart: GTmetrix
 ====== 
 
+### GTmetrix
+
 <!-- The site was tested with [GTmetrix](https://gtmetrix.com/). The reports can be found here:<br>  
 [Homepage](https://gtmetrix.com/reports/daph1986.github.io/1OKsvoY3/) <br>
 [Sample kit form](https://gtmetrix.com/reports/daph1986.github.io/iiv3HDsB/) <br>
@@ -134,6 +145,8 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 
 :eyeglasses: Color blindness
 ======
+
+### Color blindness
 
 <!-- Color blindness was tested on this [site](https://www.toptal.com/designers/colorfilter/) to ensure you would still be able to read the website when you have different types of color blindness. Here you will find screenshots off the homepage tests, but of course all pages were tested. <br>
 <img src="../testing/testing_images/protanopia.png" alt="Protanopia" width="25%" height="25%"/>
@@ -145,6 +158,8 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 
 :test_tube: Other tests
 ======
+
+### Other tests
 
 <!-- A lot of different people were asked to check the project to ensure it works on different systems and devices. The website was tested on Samsung Galaxy TabA (10.1-inch 2019), OnePlus 5, Xiaomi Redmi Note 7, Xiaomi Redmi Note 8 Pro, Motorola G9, Motorola G5 and iPhone 12 Pro Max among others. It has been tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. One bug was found and fixed, please see Bugs section for the found text bug.
 
@@ -158,177 +173,18 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 :bug: Bugs
 ======
 
-#### Background
-For the backgrounds the following CSS was used:<br>
-Base background:
-```
-body {
-  background-color: #f1dec2;
-  background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
-  height: 1000px;
-} 
-```
-```
-@media only screen and (max-width : 414px) {
-  body {
-    height: 736px;
-  }
-  .register {
-    height: 736px;
-  }
-  .headers{
-    margin-top: 50px;
-  }
-}
-```
-Register background:
-```
-.register {
-  background-image: url(/static/images/background_login.png);
-  height: 1500px;
-	width: 100%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	display:flexbox;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-}
-```
-```
-@media only screen and (max-width : 1024px) {
-  body {
-    height: 1366px;
-  }
-  header, main, footer {
-    padding-left: 0;
-  }
-  .btn-green {
-    font-size: 14px;
-  }
-  main .fas:before {
-    font-size: 16px;
-  }
-  .register {
-    height: 1366px;
-  }
-} 
-```
-This was used because otherwise the base background would repeat and the register page background would be cut off.<br>
-<img src="../testing/testing_images/gradient_background.png" alt="Mobile nav start" width="50%" height="50%"> <br>
-<img src="../testing/testing_images/register_background.png" alt="Mobile nav start" width="50%" height="50%"> <br>
-But the fixed height with px bothered me. After some searching I found a way on stack overflow to fix it for the gradient background and figured out how to fix it for the register background myself.
-Which resulted in the following CSS:<br>
-Base background:
-```
-html {
-  min-height: 100%;
-  background-color: #f1dec2;
-  background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
-  background-repeat:no-repeat;
-  font-family: 'Ubuntu', sans-serif;
-  color: #212121;
-}
-```
-Register background:<br>
-```
-.bg-register {
-  height: 100vh;
-  min-height: 100%;
-  background-image: url("/static/images/background_login.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-```
-The media queries were no longer necessary.
-<br>
+The bugs are listed below, with a link to the issue item where they are further explained. I was able to solve all of them.
 
-<div align="right"><a href="#top">🔝</a></div>
+### Background
+[Full size background bug](https://github.com/Daph1986/mamamaki/issues/26)
 
-#### Mobile nav
-Once the background images bug was fixed, the hamburger menu icon looked like this:<br>
-<img src="../testing/testing_images/mobile_nav_start.png" alt="Mobile nav start" width="30%" height="30%"> <br>
-The following CSS code was used to get it fixed:
-```
-header {
-  position: absolute;
-  z-index: 5;
-}
-```
-Which resulted in this:<br>
-<img src="../testing/testing_images/mobile_nav_1.png" alt="Mobile nav 1" width="30%" height="30%"><br><br><img src="../testing/testing_images/mobile_nav_2.png" alt="Mobile nav 2" width="30%" height="30%"><br>
-But when the nav links were clicked, nothing happend, you stayed at the same page, the links weren't working anymore.
-After thoroughly checking the HTML code of the side nav and mobile nav, this was causing the problem:
-```
-<!-- mobile navbar-->
-<a href="#" data-target="slide-out" class="sidenav-trigger">
-  <i class="fas fa-bars hamburger-menu opaque-overlay hide-on-large-only"></i>
-</a>
-```
-To fix it the CSS of the hamburger menu was changed to:
-```
-.hamburger-menu {
-  font-size: 30px;
-  margin-top: 20px;
-  margin-left: 30px;
-  color: #fff;;
-  position: absolute;
-  z-index: 3;
-}
-```
-After that the nav links worked again.
-<br>
+### Mobile nav
+[Mobile navigation bug](https://github.com/Daph1986/mamamaki/issues/27)
 
-<div align="right"><a href="#top">🔝</a></div>
+### Flash messages
+[Flash messages bug](https://github.com/Daph1986/mamamaki/issues/28)
 
-#### Flash messages
-Once the mobile nav bug was fixed, another bug arose:<br>
-<img src="../testing/testing_images/flash_message_bug_1.png" alt="Flash message bug 1" width="30%" height="30%"><br>
-The flash message pussed the background down.
-This was tried to fix with the following css:
-```
-.flashes {
-  position: absolute;
-  z-index: 5;
-}
-```
-Which resulted in:<br>
-<img src="../testing/testing_images/flash_message_bug_2.png" alt="Flash message bug 2" width="30%" height="30%"><br>
-Of course this didn't look very nice.
-The CSS was adjusted to:
-```
-.flashes h4 {
-  font-family: 'Chicle', sans-serif;
-  color: #DF5B5B;
-  padding-left: 300px;
-}
-.flashes {
-  position: absolute;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
-  line-height: 1;
-  top: 650px;
-}
-```
-<img src="../testing/testing_images/flash_message_bug_3.png" alt="Flash message bug 3" width="30%" height="30%"><br>
-The contrast of the pink text with the white background wasn't good enough, so it was changed to a blue color #4478b1 which has no problems with the contrast and fits nicely with the design.<br>
-<img src="../testing/testing_images/flash_message_bug_4.png" alt="Flash message bug 4" width="30%" height="30%"><br>
-
-<div align="right"><a href="#top">🔝</a></div>
-
-#### Logo in sidenav
-Once the profile page was made I saw that when logged in and on the personal recipe page the logo in the sidenav disappeared and gave a 404 for the image.<br>
-<img src="../testing/testing_images/logo_logged_in_not_working.png" alt="Logo logged in not working" width="30%" height="30%"><img src="../testing/testing_images/img_404.png" alt="Logo 404" width="70%" height="70%"><br>
-It was only on this page, for example on the about page it gave no problem and as soon when you logged out it was also fine.<br>
-<img src="../testing/testing_images/logo_logged_in_working.png" alt="Logo logged in not working" width="30%" height="30%">
-<img src="../testing/testing_images/logo_logged_out_working.png" alt="Logo logged out working" width="30%" height="30%"><br>
-I didn't see what caused the problem and posted my question on Slack, fellow student Benjamin Kavanagh, looked into my code and reminded me to use also the 
-```
-{{ url_for('static', filename='images/logo.png') }}
-```
-for my images to prevent them from giving a 404. This solved the bug.
+### Logo in sidenav
+[The sidenav logo bug](https://github.com/Daph1986/mamamaki/issues/29)
 
 <div align="right"><a href="#top">🔝</a></div>
