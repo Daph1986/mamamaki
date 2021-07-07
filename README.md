@@ -5,10 +5,11 @@ MAMAMAKI
 
 <img src="static/readme images/logo.png" alt="Logo" width="55%" height="55%">
 
+:bento:<br>
 MAMAMAKI is a site for Japanese home cooking recipes and when you are logged in, you can add, edit and delete your own recipes.
 The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
 
-Demo
+Demo :calling:
 ======
 
 By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version will be visible.
@@ -18,7 +19,7 @@ By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version wil
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Table of Contents
+Table of Contents :bookmark_tabs:
 ======
 
 **<details><summary>UX</summary>**
@@ -63,7 +64,7 @@ Table of Contents
 
 <div align="right"><a href="#top">🔝</a></div>
 
-UX
+UX :construction:
 ======
 
 This is meant to be a B2C site which targets visitors who are interested in Japanese home cooking.
@@ -132,7 +133,7 @@ Which results in this: <br>
 <img src="static/readme images/gradient_backrgound.png" alt="Gradient background colors" width="25%" height="25%"> <br>
 For this [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) was used.
 
-The colors were chosen because they fit very well with Japan, reminding of Sakura blossoms. The background of the sea is a reference to a traditional Japanese painting, called “The Great Wave off Kanagawa”. <br>
+The colors were chosen because they fit very well with Japan, reminding of Sakura blossoms. The [background](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) of the sea, is a reference to a traditional Japanese painting, called “The Great Wave off Kanagawa”. <br>
 <img src="static/readme images/background_login.png" alt="Waves background" width="45%" height="45%"> <br>
 
 This was chosen because it gives a nice separation to the register and log in page from the rest of the site and I think it connects well with the recipes, because a few of them use fish as an ingredient. And fish comes from the sea.
@@ -140,42 +141,17 @@ This was chosen because it gives a nice separation to the register and log in pa
 The first set up for the wireframes was with a grey background and footer, but it was felt to be UX unappealing, that’s why this was changed to the current wireframes.
 
 During development the site's layout was restructured a little bit, because this seemed visually or otherwise better.
-What was changed is:
+They are listed below, the more extensive ones, with a link to the issue item where they are further explained.
 
-1. <br>
-On the register page the headers were outside the white block, but this gave a problem with the flash messages. They pushed the content down, the headers text becaume hard. <br>
-<img src="static/readme images/headers_with_flash_message_1.png" alt="Headers with Flash message before" width="30%" height="30%"> <br>
-
-So it was decided to put the headers in the white register block to solve this. And in the end it was decided to put the flash message in a white bar with blue text, to put it more downwards and to give it a fade out. This is better for the end user because the text disappears without the page having to be reloaded.<br>
-
-<img src="static/readme images/headers_with_flash_message_2.png" alt="Headers with Flash message after" width="30%" height="30%"> <br>
-
-2. <br>
-Originally the texts were aligned left, but in the actual design this didn't look right. Also for the footer it looked better when everything was centered.<br>
-<img src="static/readme images/text_align_left.png" alt="Text align left" width="45%" height="45%"> <br>
-So centering the text seemed better.<br>
-<img src="static/readme images/text_align_center.png" alt="Text align center" width="45%" height="45%"> <br>
-
-3. <br>
-Two call to action buttons have been added to the homepage to make it more user-friendly and to register or log in right away. A contact form has also been added, again to increase user-friendliness.
-
-4. <br>
-Scroll to the top buttons have been added on all pages, because you don't have to scroll all the way up again, this improves user-friendliness. They will appear automatically as soon as you have to scroll down.
-
-5. <br>
-On the about page the words "register page" have been linked to go directly to that page.
-
-6. <br>
-On the single recipe page, the ingredients list and the instruction list have been made collapsible to make it easier during cooking, when you have the ingredients ready, just close it and keep only the instruction list open. Because not all the recipes show the calories, it has been decided to omit that and instead put down which user has added the recipe.
-
-7. <br>
-Some additional text has been added to the personal recipe page to indicate what it displays and the white block was removed, the content is merged with the header.
-
-8. <br>
-Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
-
-9. <br>
-Initially the color of the sidenav was #df5b5b but this has been changed to #eb6161 to ensure that even when a page has a lot of content there is always a color difference between the sidenav and the background.
+1. [Headers](https://github.com/Daph1986/mamamaki/issues/22) on register and login page
+2. [Text alignment](https://github.com/Daph1986/mamamaki/issues/23)
+3. Two call to action buttons have been added to the homepage to make it more user-friendly and to register or log in right away. A contact form has also been added, again to increase user-friendliness.
+4. A scroll to the top button has been added on all pages, so you don't have to scroll all the way up again, this improves user-friendliness. They will appear automatically as soon as you have to scroll down.
+5. On the about page the words "register page" have been linked to go directly to that page.
+6. On the single recipe page, the ingredients list and the instruction list have been made collapsible to make it easier during cooking, when you have the ingredients ready, just close it and keep only the instruction list open. Because not all the recipes show the calories, it has been decided to omit that and instead put down which user has added the recipe.
+7. Some additional text has been added to the personal recipe page to indicate what it displays and the white block was removed, the content is merged with the header.
+8. Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
+9. Initially the color of the sidenav was #df5b5b but this has been changed to #ea5757 to ensure that even when a page has a lot of content there is always a color difference between the sidenav and the background.
 
 ### Fonts and icons
 
@@ -185,7 +161,7 @@ For the icons [Font Awesome](https://fontawesome.com/) was used.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Features
+Features :dizzy:
 ======
 
 The site contains the following features: 
@@ -208,7 +184,7 @@ The following items can be added:
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Technologies
+Technologies :gear:
 ======
 
 ### Languages
@@ -245,7 +221,7 @@ Technologies
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Testing and Bugs
+Testing and Bugs :ballot_box_with_check: :bug: 
 ======
 
 ### Testing file
@@ -255,7 +231,7 @@ For more details about testing and bugs please view this [file](testing/README.m
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Deployment
+Deployment :computer:
 ======
 
 ### Live version
@@ -397,16 +373,20 @@ You can click the view button to launch your app.
 <img src="static/readme images/integration.png" alt="Integration" width="50%" height="50%"/>
 8. The EmailJS service is set up and everything should work.
 
-Credits
+Credits :copyright:
 ======
 
 ### Content
-All content has been written by me,some of the recipes I edited to my own liking during cooking, but the original recipes come out of two books and two websites which are:
+All content has been written by me, but the original recipes come out of two books and two websites which are:
 
 1. [Tori to piman no itame ni - Japans Koken - Harumi Kurihara](https://www.yutori.co.jp/en/index.html) 
 2. [Tamago - SUSHITOTAAL.NL](https://www.sushitotaal.nl/tamago_bereiden) 
 3. [Miso soup - THE SUSHI TIMES](https://www.thesushitimes.com/recept-miso-soep-onmisbaar-japanse-keuken/) 
 4. [All the other recipes - Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
+
+The recipes added by users "admin" and "daphnehf" are all cooked and photographed by me.
+I have sometimes edited these recipes to my own liking while cooking, the edited versions are on the site.
+Recipes posted by other users are not pre-tested!
 
 ### Code:
 
@@ -429,7 +409,7 @@ All content has been written by me,some of the recipes I edited to my own liking
 
 2. [Adobe Stock](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) the wave image is a licensed image downloaded with a paid Adobe Stock account, the image was used for the background of the register and log in page.
 
-3. Photos of the food, all these photos are my own.
+3. Photos of the food, for recipes added by users "admin" and "daphnehf", all these photos are my own.
 
 4. [Color-hex](https://www.color-hex.com/) was used to get the images of the colors that were used.
 
@@ -444,17 +424,18 @@ All content has been written by me,some of the recipes I edited to my own liking
 3. [cdnjs](https://cdnjs.com/) to get the fontawsome cdn from.
 4. [jQuery](https://code.jquery.com/) to get the jQuery cdn from.
 5. [Am I Responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Fdaph1986.github.io%2FPostfly-business-card-creator%2Findex.html) to check the responsiveness and make the mockups.
+6. [WebAIM](https://webaim.org/resources/contrastchecker/)used for checking contrasts on the site.
 
 ### Acknowledgements
 
 - My mentor from Code Institute, thank you Narender for your time and guidance.
-- My husband, thank you Django for taking care of our son more so I can work on my education, thank you for your patience.
+- My husband, thank you Django for taking more care of our son so I can work on my education, thank you for trying my cooking skills with these recipes and thank you for your patience.
 - Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collabsable table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
 - Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the url_for also my images to prevent them from giving a 404.
 ```
 {{ url_for('static', filename='images/logo.png') }}
 ```
-- Fellow slack members, Andrew Dempsey, Mike Avgeros and Pete Baker for extensive testing my project.
+- Fellow slack members, Andrew Dempsey, Mike Avgeros and Peter Baker for extensively testing my project.
 
 <div align="right"><a href="#top">🔝</a></div>
