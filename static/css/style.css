@@ -114,6 +114,10 @@ header, main, footer {
   background-color: #fff;
 }
 
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button-bevel;
+}
+
 button:focus {
   background-color: #fff;
 }
