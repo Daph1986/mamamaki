@@ -5,11 +5,10 @@ MAMAMAKI
 
 <img src="static/readme images/logo.png" alt="Logo" width="55%" height="55%">
 
-:bento:<br>
 MAMAMAKI is a site for Japanese home cooking recipes and when you are logged in, you can add, edit and delete your own recipes.
 The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
 
-Demo :calling:
+:clapper: Demo
 ======
 
 By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version will be visible.
@@ -19,7 +18,7 @@ By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version wil
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Table of Contents :bookmark_tabs:
+:open_file_folder: Table of Contents
 ======
 
 **<details><summary>UX</summary>**
@@ -64,7 +63,7 @@ Table of Contents :bookmark_tabs:
 
 <div align="right"><a href="#top">🔝</a></div>
 
-UX :construction:
+:busts_in_silhouette: UX
 ======
 
 This is meant to be a B2C site which targets visitors who are interested in Japanese home cooking.
@@ -114,24 +113,26 @@ Raw data diagram<br>
 Eventually some items were added to the diagram and it has been simplified.
 <img src="static/readme images/updated_data_diagram.png" alt="Data Overview" width="65%" height="65%">
 
+<div align="right"><a href="#top">🔝</a></div>
+
 **Surface**
 
 The following main colors will be used:
 
-<img src="static/readme images/hex_EA5757.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color"  width="25%" height="25%"> <br>
+<img src="static/readme images/hex_EA5757.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color" width="25%" height="25%"> <br>
 
 For the buttons and forms the following colors will be used:
 
 <img src="static/readme images/hex_1A581C.png" alt="Green btn" width="25%" height="25%"> <img src="static/readme images/hex_338436.png" alt="Green btn hover" width="25%" height="25%"> <img src="static/readme images/hex_C62828.png" alt="Red btn" width="25%" height="25%"> <br>
-<img src="static/readme images/hex_6D1B1B.png" alt="Red btn hover"  width="25%" height="25%"> <img src="static/readme images/hex_4478B1.png" alt="Blue btn" width="25%" height="25%"> <img src="static/readme images/hex_103D6D.png" alt="Blue btn hover" width="25%" height="25%"><br>
-<img src="static/readme images/hex_707070.png" alt="Form color 1"  width="25%" height="25%"> <img src="static/readme images/hex_757575.png" alt="Form color 2" width="25%" height="25%"> <br>
+<img src="static/readme images/hex_6D1B1B.png" alt="Red btn hover" width="25%" height="25%"> <img src="static/readme images/hex_4478B1.png" alt="Blue btn" width="25%" height="25%"> <img src="static/readme images/hex_103D6D.png" alt="Blue btn hover" width="25%" height="25%"><br>
+<img src="static/readme images/hex_707070.png" alt="Form color 1" width="25%" height="25%"> <img src="static/readme images/hex_757575.png" alt="Form color 2" width="25%" height="25%"> <br>
 
 For a gradient background: <br>
-<img src="static/readme images/hex_DE5959.png" alt="Gradient 1"  width="25%" height="25%"> <img src="static/readme images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
+<img src="static/readme images/hex_DE5959.png" alt="Gradient 1" width="25%" height="25%"> <img src="static/readme images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
 
 Which results in this: <br>
 <img src="static/readme images/gradient_backrgound.png" alt="Gradient background colors" width="25%" height="25%"> <br>
-For this [ColorSpace](https://mycolor.space/gradient3?ori=to+right+top&hex=%23FEFFFA&hex2=%23E9E1C7&hex3=%23A0C7D7&submit=submit) was used.
+For this [CSS Gradient](https://cssgradient.io/gradient-backgrounds/) was used.
 
 The colors were chosen because they fit very well with Japan, reminding of Sakura blossoms. The [background](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) of the sea, is a reference to a traditional Japanese painting, called “The Great Wave off Kanagawa”. <br>
 <img src="static/readme images/background_login.png" alt="Waves background" width="45%" height="45%"> <br>
@@ -149,20 +150,24 @@ They are listed below, the more extensive ones, with a link to the issue item wh
 4. A scroll to the top button has been added on all pages, so you don't have to scroll all the way up again, this improves user-friendliness. They will appear automatically as soon as you have to scroll down.
 5. On the about page the words "register page" have been linked to go directly to that page.
 6. On the single recipe page, the ingredients list and the instruction list have been made collapsible to make it easier during cooking, when you have the ingredients ready, just close it and keep only the instruction list open. Because not all the recipes show the calories, it has been decided to omit that and instead put down which user has added the recipe.
-7. Some additional text has been added to the personal recipe page to indicate what it displays and the white block was removed, the content is merged with the header.
+7. Some additional text has been added to the personal recipe page to indicate what it displays, and the white block was removed, the content is merged with the header.
 8. Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
 9. Initially the color of the sidenav was #df5b5b but this has been changed to #ea5757 to ensure that even when a page has a lot of content there is always a color difference between the sidenav and the background.
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ### Fonts and icons
 
-[Google Fonts](https://fonts.google.com/) was used to embed the Chicle and Ubuntu font in the code. Chicle was chosen because this reminds of Japanse calligraphy. Ubuntu was chosen because for the main text I felt this has a better readability which gives better UX.
+[Google Fonts](https://fonts.google.com/) was used to embed the Chicle and Ubuntu font in the code. Chicle was chosen because this reminds of Japanese calligraphy. Ubuntu was chosen because for the main text I felt this has a better readability which gives better UX.
 
 For the icons [Font Awesome](https://fontawesome.com/) was used.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Features :dizzy:
+:star2: Features
 ======
+
+### Existing Features
 
 The site contains the following features: 
 
@@ -181,10 +186,11 @@ The following items can be added:
 - Being able to share a recipe on social media.
 - Being able to print out a recipe directly from the site with one click on a button. 
 - Put the ingredients on a shopping list which one can print out.
+- Share videos of the cooking techniques.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Technologies :gear:
+:gear: Technologies
 ======
 
 ### Languages
@@ -197,7 +203,7 @@ Technologies :gear:
 ### Libraries and Frameworks
 
 - Materialize 1.0.0
-- JQuery
+- jQuery
 - PyMongo
 - Flask
 - Jinja
@@ -209,11 +215,11 @@ Technologies :gear:
 
 ### Tools
 
-- Adobe Photoshop: to resize the images.
+- [Adobe Photoshop](https://www.adobe.com/products/photoshop.html): to resize the images.
 - [tinypng](https://tinypng.com/): was used to downsize the images.
-- [Cloudinary](https://cloudinary.com/): was used to store the images and get an url-link for them which are used in my recipes.
-- Adobe Illustrator: to create the logo.
-- VSCode: to write the code in.
+- [Cloudinary](https://cloudinary.com/): was used to store the images and get an URL-link for them which are used in my recipes.
+- [Adobe Illustrator](https://www.adobe.com/products/illustrator.html): to create the logo.
+- [VSCode](https://code.visualstudio.com/): to write the code in.
 - [EmailJS](https://www.emailjs.com/): for receiving the content of the contact form
 - [MongoDB Atlas](https://www.mongodb.com/): as a database for this project
 - [Heroku](https://www.heroku.com/): as a host for the deployed site
@@ -221,17 +227,17 @@ Technologies :gear:
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Testing and Bugs :ballot_box_with_check: :bug: 
+:white_check_mark: :bug: Testing and Bugs 
 ======
 
 ### Testing file
 
-The tests have been done on multiple devices and browsers, in the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
+The tests have been done on multiple devices and browsers. In the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
 For more details about testing and bugs please view this [file](testing/README.md).
 
 <div align="right"><a href="#top">🔝</a></div>
 
-Deployment :computer:
+:computer: Deployment
 ======
 
 ### Live version
@@ -248,9 +254,11 @@ By clicking that link the live demo version will be visible. <br>
 <img src="static/readme images/deployment_link_1.png" alt="Deployment link 1" width="75%" height="50%"/>
 <img src="static/readme images/deployment_link_2.png" alt="Deployment link 2" width="75%" height="50%"/>
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ### Run local
 
-If you would like to run this website locally you can clone this repository in an IDE such as VSCode. Make sure that `PIP`, `Flask`, `Python3` and `Git` are installed. Set up your account for [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), how to do that you can see [here](https://docs.atlas.mongodb.com/).
+If you would like to run this website locally you can clone this repository in an IDE such as VSCode. Make sure that `PIP3`, `Flask`, `Python3` and `Git` are installed. Set up your account for [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), how to do that you can see [here](https://docs.atlas.mongodb.com/).
 You can clone it by following the next steps: <br>
 
 1. Log in at [GitHub](https://github.com/) 
@@ -268,12 +276,12 @@ You can clone it by following the next steps: <br>
 git clone https://github.com/Daph1986/mamamaki.git
 ``` 
 
-9. Press enter and the clone will be created.
+9. Press enter, and the clone will be created.
 10. Create a new `Cluster` and a new `Database` in your MongoDB account.
-In this cases the database is called `mamamaki_recipe_manager`, two collections are used:<br>
+In this case the database is called `mamamaki_recipe_manager`, two collections are used:<br>
 <img src="static/readme images/db_1.png" alt="MongoDB 1" width="25%" height="25%"/> <br> 
 and they are filled out like this:<br> 
-<img src="static/readme images/db_2.png" alt="MongoDB 1" width="75%" height="75%"/> <br> 
+<img src="static/readme images/db_2.png" alt="MongoDB 1" width="75%" height="75%"/>
 <img src="static/readme images/db_3.png" alt="MongoDB 1" width="75%" height="75%"/>
 
 11. Create an `env.py` file, type
@@ -300,7 +308,7 @@ Choose the option in the middle<br>
 Set it to `Python` and version `3.6 or later`. Copy the code you see here:<br>
 <img src="static/readme images/mongo_db_4.png" alt="MongoDB 4" width="75%" height="50%"/> <br>
 Replace the password with your own and replace the database name for your own.
-For more information about MongoDB Atlas you can look [here](https://docs.atlas.mongodb.com/).
+For more information about MongoDB Atlas, you can look [here](https://docs.atlas.mongodb.com/).
 
 12. Create a `.gitignore` file type
 ```
@@ -326,7 +334,7 @@ To create a live version of the website VSCode was used together with Heroku.
 To deploy the website with Heroku the following steps were made:
 
 1. Create a `requirement.txt` and `Procfile` file by typing `pip3 freeze --local > requirements.txt` and then `echo web: python app.py >Procfile` in the CLI terminal.
-2. Make sure that these files are commited, added and pushed to your GitHub repository.
+2. Make sure that these files are committed, added and pushed to your GitHub repository.
 3. Log in or create an account on [Heroku](https://www.heroku.com) and create a new app by clicking the button.<br>
 <img src="static/readme images/heroku_deployment_1.png" alt="Deployment to Heroku 1" width="75%" height="50%"/>
 
@@ -353,13 +361,15 @@ For more information about your MONGO_URI in MongoDB Atlas you can look [here](h
 <br>
 
 8. Now click on `Enable Automatic Deploys` and then `Deploy Branch`
-9. This can take a little bit, when it's ready you should see somthing like this:<br>
+9. This can take a little bit, when it's ready you should see something like this:<br>
 <img src="static/readme images/heroku_deployment_5.png" alt="Deployment to Heroku 5" width="75%" height="50%"/>
 You can click the view button to launch your app.
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ### Setting EmailJS up
 
-1. Go to [EmailJS](https://www.emailjs.com/) sign in to your existing account or sign up to create an account.
+1. Go to [EmailJS](https://www.emailjs.com/) sign into your existing account or sign up to create an account.
 2. Click on Email Services and then add new service. <br>
 <img src="static/readme images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/>
 3. Save and click on Email Templates. <br>
@@ -373,7 +383,7 @@ You can click the view button to launch your app.
 <img src="static/readme images/integration.png" alt="Integration" width="50%" height="50%"/>
 8. The EmailJS service is set up and everything should work.
 
-Credits :copyright:
+:copyright: Credits
 ======
 
 ### Content
@@ -390,16 +400,18 @@ Recipes posted by other users are not pre-tested!
 
 ### Code:
 
-1. [CSS Gradient](https://cssgradient.io/gradient-backgrounds/) to create the gradient background with CSS.
-2. [Code Institute LMS Backend Development Task Manager Miniproject by Tim Nelson](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) this was used as the basis of the code and then modified to make it my own site.
+1. [Code Institute LMS Backend Development Task Manager Miniproject by Tim Nelson](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) this was used as the basis of the code and then modified to make it my own site.
+2. [CSS Gradient](https://cssgradient.io/gradient-backgrounds/) to create the gradient background with CSS.
 3. [Stack Overflow](https://stackoverflow.com/questions/16841323/making-gradient-background-fill-page-with-css/16841457) to prevent the gradient background from repeating and without having to use a fixed height value with px.
-4. [Sanwebe.com](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery) as help to let JQuery add en remove extra fields for the ingredients list and the instruction list.
+4. [Sanwebe.com](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery) as help to let jQuery add and remove extra fields for the ingredients list and the instruction list.
 5. [Stack Overflow](https://stackoverflow.com/questions/20233721/how-do-you-index-on-a-jinja-template) to help me figure out how to loop over the ingredients list and the instruction list and get them displayed.
 6. [W3schools](https://www.w3schools.com/howto/howto_js_collapsible.asp) to help me make a collapsible with HTML and JavaScript.
 7. [W3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) to help me make a scroll back to the top button.
 8. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
 9. [Materialize](https://materializecss.com/) as a reference work on the framework.
 10. [Python Programming](https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/) as how to use the Login_Required decorator.
+
+<div align="right"><a href="#top">🔝</a></div>
 
 ### Media 
 
@@ -421,21 +433,22 @@ Recipes posted by other users are not pre-tested!
 
 1. [creately](https://creately.com/) to create the data diagrams.
 2. [RandomKeygen](https://randomkeygen.com/) to get a value for the secret key.
-3. [cdnjs](https://cdnjs.com/) to get the fontawsome cdn from.
+3. [cdnjs](https://cdnjs.com/) to get the fontawesome cdn from.
 4. [jQuery](https://code.jquery.com/) to get the jQuery cdn from.
-5. [Am I Responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Fdaph1986.github.io%2FPostfly-business-card-creator%2Findex.html) to check the responsiveness and make the mockups.
-6. [WebAIM](https://webaim.org/resources/contrastchecker/)used for checking contrasts on the site.
+5. [Am I Responsive?](http://ami.responsivedesign.is/) to check the responsiveness and make the mockups.
+6. [WebAIM](https://webaim.org/resources/contrastchecker/) used for checking contrasts on the site.
 
 ### Acknowledgements
 
 - My mentor from Code Institute, thank you Narender for your time and guidance.
 - My husband, thank you Django for taking more care of our son so I can work on my education, thank you for trying my cooking skills with these recipes and thank you for your patience.
-- Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collabsable table of contents.
+- Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collapsible table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
 - Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the url_for also my images to prevent them from giving a 404.
 ```
 {{ url_for('static', filename='images/logo.png') }}
 ```
 - Fellow slack members, Andrew Dempsey, Mike Avgeros and Peter Baker for extensively testing my project.
+- Special thanks to my colleagues, friends and family for their support, tips and for testing my project.
 
 <div align="right"><a href="#top">🔝</a></div>
