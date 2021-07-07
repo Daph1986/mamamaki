@@ -21,6 +21,8 @@
 * [**_Mobile nav_**](#mobile-nav)
 * [**_Flash messages_**](#flash-messages)
 * [**_Logo in sidenav_**](#logo-in-sidenav)
+* [**_Safari button bug_**](#safari-button-bug)
+* [**_Multiple cards in one card bug_**](#multiple-cards-in-one-card-bug)
 </details>
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -30,44 +32,21 @@
 
 ### User stories
 
-<!-- The design goal is to make a clear, accessible, structured site so that visitors can easily design their own business cards. <br>
-When landing on the page there is an explanation on how things work: <br>
-<img src="../testing/testing_images/explanation.png" alt="Explanation" width="25%" height="25%"> 
-<img src="../testing/testing_images/modal.png" alt="Modal" width="25%" height="25%"> <br>
-After reading it the user can either request a sample kit or start designing. When the user clicks the sample kit button they will be taken to a form, this form needs to be filled in to get the address to send the sample kit. <br>
-<img src="../testing/testing_images/sample_form1.png" alt="Sample form 1" width="25%" height="25%">
-<img src="../testing/testing_images/sample_form2.png" alt="Sample form 3" width="25%" height="25%">
-<img src="../testing/testing_images/sample_form3.png" alt="Sample form 3" width="25%" height="25%"> <br> 
-After everything is filled out an email is sent to, in this case me, with the data needed to send the sample kit through mail. <br>
-<img src="../testing/testing_images/sample_form_emailjs_mail.png" alt="Form emailJS mail" width="40%" height="40%"> <br>
-When the user feels ready to start designing they can click the start design button, which will take them to the creator.html page. <br>
-<img src="../testing/testing_images/creator_page.png" alt="Creator page" width="25%" height="25%"> <br>
-As a visitor there were multiple steps you would like to take, in the manual tests it was checked if these were achieved.
-- Choose out of three different sizes of business cards.
-- Choose a background color. <br>
-This can be done in step 1 and 2.<br>
-<img src="../testing/testing_images/step1_2.png" alt="Step 1 & 2" width="25%" height="25%"> <br>
-- Choose the paper type.
-- Choose the quantity. <br>
-This can be done in step 3 and 4.<br>
-<img src="../testing/testing_images/step3_4.png" alt="Step 3 & 4" width="25%" height="25%"> <br>
-- Upload an own photo or logo.
-- Edit text content.
-- Download the designed card as a low-res jpeg file. <br>
-<img src="../testing/testing_images/buttons.png" alt="Buttons" width="25%" height="25%">
-<img src="../testing/testing_images/preview.png" alt="Preview" width="25%" height="25%"> <br>
-<img src="../testing/testing_images/preview_testing.jpeg" alt="Download preview" width="18%" height="18%"> <br>
-The user can click the buttons to achieve this, also the selections made with steps 1 and 2 are visible on this preview.<br>
-- Send a request for a quotation for the designed business cards.<br>
-<img src="../testing/testing_images/request_form1.png" alt="Request form 1" width="25%" height="25%">
-<img src="../testing/testing_images/request_form2.png" alt="Request form 2" width="25%" height="25%"> <br>
-<img src="../testing/testing_images/request_form3.png" alt="Request form 3" width="25%" height="25%"> <br>
-<img src="../testing/testing_images/quotation_form_emailjs_mail.png" alt="Quotation form emailJS mail" width="40%" height="40%"> <br>
-As with the sample kit form after everything is filled out the send button can be clicked and the user will be informed the request is send successfully and will be redirected to the homepage and the email with the values that are needed to make a quotation is send through EmailJS, to in this case me.
+The design goal is to make a clear, accessible, structured site so that visitors can easily read the displayed recipes, make an account and add, edit and delete their own recipes. <br>
+<!-- The visitor goals are:
+- To be able to see different recipes and search for them using keywords.
 
-It can be concluded that all goals have been achieved. <br>
-<br>
-The project has been tested on the available DevTools for phone and tablet sizes as well as on multiple responsive sizes and it was made sure that it looks good and works well on all. It was also tested on multiple devices among others an OnePlus Nord, an iMac (Retina 5K, 27-inch, 2017), a MacBook-Air (Retina M1, 13.3-inch, 2020) and a Samsung Galaxy Tab4 (10.1-inch 2014), everything works as it should. -->
+- To create an account and log in on that account.
+
+- To create, read, update and delete my own recipes.
+
+The site owners goals are:
+- To share the love for Japanese home cooking and promote it.
+- Share nice Japanese home cooking recipes.
+
+It can be concluded that all goals have been achieved. <br> -->
+
+The project has been tested on the available DevTools for phone and tablet sizes as well as on multiple responsive sizes and it was made sure that it looks good and works well on all. It was also tested on multiple devices among others an OnePlus Nord, an iMac (Retina 5K, 27-inch, 2017), a MacBook-Air (Retina M1, 13.3-inch, 2020) and a Samsung Galaxy Tab4 (10.1-inch 2014), everything works as it should.
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -75,9 +54,16 @@ The project has been tested on the available DevTools for phone and tablet sizes
 ======
 ### HTML
 
-HTML code was tested with a [HTML](https://validator.w3.org/nu/?doc=http%3A%2F%2Fmamamaki.herokuapp.com%2F) validator. <br>
-<img src="../testing/testing_images/html_check.png" alt="HTML check" width="55%" height="55%"> <br>
-No errors or warnings were found.
+The HTML code of all pages was tested with a [HTML](https://validator.w3.org/nu/?doc=http%3A%2F%2Fmamamaki.herokuapp.com%2F) validator.<br>
+<img src="../testing/testing_images/html_check_homepage.png" alt="HTML check homepage" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_about_page.png" alt="HTML check about page" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_recipes_page.png" alt="HTML check recipes page" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_personal_recipe_page.png" alt="HTML check personal recipe page" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_add_recipe_page.png" alt="HTML check add recipe page" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_update_recipe_page.png" alt="HTML check edit recipe page" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_log_in_page.png" alt="HTML check log in page" width="55%" height="55%"> <br>
+<img src="../testing/testing_images/html_check_register_page.png" alt="HTML check register page" width="55%" height="55%"> <br>
+No errors or warnings were found. 
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -86,17 +72,19 @@ No errors or warnings were found.
 
 ### CSS
 
-CSS code was tested with a [CSS](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) validator. <br>
+The CSS code was tested with a [CSS](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) validator. <br>
 <img src="../testing/testing_images/css_check_1.png" alt="CSS check" width="55%" height="55%"> <img src="../testing/testing_images/css_check_2.png" alt="CSS check" width="55%" height="55%"> <br>
 
 Only warnings were found, but nothing that needs to be fixed or effects the code in a wrong way.
 
 <div align="right"><a href="#top">🔝</a></div>
 
-![JavaScript](https://img.shields.io/badge/JavaScript%20-%23323330.svg?&style=for-the-badge&logo=JavaScript&logoColor=F7DF1E) JavaScript
+![JavaScript](https://img.shields.io/badge/JavaScript%20-%23323330.svg?&style=for-the-badge&logo=JavaScript&logoColor=F7DF1E)
 ======
 
-JavaScript was tested with a [JavaScript](https://jshint.com/) linter. <br>
+### JavaScript
+
+The JavaScript code was tested with a [JavaScript](https://jshint.com/) linter. <br>
 <img src="../testing/testing_images/js_check_1.png" alt="JS check 1" width="55%" height="55%">
 <img src="../testing/testing_images/js_check_2.png" alt="JS check 2" width="55%" height="55%"><br>
 
@@ -109,7 +97,7 @@ Only warnings were found, but nothing that needs to be fixed or effects the code
 
 ### Python
 
-Python was tested with a [PEP8](http://pep8online.com/) linter. <br>
+The Python code was tested with a [PEP8](http://pep8online.com/) linter. <br>
 <img src="../testing/testing_images/python_check.png" alt="Python check" width="55%" height="55%"><br>
 No errors or warnings were found.
 
@@ -136,10 +124,17 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 
 ### GTmetrix
 
-<!-- The site was tested with [GTmetrix](https://gtmetrix.com/). The reports can be found here:<br>  
-[Homepage](https://gtmetrix.com/reports/daph1986.github.io/1OKsvoY3/) <br>
-[Sample kit form](https://gtmetrix.com/reports/daph1986.github.io/iiv3HDsB/) <br>
-[Creator page](https://gtmetrix.com/reports/daph1986.github.io/nJoX5M9e/) -->
+The site was tested with [GTmetrix](https://gtmetrix.com/). The reports can be found here:<br>
+[Homepage](https://gtmetrix.com/reports/mamamaki.herokuapp.com/s5oaEEkc/) <br>
+[About page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/ORtp6cCU/) <br>
+[Recipes page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/jJydxJtH/) <br>
+[Single recipe page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/bZ5vU616/) <br>
+[Register page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/D9zcldQf/) <br>
+[Log in page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/w7caPZIA/) <br>
+[Personal recipe page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/ilAC1S1D/) <br>
+[Add recipe](https://gtmetrix.com/reports/mamamaki.herokuapp.com/N1BFTHGb/) <br>
+[Edit recipe](https://gtmetrix.com/reports/mamamaki.herokuapp.com/UMcBCkEe/) <br>
+
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -148,11 +143,11 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 
 ### Color blindness
 
-<!-- Color blindness was tested on this [site](https://www.toptal.com/designers/colorfilter/) to ensure you would still be able to read the website when you have different types of color blindness. Here you will find screenshots off the homepage tests, but of course all pages were tested. <br>
-<img src="../testing/testing_images/protanopia.png" alt="Protanopia" width="25%" height="25%"/>
-<img src="../testing/testing_images/deutanopia.png" alt="Deutanopia" width="25%" height="25%"/>
-<img src="../testing/testing_images/tritanopia.png" alt="Tritanopia" width="25%" height="25%"/>
-<img src="../testing/testing_images/greyscale_achromatopsia.png" alt="Greyscale / Achromatopsia" width="25%" height="25%"/> -->
+Color blindness was tested on this [site](https://www.toptal.com/designers/colorfilter/) to ensure you would still be able to read the website when you have different types of color blindness. Here you will find the links of the homepage tests, but of course all pages were tested. <br>
+[Protanopia](https://www.toptal.com/designers/colorfilter?orig_uri=http://mamamaki.herokuapp.com/&process_type=protan) <br>
+[Deutanopia](https://www.toptal.com/designers/colorfilter?orig_uri=http://mamamaki.herokuapp.com/&process_type=deutan) <br>
+[Tritanopia](https://www.toptal.com/designers/colorfilter?orig_uri=http://mamamaki.herokuapp.com/&process_type=tritan) <br>
+[Greyscale / Achromatopsia](https://www.toptal.com/designers/colorfilter?orig_uri=http://mamamaki.herokuapp.com/&process_type=grey)
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -161,9 +156,9 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 
 ### Other tests
 
-<!-- A lot of different people were asked to check the project to ensure it works on different systems and devices. The website was tested on Samsung Galaxy TabA (10.1-inch 2019), OnePlus 5, Xiaomi Redmi Note 7, Xiaomi Redmi Note 8 Pro, Motorola G9, Motorola G5 and iPhone 12 Pro Max among others. It has been tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. One bug was found and fixed, please see Bugs section for the found text bug.
+A lot of different people were asked to check the project to ensure it works on different systems and devices. The website was tested on Samsung Galaxy TabA (10.1-inch 2019), OnePlus 5, Xiaomi Redmi Note 7, Xiaomi Redmi Note 8 Pro, Motorola G9, Motorola G5 and iPhone 12 Pro Max among others. It has been tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. During the testing two bugs were found and fixed,the Safari button bug and the Multiple cards in one card bug, please see the Bugs section and matching issue link for these bugs and their fix.
 
-#### Advices given after testing which were followed
+<!-- #### Advices given after testing which were followed
 
 1. Some spelling and grammar changes have been made after reviews from my husband, brother-in-law and sister-in-law.
 2. My husband, Django, did not think the user-friendliness was good enough, because only the logo could be used to return to the homepage. That is why on the page for requesting the sample kit and for designing the business card, 2 buttons have been added at the top to switch between the other pages. Cancel buttons have also been added to the bottom of the forms. This increases user-friendliness. -->
@@ -186,5 +181,11 @@ The bugs are listed below, with a link to the issue item where they are further 
 
 ### Logo in sidenav
 [The sidenav logo bug](https://github.com/Daph1986/mamamaki/issues/29)
+
+### Safari button bug
+[Safari button bug](https://github.com/Daph1986/mamamaki/issues/30)
+
+### Multiple cards in one card bug
+[Multiple cards in one card bug](https://github.com/Daph1986/mamamaki/issues/31)
 
 <div align="right"><a href="#top">🔝</a></div>
