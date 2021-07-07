@@ -482,6 +482,9 @@ div.card-panel {
   .btn-blue {
     font-size: 20px;
   }
+  .card-bottom-margin {
+    margin-bottom: 70px;
+  }
   .input-field .prefix {
     font-size: 1.5rem;
   }

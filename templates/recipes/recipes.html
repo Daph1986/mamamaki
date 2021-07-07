@@ -63,10 +63,10 @@
   <!-- Recipe cards -->
   <div class="container">
     {% if recipes|length > 0 %}
-    {%for recipe in recipes %}
+    {% for recipe in recipes %}
     <div class="row top-margins">
       <div class="col s12 center-align">
-        <div class="card">
+        <div class="card card-bottom-margin">
           <div class="card-image">
             <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}" loading="lazy">
             <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
@@ -80,7 +80,7 @@
           </div>
           <div class="row bg-white">
             <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"
-              class="btn-spacing btn-large btn-green center-align recipe-margins">
+              class="btn-spacing btn-large btn-green center-align recipe-margins ">
               Go to recipe <i class="fas fa-arrow-alt-circle-right prefix"></i>
             </a>
             {% if session.user|lower == recipe.recipe_created_by|lower or session.user|lower == 'admin'|lower %}
@@ -89,7 +89,7 @@
               Edit recipe <i class="fas fa-edit prefix"></i>
             </a>
             <button data-target="{{ recipe._id }}" type="button"
-              class="modal-trigger btn-spacing btn-large btn-red center-align recipe-margins">
+              class="modal-trigger btn-spacing btn-large btn-red center-align">
               Delete recipe <i class="fas fa-trash-alt prefix"></i>
             </button>
             {% endif %}
