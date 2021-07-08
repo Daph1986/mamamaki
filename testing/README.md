@@ -33,18 +33,61 @@
 ### User stories
 
 The design goal is to make a clear, accessible, structured site so that visitors can easily read the displayed recipes, make an account and add, edit and delete their own recipes. <br>
-<!-- The visitor goals are:
-- To be able to see different recipes and search for them using keywords.
+To test the goals screen records of an OnePlus Nord were made.<br>
+NOTE: the grey overlay in some caption on the footer are displayed because the end of the screen was captured, when just looking on the device this is not visible. So this is just the screen records issue of the phone not a site issue!!!<br><br>
+On small devices the menu can be accesed through the hamburger menu, on large devices the sidenav is always visible. There is a difference between the menu for an user who is not logged in and an user who is logged in.<br>
+<img src="../testing/testing_images/screen_record_navigation_menu.png" alt="Navigation menu logged out user" width="40%" height="40%"> <img src="../testing/testing_images/screen_record_menu_logged_in_user.png" alt="Navigation menu logged in user" width="40%" height="40%">
 
-- To create an account and log in on that account.
+#### The visitor goals are:
+- To be able to see different recipes and search for them using keywords.<br>
+When you navigate to `recipes` you will see a search option and a list with recipe cards.<br> 
+<img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="35%" height="35%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="35%" height="35%"> <br>
+In the example underneath, the `search` keyword used is pork and the results for the search will be displayed, in this case two recipes.<br>
+<img src="../testing/testing_images/screen_record_search.png" alt="Search" width="35%" height="35%">
+<img src="../testing/testing_images/extended_screen_record_search_result.png" alt="Search result" width="35%" height="35%"> 
 
-- To create, read, update and delete my own recipes.
+- To create an account and log in on that account.<br>
+To register navigate to `Register` in the menu.<br>
+<img src="../testing/testing_images/screen_record_register_page_1.png" alt="Register 1" width="35%" height="35%">
+<img src="../testing/testing_images/screen_record_register_page_2.png" alt="Register 2" width="35%" height="35%"><br>
+Fill in an `Username` and `Password` end hit `Register`. If the is a not yet excisting user it will successfully register the account<br>
+<img src="../testing/testing_images/screen_record_successfully_registered_1.png" alt="Registered successfully 1" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_successfully_registered_2.png" alt="Registered successfully 2" width="35%" height="35%"><br>
+If the username is already used it will give an error message. When the characters used are not in range of what is required it will also give error messages, however since I used a phone with langues set to Dutch as a primary language this will be displayed in Dutch.<br>
+<img src="../testing/testing_images/screen_record_error_username.png" alt="Username unavailable" width="35%" height="35%">
+<img src="../testing/testing_images/screen_record_error_username_and_password_1.png" alt="Register error 1" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_error_username_and_password_2.png" alt="Register error 2" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_error_username_and_password_3.png" alt="Register error 3" width="35%" height="35%"><br>
+The same will aply when you navigat to `Log in` and try to log in with an excisting account. It will log you in or give an error message if the username and / or password is not correct:<br>
+<img src="../testing/testing_images/screen_record_log_in_1.png" alt="Log in 1" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_log_in_2.png" alt="Log in 2" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_log_in_with_wrong_username_and_or_password.png" alt="Log in wrong" width="35%" height="35%"><br>
+Alternatively you can navigate to `Register` and `Log in` through the `Home` page:<br>
+<img src="../testing/testing_images/screen_record_alternative_registration_option_1.png" alt="Alternative registration option 1" width="35%" height="35%"><br>
+Or navigate to `Register` through the `About` page:<br>
+<img src="../testing/testing_images/screen_record_alternative_registration_option_2.png" alt="Alternative registration option 2" width="35%" height="35%">
 
-The site owners goals are:
-- To share the love for Japanese home cooking and promote it.
-- Share nice Japanese home cooking recipes.
+- To create, read, update and delete my own recipes.<br>
+To create a recipe, make sure you are logged in, if not, navigate to `Log in` and log in to your account. If you don't have an account, navigate to `Register` and register an account. Once logged in navigate to `Add recipe`, there you can fill out the form.<br>
+<img src="../testing/testing_images/extended_screen_record_add_recipe_1.png" alt="Add recipie 1" width="35%" height="35%"><br>
+Fill out the form and hit  `Add recipe`.<br>
+<img src="../testing/testing_images/screen_record_add_recipe_2.png" alt="Add recipie 2" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_add_recipe_3.png" alt="Add recipie 3" width="35%" height="35%"><br>
+To read the recipe navigate to `Recipes` in the menu, pick a recipe and hit `Go to recipe`, there you'll see the full recipe.<br>
+<img src="../testing/testing_images/extended_screen_record_full_recipe_1.png" alt="Full recipie 1" width="35%" height="35%"> <img src="../testing/testing_images/extended_screen_record_full_recipe_2.png" alt="Full recipie 2" width="35%" height="35%"><br>
+To edit / update the recipe hit  `Edit recipe`<br>
+<img src="../testing/testing_images/screen_record_recipe_options_logged_in_user.png" alt="Recipe options" width="35%" height="35%"><br>
+and change what you want to edit in the recipe, then hit  `Save edited recipe`<br>
+<img src="../testing/testing_images/extended_screen_record_edit_recipe.png" alt="Edit recipe" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_updated_successfully.png" alt="Recipe updated successfully" width="35%" height="35%"><br>
+To delete a recipe hit `Delete recipe`, you will see a message with the question if you are sure you want to delete it.<br>
+<img src="../testing/testing_images/screen_record_delete_recipe.png" alt="Delete recipe" width="35%" height="35%"><br>
+If you are sure hit `YES,DELETE!` and the recipe will be deleted.<br>
+<img src="../testing/testing_images/screen_record_delete_recipe_success.png" alt="Recipe deleted successfully" width="35%" height="35%"><br><br>
 
-It can be concluded that all goals have been achieved. <br> -->
+#### The site owners goals are:
+
+- To share the love for Japanese home cooking and promote it.<br>
+The love for Japanese home cooking is explained on the about page, to read it navigate to `About`.
+<img src="../testing/testing_images/extended_screen_record_about_page.png" alt="About page" width="35%" height="35%">
+- Share nice Japanese home cooking recipes.<br>
+This is shown through the recipes page were all the shared recipes can be found. Navigate to `Recipes` to read them.<br>
+<img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="35%" height="35%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="35%" height="35%"> <br><br>
+
+It can be concluded that all goals have been achieved. <br>
 
 The project has been tested on the available DevTools for phone and tablet sizes as well as on multiple responsive sizes and it was made sure that it looks good and works well on all. It was also tested on multiple devices among others an OnePlus Nord, an iMac (Retina 5K, 27-inch, 2017), a MacBook-Air (Retina M1, 13.3-inch, 2020) and a Samsung Galaxy Tab4 (10.1-inch 2014), everything works as it should.
 
