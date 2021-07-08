@@ -347,6 +347,7 @@ span.text-keep:hover {
 .search-card {
   margin-left: 75px;
   margin-right: 75px;
+  margin-bottom: 75px;
 }
 
 .no-results-text {
@@ -519,8 +520,7 @@ div.card-panel {
     font-size: 1rem;
   }
   .btn-spacing {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
   }
   .top-margin-error {
     margin-top: 125px;
