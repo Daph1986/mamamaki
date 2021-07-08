@@ -110,7 +110,7 @@ def login():
         if user:
             if password_is_valid(user):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+                flash("Welcome back, {}".format(request.form.get("username")))
                 return redirect(url_for("personal", username=session["user"]))
             flash("Sorry, this Username and/or Password is incorrect")
             return redirect(url_for("login"))
