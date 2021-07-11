@@ -247,7 +247,7 @@ The following items can be added:
 
 <div align="right"><a href="#top">🔝</a></div>
 
-:white_check_mark: :bug: Testing and Bugs 
+:test_tube: :bug: Testing and Bugs 
 ======
 
 ### Testing file
@@ -462,6 +462,7 @@ Recipes posted by other users are not pre-tested!
 
 - My mentor from Code Institute, thank you Narender for your time and guidance.
 - My husband, thank you Django for taking more care of our son so I can work on my education, thank you for trying my cooking skills with these recipes and thank you for your patience.
+- Fellow student, Abi Harrison, for sharing her info about good head elements.
 - Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collapsible table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
 - Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the url_for also my images to prevent them from giving a 404.
