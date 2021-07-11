@@ -36,56 +36,65 @@ The design goal is to make a clear, accessible, structured site so that visitors
 To test the goals screen records of an OnePlus Nord were made.<br>
 NOTE: the grey overlay in some caption on the footer are displayed because the end of the screen was captured, when just looking on the device this is not visible. So this is just the screen records issue of the phone not a site issue!!!<br><br>
 On small devices the menu can be accesed through the hamburger menu, on large devices the sidenav is always visible. There is a difference between the menu for an user who is not logged in and an user who is logged in.<br>
-<img src="../testing/testing_images/screen_record_navigation_menu.png" alt="Navigation menu logged out user" width="40%" height="40%"> <img src="../testing/testing_images/screen_record_menu_logged_in_user.png" alt="Navigation menu logged in user" width="40%" height="40%">
+<img src="../testing/testing_images/screen_record_navigation_menu.png" alt="Navigation menu logged out user" width="30%" height="30%"> <img src="../testing/testing_images/screen_record_menu_logged_in_user.png" alt="Navigation menu logged in user" width="30%" height="30%">
 
 #### The visitor goals are:
 - To be able to see different recipes and search for them using keywords.<br>
 When you navigate to `recipes` you will see a search option and a list with recipe cards.<br> 
-<img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="35%" height="35%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="35%" height="35%"> <br>
+<img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="25%" height="25%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="25%" height="25%"> <br>
 In the example underneath, the `search` keyword used is pork and the results for the search will be displayed, in this case two recipes.<br>
-<img src="../testing/testing_images/screen_record_search.png" alt="Search" width="35%" height="35%">
-<img src="../testing/testing_images/extended_screen_record_search_result.png" alt="Search result" width="35%" height="35%"> 
+<img src="../testing/testing_images/screen_record_search.png" alt="Search" width="25%" height="25%">
+<img src="../testing/testing_images/extended_screen_record_search_result.png" alt="Search result" width="25%" height="25%"> 
+
+<div align="right"><a href="#top">🔝</a></div>
 
 - To create an account and log in on that account.<br>
 To register navigate to `Register` in the menu.<br>
-<img src="../testing/testing_images/screen_record_register_page_1.png" alt="Register 1" width="35%" height="35%">
-<img src="../testing/testing_images/screen_record_register_page_2.png" alt="Register 2" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_register_page_1.png" alt="Register 1" width="25%" height="25%">
+<img src="../testing/testing_images/screen_record_register_page_2.png" alt="Register 2" width="25%" height="25%"><br>
 Fill in an `Username` and `Password` end hit `Register`. If the is a not yet excisting user it will successfully register the account<br>
-<img src="../testing/testing_images/screen_record_successfully_registered_1.png" alt="Registered successfully 1" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_successfully_registered_2.png" alt="Registered successfully 2" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_successfully_registered_1.png" alt="Registered successfully 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_successfully_registered_2.png" alt="Registered successfully 2" width="25%" height="25%"><br>
 If the username is already used it will give an error message. When the characters used are not in range of what is required it will also give error messages, however since I used a phone with langues set to Dutch as a primary language this will be displayed in Dutch.<br>
-<img src="../testing/testing_images/screen_record_error_username.png" alt="Username unavailable" width="35%" height="35%">
-<img src="../testing/testing_images/screen_record_error_username_and_password_1.png" alt="Register error 1" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_error_username_and_password_2.png" alt="Register error 2" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_error_username_and_password_3.png" alt="Register error 3" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_error_username.png" alt="Username unavailable" width="25%" height="25%">
+<img src="../testing/testing_images/screen_record_error_username_and_password_1.png" alt="Register error 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_error_username_and_password_2.png" alt="Register error 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_error_username_and_password_3.png" alt="Register error 3" width="25%" height="25%"><br>
 The same will aply when you navigat to `Log in` and try to log in with an excisting account. It will log you in or give an error message if the username and / or password is not correct:<br>
-<img src="../testing/testing_images/screen_record_log_in_1.png" alt="Log in 1" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_log_in_2.png" alt="Log in 2" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_log_in_with_wrong_username_and_or_password.png" alt="Log in wrong" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_log_in_1.png" alt="Log in 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_log_in_2.png" alt="Log in 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_log_in_with_wrong_username_and_or_password.png" alt="Log in wrong" width="25%" height="25%"><br>
 Alternatively you can navigate to `Register` and `Log in` through the `Home` page:<br>
-<img src="../testing/testing_images/screen_record_alternative_registration_option_1.png" alt="Alternative registration option 1" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_alternative_registration_option_1.png" alt="Alternative registration option 1" width="25%" height="25%"><br>
 Or navigate to `Register` through the `About` page:<br>
-<img src="../testing/testing_images/screen_record_alternative_registration_option_2.png" alt="Alternative registration option 2" width="35%" height="35%">
+<img src="../testing/testing_images/screen_record_alternative_registration_option_2.png" alt="Alternative registration option 2" width="25%" height="25%">
+
+<div align="right"><a href="#top">🔝</a></div>
 
 - To create, read, update and delete my own recipes.<br>
 To create a recipe, make sure you are logged in, if not, navigate to `Log in` and log in to your account. If you don't have an account, navigate to `Register` and register an account. Once logged in navigate to `Add recipe`, there you can fill out the form.<br>
-<img src="../testing/testing_images/extended_screen_record_add_recipe_1.png" alt="Add recipie 1" width="35%" height="35%"><br>
+<img src="../testing/testing_images/extended_screen_record_add_recipe_1.png" alt="Add recipie 1" width="25%" height="25%"><br>
 Fill out the form and hit  `Add recipe`.<br>
-<img src="../testing/testing_images/screen_record_add_recipe_2.png" alt="Add recipie 2" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_add_recipe_3.png" alt="Add recipie 3" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_add_recipe_2.png" alt="Add recipie 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_add_recipe_3.png" alt="Add recipie 3" width="25%" height="25%"><br>
 To read the recipe navigate to `Recipes` in the menu, pick a recipe and hit `Go to recipe`, there you'll see the full recipe.<br>
-<img src="../testing/testing_images/extended_screen_record_full_recipe_1.png" alt="Full recipie 1" width="35%" height="35%"> <img src="../testing/testing_images/extended_screen_record_full_recipe_2.png" alt="Full recipie 2" width="35%" height="35%"><br>
+<img src="../testing/testing_images/extended_screen_record_full_recipe_1.png" alt="Full recipie 1" width="25%" height="25%"> <img src="../testing/testing_images/extended_screen_record_full_recipe_2.png" alt="Full recipie 2" width="25%" height="25%"><br>
 To edit / update the recipe hit  `Edit recipe`<br>
-<img src="../testing/testing_images/screen_record_recipe_options_logged_in_user.png" alt="Recipe options" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_recipe_options_logged_in_user.png" alt="Recipe options" width="25%" height="25%"><br>
 and change what you want to edit in the recipe, then hit  `Save edited recipe`<br>
-<img src="../testing/testing_images/extended_screen_record_edit_recipe.png" alt="Edit recipe" width="35%" height="35%"> <img src="../testing/testing_images/screen_record_updated_successfully.png" alt="Recipe updated successfully" width="35%" height="35%"><br>
+<img src="../testing/testing_images/extended_screen_record_edit_recipe.png" alt="Edit recipe" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_updated_successfully.png" alt="Recipe updated successfully" width="25%" height="25%"><br>
 To delete a recipe hit `Delete recipe`, you will see a message with the question if you are sure you want to delete it.<br>
-<img src="../testing/testing_images/screen_record_delete_recipe.png" alt="Delete recipe" width="35%" height="35%"><br>
+<img src="../testing/testing_images/screen_record_delete_recipe.png" alt="Delete recipe" width="25%" height="25%"><br>
 If you are sure hit `YES,DELETE!` and the recipe will be deleted.<br>
-<img src="../testing/testing_images/screen_record_delete_recipe_success.png" alt="Recipe deleted successfully" width="35%" height="35%"><br><br>
+<img src="../testing/testing_images/screen_record_delete_recipe_success.png" alt="Recipe deleted successfully" width="25%" height="25%"><br>
+
+<div align="right"><a href="#top">🔝</a></div>
 
 #### The site owners goals are:
 
 - To share the love for Japanese home cooking and promote it.<br>
 The love for Japanese home cooking is explained on the about page, to read it navigate to `About`.
-<img src="../testing/testing_images/extended_screen_record_about_page.png" alt="About page" width="35%" height="35%">
+<img src="../testing/testing_images/extended_screen_record_about_page.png" alt="About page" width="25%" height="25%">
+
+<div align="right"><a href="#top">🔝</a></div>
+
 - Share nice Japanese home cooking recipes.<br>
 This is shown through the recipes page were all the shared recipes can be found. Navigate to `Recipes` to read them.<br>
-<img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="35%" height="35%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="35%" height="35%"> <br><br>
+<img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="25%" height="25%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="25%" height="25%"> <br><br>
 
 It can be concluded that all goals have been achieved. <br>
 
@@ -128,8 +137,8 @@ Only warnings were found, but nothing that needs to be fixed or effects the code
 ### JavaScript
 
 The JavaScript code was tested with a [JavaScript](https://jshint.com/) linter. <br>
-<img src="../testing/testing_images/js_check_1.png" alt="JS check 1" width="55%" height="55%">
-<img src="../testing/testing_images/js_check_2.png" alt="JS check 2" width="55%" height="55%"><br>
+<img src="../testing/testing_images/js_check_1.png" alt="JS check 1" width="45%" height="45%">
+<img src="../testing/testing_images/js_check_2.png" alt="JS check 2" width="45%" height="45%"><br>
 
 Only warnings were found, but nothing that needs to be fixed or effects the code in a wrong way.
 
@@ -151,14 +160,11 @@ No errors or warnings were found.
 
 ### Lighthouse
 
-<!-- All pages have passed through Lighthouse in Chrome DevTools, the results for desktop can found here: <br>
-<img src="../testing/testing_images/lighthouse_desktop.png" alt="Lighthouse desktop" width="70%" height="70%"><br>
+All pages have passed through Lighthouse in Chrome DevTools, the results for desktop can found here: <br>
+<img src="../testing/testing_images/home_desktop.png" alt="Lighthouse desktop home" width="25%" height="25%"> <img src="../testing/testing_images/about_desktop.png" alt="Lighthouse desktop about" width="25%" height="25%"> <img src="../testing/testing_images/recipes_desktop.png" alt="Lighthouse desktop recipes" width="25%" height="25%"> <img src="../testing/testing_images/register_desktop.png" alt="Lighthouse desktop register" width="25%" height="25%"> <img src="../testing/testing_images/log_in_desktop.png" alt="Lighthouse desktop log in" width="25%" height="25%"> <img src="../testing/testing_images/personal_recipe_page_desktop.png" alt="Lighthouse desktop personal recipe page" width="25%" height="25%"> <img src="../testing/testing_images/add_recipe_desktop.png" alt="Lighthouse desktop add recipe" width="25%" height="25%"> <img src="../testing/testing_images/edit_recipe_desktop.png" alt="Lighthouse desktop edit recipe" width="25%" height="25%"><br>
 and these are the results for the mobile versions:<br>
-<img src="../testing/testing_images/lighthouse_mobile.png" alt="Lighthouse mobile" width="70%" height="70%"><br>
-After doing the Lighthouse checks one warning became visible, namely: <br>
-<img src="../testing/testing_images/warning_after_lighthouse.png" alt="Lighthouse warning" width="70%" height="70%"><br>
-This was not there in previous testing and is likely due to changes to Google's privacy policy, tutor assistance has been contacted and this warning can be ignored.
-The results of the Lighthouse tests are satisfactory, so no adjustments are needed at this time. -->
+<img src="../testing/testing_images/home_mobile.png" alt="Lighthouse mobile home" width="25%" height="25%"> <img src="../testing/testing_images/about_mobile.png" alt="Lighthouse mobile about" width="25%" height="25%"> <img src="../testing/testing_images/recipes_mobile.png" alt="Lighthouse mobile recipes" width="25%" height="25%"> <img src="../testing/testing_images/register_mobile.png" alt="Lighthouse mobile register" width="25%" height="25%"> <img src="../testing/testing_images/login_mobile.png" alt="Lighthouse mobile log in" width="25%" height="25%"> <img src="../testing/testing_images/personal_recipe_page_mobile.png" alt="Lighthouse mobile personal recipe page" width="25%" height="25%"> <img src="../testing/testing_images/add_recipe_mobile.png" alt="Lighthouse mobile add recipe" width="25%" height="25%"> <img src="../testing/testing_images/edit_recipe_mobile.png" alt="Lighthouse mobile edit recipe" width="25%" height="25%"><br>
+The results of the Lighthouse tests are satisfactory, so no adjustments are needed at this time. But in the future a way to increase the performance on some pages would be something to do in an update.
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -199,7 +205,10 @@ Color blindness was tested on this [site](https://www.toptal.com/designers/color
 
 ### Other tests
 
-A lot of different people were asked to check the project to ensure it works on different systems and devices. The website was tested on Samsung Galaxy TabA (10.1-inch 2019), OnePlus 5, Xiaomi Redmi Note 7, Xiaomi Redmi Note 8 Pro, Motorola G9, Motorola G5 and iPhone 12 Pro Max among others. It has been tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. During the testing two bugs were found and fixed,the Safari button bug and the Multiple cards in one card bug, please see the Bugs section and matching issue link for these bugs and their fix.
+A lot of different people were asked to check the project to ensure it works on different systems and devices. The website was tested on Samsung Galaxy TabA (10.1-inch 2019), OnePlus 5, Xiaomi Redmi Note 7, Xiaomi Redmi Note 8 Pro, Motorola G9, Motorola G5 and iPhone 12 Pro Max among others. It has been tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. During the testing two bugs were found and fixed, the Safari button bug and the Multiple cards in one card bug, please see the Bugs section and matching issue link for these bugs and their fix.
+<br>
+The contact form of the home page has also been tested on Google Chrome, Safari, Microsoft Edge and Mozilla Firefox, this works as it should.<br>
+<img src="../testing/testing_images/emailjs_test.png" alt="EmaiJS test" width="55%" height="55%">
 
 <!-- #### Advices given after testing which were followed
 
