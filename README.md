@@ -3,7 +3,7 @@ MAMAMAKI
 
 **[Code Institute](https://codeinstitute.net/)  Milestone Project 3: Python and Data Centric Development**
 
-<img src="static/readme images/logo.png" alt="Logo" width="55%" height="55%">
+<img src="static/readme_images/logo.png" alt="Logo" width="55%" height="55%">
 
 MAMAMAKI is a site for Japanese home cooking recipes and when you are logged in, you can add, edit and delete your own recipes.
 The focus with this site is to combine knowledge about Japanese home cooking with what was learned this far about HTML, CSS, JavaScript and Python. The site’s goal is to share recipes.
@@ -13,8 +13,8 @@ The focus with this site is to combine knowledge about Japanese home cooking wit
 
 By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version will be visible.
 
-<img src="static/readme images/mockup_1.png" alt="Mockup 1" width="65%" height="65%">
-<img src="static/readme images/mockup_2.png" alt="Mockup 2" width="65%" height="65%">
+<img src="static/readme_images/mockup_1.png" alt="Mockup 1" width="65%" height="65%">
+<img src="static/readme_images/mockup_2.png" alt="Mockup 2" width="65%" height="65%">
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -117,21 +117,21 @@ The site will be structured as clear as possible, it should be easy to see what 
 ### Skeleton
 
 Desktop wireframes <br>
-<img src="static/readme images/desktop_all_pages.png" alt="Desktop overview" width="85%" height="85%">
+<img src="static/readme_images/desktop_all_pages.png" alt="Desktop overview" width="85%" height="85%">
 
 Tablet wireframes <br>
 
-<img src="static/readme images/tablet_all_pages.png" alt="Tablet overview" width="85%" height="85%">
+<img src="static/readme_images/tablet_all_pages.png" alt="Tablet overview" width="85%" height="85%">
 
 Mobile wireframes<br>
 
-<img src="static/readme images/mobile_all_pages.png" alt="Mobile Overview" width="85%" height="85%">
+<img src="static/readme_images/mobile_all_pages.png" alt="Mobile Overview" width="85%" height="85%">
 
 Raw data diagram<br>
 
-<img src="static/readme images/raw_data_diagram.png" alt="Data Overview" width="65%" height="65%"><br>
+<img src="static/readme_images/raw_data_diagram.png" alt="Data Overview" width="65%" height="65%"><br>
 Eventually some items were added to the diagram and it has been simplified.
-<img src="static/readme images/updated_data_diagram.png" alt="Data Overview" width="65%" height="65%">
+<img src="static/readme_images/updated_data_diagram.png" alt="Data Overview" width="65%" height="65%">
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -139,23 +139,23 @@ Eventually some items were added to the diagram and it has been simplified.
 
 The following main colors have been used:
 
-<img src="static/readme images/hex_EA5757.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme images/hex_212121.png" alt="Text color" width="25%" height="25%"> <br>
+<img src="static/readme_images/hex_EA5757.png" alt="Side menu color" width="25%" height="25%"> <img src="static/readme_images/hex_FFFFFF.png" alt="Side menu text color" width="25%" height="25%"> <img src="static/readme_images/hex_212121.png" alt="Text color" width="25%" height="25%"> <br>
 
 For the buttons and forms the following colors have been used:
 
-<img src="static/readme images/hex_1A581C.png" alt="Green btn" width="25%" height="25%"> <img src="static/readme images/hex_338436.png" alt="Green btn hover" width="25%" height="25%"> <img src="static/readme images/hex_C62828.png" alt="Red btn" width="25%" height="25%"> <br>
-<img src="static/readme images/hex_6D1B1B.png" alt="Red btn hover" width="25%" height="25%"> <img src="static/readme images/hex_4478B1.png" alt="Blue btn" width="25%" height="25%"> <img src="static/readme images/hex_103D6D.png" alt="Blue btn hover" width="25%" height="25%"><br>
-<img src="static/readme images/hex_707070.png" alt="Form color 1" width="25%" height="25%"> <img src="static/readme images/hex_757575.png" alt="Form color 2" width="25%" height="25%"> <br>
+<img src="static/readme_images/hex_1A581C.png" alt="Green btn" width="25%" height="25%"> <img src="static/readme_images/hex_338436.png" alt="Green btn hover" width="25%" height="25%"> <img src="static/readme_images/hex_C62828.png" alt="Red btn" width="25%" height="25%"> <br>
+<img src="static/readme_images/hex_6D1B1B.png" alt="Red btn hover" width="25%" height="25%"> <img src="static/readme_images/hex_4478B1.png" alt="Blue btn" width="25%" height="25%"> <img src="static/readme_images/hex_103D6D.png" alt="Blue btn hover" width="25%" height="25%"><br>
+<img src="static/readme_images/hex_707070.png" alt="Form color 1" width="25%" height="25%"> <img src="static/readme_images/hex_757575.png" alt="Form color 2" width="25%" height="25%"> <br>
 
 For a gradient background: <br>
-<img src="static/readme images/hex_DE5959.png" alt="Gradient 1" width="25%" height="25%"> <img src="static/readme images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
+<img src="static/readme_images/hex_DE5959.png" alt="Gradient 1" width="25%" height="25%"> <img src="static/readme_images/hex_EFAA9C.png" alt="Gradient 2"  width="25%" height="25%"> <img src="static/readme_images/hex_F3BEA2.png" alt="Gradient 3"  width="25%" height="25%"><img src="static/readme_images/hex_F1DEC2.png" alt="Gradient 4"  width="25%" height="25%"> <br>
 
 Which results in this: <br>
-<img src="static/readme images/gradient_backrgound.png" alt="Gradient background colors" width="25%" height="25%"> <br>
+<img src="static/readme_images/gradient_backrgound.png" alt="Gradient background colors" width="25%" height="25%"> <br>
 For this [CSS Gradient](https://cssgradient.io/gradient-backgrounds/) was used.
 
 The colors were chosen because they fit very well with Japan, reminding of Sakura blossoms. The [background](https://stock.adobe.com/nl/images/wave-tides-in-ukiyo-e-style/229859488) of the sea, is a reference to a traditional Japanese painting, called “The Great Wave off Kanagawa”. <br>
-<img src="static/readme images/background_login.png" alt="Waves background" width="45%" height="45%"> <br>
+<img src="static/readme_images/background_login.png" alt="Waves background" width="45%" height="45%"> <br>
 
 This was chosen because it gives a nice separation to the register and log in page from the rest of the site and I think it connects well with the recipes, because a few of them use fish as an ingredient. And fish comes from the sea.
 
@@ -271,8 +271,8 @@ To view the deployed version, the steps underneath can be followed:
 5. Click on the link on the right side or on the link under "Demo".
 By clicking that link the live demo version will be visible. <br>
 
-<img src="static/readme images/deployment_link_1.png" alt="Deployment link 1" width="75%" height="50%"/>
-<img src="static/readme images/deployment_link_2.png" alt="Deployment link 2" width="75%" height="50%"/>
+<img src="static/readme_images/deployment_link_1.png" alt="Deployment link 1" width="75%" height="50%"/>
+<img src="static/readme_images/deployment_link_2.png" alt="Deployment link 2" width="75%" height="50%"/>
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -286,7 +286,7 @@ You can clone it by following the next steps: <br>
 3. Select repositories.
 4. Select the mamamaki repository.
 5. Click on the "Code" button. <br>
-<img src="static/readme images/run_local_1.png" alt="Run local 1" width="75%" height="50%"/> <br>
+<img src="static/readme_images/run_local_1.png" alt="Run local 1" width="75%" height="50%"/> <br>
 
 6. Copy the URL.
 7. Open VScode or your preferred IDE, open the file or folder in which you want to use the project and open a CLI terminal.
@@ -299,10 +299,10 @@ git clone https://github.com/Daph1986/mamamaki.git
 9. Press enter, and the clone will be created.
 10. Create a new `Cluster` and a new `Database` in your MongoDB account.
 In this case the database is called `mamamaki_recipe_manager`, two collections are used:<br>
-<img src="static/readme images/db_1.png" alt="MongoDB 1" width="25%" height="25%"/> <br> 
+<img src="static/readme_images/db_1.png" alt="MongoDB 1" width="25%" height="25%"/> <br> 
 and they are filled out like this:<br> 
-<img src="static/readme images/db_2.png" alt="MongoDB 1" width="75%" height="75%"/>
-<img src="static/readme images/db_3.png" alt="MongoDB 1" width="75%" height="75%"/>
+<img src="static/readme_images/db_2.png" alt="MongoDB 1" width="75%" height="75%"/>
+<img src="static/readme_images/db_3.png" alt="MongoDB 1" width="75%" height="75%"/>
 
 11. Create an `env.py` file, type
 ```
@@ -320,13 +320,13 @@ os.environ.setdefault("MONGO_DBNAME", "value")
 ```
 For `IP` you can use `0.0.0.0`, for `PORT` you can use `5000` for `SECRET_KEY` you can make up your own password or use [RandomKeygen](https://randomkeygen.com/) to generate a password. The `MONGO_URI` and `MONGO_DBNAME` values you can find in your MongoDB account.
 Your `MONGO_DBNAME` is here:<br>
-<img src="static/readme images/mongo_db_1.png" alt="MongoDB 1" width="75%" height="50%"/> <br>
+<img src="static/readme_images/mongo_db_1.png" alt="MongoDB 1" width="75%" height="50%"/> <br>
 The `MONGO_URI` you'll find when you click `Clusters` and then `Connect`.
-<img src="static/readme images/mongo_db_2.png" alt="MongoDB 2" width="75%" height="50%"/> <br>
+<img src="static/readme_images/mongo_db_2.png" alt="MongoDB 2" width="75%" height="50%"/> <br>
 Choose the option in the middle<br>
-<img src="static/readme images/mongo_db_3.png" alt="MongoDB 3" width="75%" height="50%"/> <br>
+<img src="static/readme_images/mongo_db_3.png" alt="MongoDB 3" width="75%" height="50%"/> <br>
 Set it to `Python` and version `3.6 or later`. Copy the code you see here:<br>
-<img src="static/readme images/mongo_db_4.png" alt="MongoDB 4" width="75%" height="50%"/> <br>
+<img src="static/readme_images/mongo_db_4.png" alt="MongoDB 4" width="75%" height="50%"/> <br>
 Replace the password with your own and replace the database name for your own.
 For more information about MongoDB Atlas, you can look [here](https://docs.atlas.mongodb.com/).
 
@@ -356,16 +356,16 @@ To deploy the website with Heroku the following steps were made:
 1. Create a `requirement.txt` and `Procfile` file by typing `pip3 freeze --local > requirements.txt` and then `echo web: python app.py >Procfile` in the CLI terminal.
 2. Make sure that these files are committed, added and pushed to your GitHub repository.
 3. Log in or create an account on [Heroku](https://www.heroku.com) and create a new app by clicking the button.<br>
-<img src="static/readme images/heroku_deployment_1.png" alt="Deployment to Heroku 1" width="75%" height="50%"/>
+<img src="static/readme_images/heroku_deployment_1.png" alt="Deployment to Heroku 1" width="75%" height="50%"/>
 
 4. Give the app a name in all lowercase letters and set `Choose a region` to Europe, click on create app.<br>
-<img src="static/readme images/heroku_deployment_2.png" alt="Deployment to Heroku 2" width="75%" height="50%"/>
+<img src="static/readme_images/heroku_deployment_2.png" alt="Deployment to Heroku 2" width="75%" height="50%"/>
 
 5. On you app dashboard click deploy and select GitHub, connect it to your GitHub respository. Don't click `Enable Automatic Deploys` yet. <br>
-<img src="static/readme images/heroku_deployment_3.png" alt="Deployment to Heroku 3" width="75%" height="50%"/>
+<img src="static/readme_images/heroku_deployment_3.png" alt="Deployment to Heroku 3" width="75%" height="50%"/>
 
 6. Click on Settings and then Reveal Config Vars. <br>
-<img src="static/readme images/heroku_deployment_4.png" alt="Deployment to Heroku 4" width="75%" height="50%"/>
+<img src="static/readme_images/heroku_deployment_4.png" alt="Deployment to Heroku 4" width="75%" height="50%"/>
 
 7. Fill in the vars with your own username, password, database name and secretkey which you have in your `env.py` file: <br>
 
@@ -382,7 +382,7 @@ For more information about your MONGO_URI in MongoDB Atlas you can look [here](h
 
 8. Now click on `Enable Automatic Deploys` and then `Deploy Branch`
 9. This can take a little bit, when it's ready you should see something like this:<br>
-<img src="static/readme images/heroku_deployment_5.png" alt="Deployment to Heroku 5" width="75%" height="50%"/>
+<img src="static/readme_images/heroku_deployment_5.png" alt="Deployment to Heroku 5" width="75%" height="50%"/>
 You can click the view button to launch your app.
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -391,16 +391,16 @@ You can click the view button to launch your app.
 
 1. Go to [EmailJS](https://www.emailjs.com/) sign into your existing account or sign up to create an account.
 2. Click on Email Services and then add new service. <br>
-<img src="static/readme images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/>
+<img src="static/readme_images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/>
 3. Save and click on Email Templates. <br>
-<img src="static/readme images/emailjs_2.png" alt="EmailJS new template" width="50%" height="50%"/>
+<img src="static/readme_images/emailjs_2.png" alt="EmailJS new template" width="50%" height="50%"/>
 4. Make a template and give it the id names of `send contact mail` to ensure they work with the function in this code. <br>
-<img src="static/readme images/emailjs_3.png" alt="Template settings" width="50%" height="50%"/>
+<img src="static/readme_images/emailjs_3.png" alt="Template settings" width="50%" height="50%"/>
 5. Copy the service id as shown at step 2.<br>
 6. Replace the id in the code for your own id. <br>
-<img src="static/readme images/scriptjs.png" alt="JS file" width="50%" height="50%"/>
+<img src="static/readme_images/scriptjs.png" alt="JS file" width="50%" height="50%"/>
 7. Go to Integration and copy the user id and replace your id for the id in the JavaScript file.<br>
-<img src="static/readme images/integration.png" alt="Integration" width="50%" height="50%"/>
+<img src="static/readme_images/integration.png" alt="Integration" width="50%" height="50%"/>
 8. The EmailJS service is set up and everything should work.
 
 :copyright: Credits
