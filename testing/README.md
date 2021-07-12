@@ -25,17 +25,15 @@
 * [**_Multiple cards in one card bug_**](#multiple-cards-in-one-card-bug)
 </details>
 
-<div align="right"><a href="#top">🔝</a></div>
-
 :construction_worker_woman: :construction_worker_man: Manual testing
 ======
 
 ### User stories
 
 The design goal is to make a clear, accessible, structured site so that visitors can easily read the displayed recipes, make an account and add, edit and delete their own recipes. <br>
-To test the goals screen records of an OnePlus Nord were made.<br>
-NOTE: the grey overlay in some caption on the footer are displayed because the end of the screen was captured, when just looking on the device this is not visible. So this is just the screen records issue of the phone not a site issue!!!<br><br>
-On small devices the menu can be accesed through the hamburger menu, on large devices the sidenav is always visible. There is a difference between the menu for an user who is not logged in and an user who is logged in.<br>
+To test the goals screen records of a OnePlus Nord were made.<br>
+NOTE: the grey overlay in some captions on the footer are displayed because the end of the screen was captured, when just looking on the device this is not visible. So, this is just the screen records issue of the phone not a site issue!!!<br><br>
+On small devices the menu can be accessed through the hamburger menu, on large devices the sidenav is always visible. There is a difference between the menu for a user who is not logged in and a user who is logged in.<br>
 <img src="../testing/testing_images/screen_record_navigation_menu.png" alt="Navigation menu logged out user" width="30%" height="30%"> <img src="../testing/testing_images/screen_record_menu_logged_in_user.png" alt="Navigation menu logged in user" width="30%" height="30%">
 
 #### The visitor goals are:
@@ -52,12 +50,12 @@ In the example underneath, the `search` keyword used is pork and the results for
 To register navigate to `Register` in the menu.<br>
 <img src="../testing/testing_images/screen_record_register_page_1.png" alt="Register 1" width="25%" height="25%">
 <img src="../testing/testing_images/screen_record_register_page_2.png" alt="Register 2" width="25%" height="25%"><br>
-Fill in an `Username` and `Password` end hit `Register`. If the is a not yet excisting user it will successfully register the account<br>
+Fill in a `Username` and `Password` and hit `Register`. If the is a not yet existing user, it will successfully register the account.<br>
 <img src="../testing/testing_images/screen_record_successfully_registered_1.png" alt="Registered successfully 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_successfully_registered_2.png" alt="Registered successfully 2" width="25%" height="25%"><br>
-If the username is already used it will give an error message. When the characters used are not in range of what is required it will also give error messages, however since I used a phone with langues set to Dutch as a primary language this will be displayed in Dutch.<br>
+If the username is already used it will give an error message. When the characters used are not in range of what is required it will also give error messages, however since I used a phone with language set to Dutch as a primary language this will be displayed in Dutch.<br>
 <img src="../testing/testing_images/screen_record_error_username.png" alt="Username unavailable" width="25%" height="25%">
 <img src="../testing/testing_images/screen_record_error_username_and_password_1.png" alt="Register error 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_error_username_and_password_2.png" alt="Register error 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_error_username_and_password_3.png" alt="Register error 3" width="25%" height="25%"><br>
-The same will aply when you navigat to `Log in` and try to log in with an excisting account. It will log you in or give an error message if the username and / or password is not correct:<br>
+The same will apply when you navigate to `Log in` and try to log in with an  existing account. It will log you in or give an error message if the username and / or password is not correct:<br>
 <img src="../testing/testing_images/screen_record_log_in_1.png" alt="Log in 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_log_in_2.png" alt="Log in 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_log_in_with_wrong_username_and_or_password.png" alt="Log in wrong" width="25%" height="25%"><br>
 Alternatively you can navigate to `Register` and `Log in` through the `Home` page:<br>
 <img src="../testing/testing_images/screen_record_alternative_registration_option_1.png" alt="Alternative registration option 1" width="25%" height="25%"><br>
@@ -79,7 +77,7 @@ and change what you want to edit in the recipe, then hit  `Save edited recipe`<b
 <img src="../testing/testing_images/extended_screen_record_edit_recipe.png" alt="Edit recipe" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_updated_successfully.png" alt="Recipe updated successfully" width="25%" height="25%"><br>
 To delete a recipe hit `Delete recipe`, you will see a message with the question if you are sure you want to delete it.<br>
 <img src="../testing/testing_images/screen_record_delete_recipe.png" alt="Delete recipe" width="25%" height="25%"><br>
-If you are sure hit `YES,DELETE!` and the recipe will be deleted.<br>
+If you are sure hit `YES, DELETE!` and the recipe will be deleted.<br>
 <img src="../testing/testing_images/screen_record_delete_recipe_success.png" alt="Recipe deleted successfully" width="25%" height="25%"><br>
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -98,7 +96,7 @@ This is shown through the recipes page were all the shared recipes can be found.
 
 It can be concluded that all goals have been achieved. <br>
 
-The project has been tested on the available DevTools for phone and tablet sizes as well as on multiple responsive sizes and it was made sure that it looks good and works well on all. It was also tested on multiple devices among others an OnePlus Nord, an iMac (Retina 5K, 27-inch, 2017), a MacBook-Air (Retina M1, 13.3-inch, 2020) and a Samsung Galaxy Tab4 (10.1-inch 2014), everything works as it should.
+The project has been tested on the available DevTools for phone and tablet sizes as well as on multiple responsive sizes and it was made sure that it looks good and works well on all. It was also tested on multiple devices among others a OnePlus Nord, an iMac (Retina 5K, 27-inch, 2017), a MacBook-Air (Retina M1, 13.3-inch, 2020) and a Samsung Galaxy Tab4 (10.1-inch 2014), everything works as it should.
 
 <div align="right"><a href="#top">🔝</a></div>
 
