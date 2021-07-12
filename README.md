@@ -168,10 +168,10 @@ They are listed below, the more extensive ones, with a link to the issue item wh
 2. [Text alignment](https://github.com/Daph1986/mamamaki/issues/23)
 3. Two call to action buttons have been added to the homepage to make it more user-friendly and to register or log in right away. A contact form has also been added, again to increase user-friendliness.
 4. A scroll to the top button has been added on all pages, so you don't have to scroll all the way up again, this improves user-friendliness. They will appear automatically as soon as you have to scroll down.
-5. On the about page the words "register page" have been linked to go directly to that page.
+5. On the about page the words `register page` have been linked to go directly to that page.
 6. On the single recipe page, the ingredients list and the instruction list have been made collapsible to make it easier during cooking, when you have the ingredients ready, just close it and keep only the instruction list open. Because not all the recipes show the calories, it has been decided to omit that and instead put down which user has added the recipe.
 7. Some additional text has been added to the personal recipe page to indicate what it displays, and the white block was removed, the content is merged with the header.
-8. Some extra fields have been added to the add recipe page, namely "remarks", "additional notes" and a switch for if it's a vegetarian recipe.
+8. Some extra fields have been added to the add recipe page, namely `remarks`, `additional notes` and a switch for if it's a `vegetarian` recipe.
 9. Initially the color of the sidenav was #df5b5b but this has been changed to #ea5757 to ensure that even when a page has a lot of content there is always a color difference between the sidenav and the background.
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -231,7 +231,7 @@ The following items can be added:
 
 ### Wireframes
 
-- Adobe XD
+- [Adobe XD](https://www.adobe.com/products/xd.html)
 
 ### Tools
 
@@ -268,7 +268,7 @@ To view the deployed version, the steps underneath can be followed:
 2. Find Daph1986's [page](https://github.com/Daph1986)
 3. Select repositories.
 4. Select the mamamaki repository.
-5. Click on the link on the right side or on the link under "Demo".
+5. Click on the link on the right side or on the link under `Demo`.
 By clicking that link the live demo version will be visible. <br>
 
 <img src="static/readme_images/deployment_link_1.png" alt="Deployment link 1" width="75%" height="50%"/>
@@ -284,8 +284,8 @@ You can clone it by following the next steps: <br>
 1. Log in at [GitHub](https://github.com/) 
 2. Find Daph1986's [page](https://github.com/Daph1986)
 3. Select repositories.
-4. Select the mamamaki repository.
-5. Click on the "Code" button. <br>
+4. Select the `mamamaki` repository.
+5. Click on the `Code` button. <br>
 <img src="static/readme_images/run_local_1.png" alt="Run local 1" width="75%" height="50%"/> <br>
 
 6. Copy the URL.
@@ -361,10 +361,10 @@ To deploy the website with Heroku the following steps were made:
 4. Give the app a name in all lowercase letters and set `Choose a region` to Europe, click on create app.<br>
 <img src="static/readme_images/heroku_deployment_2.png" alt="Deployment to Heroku 2" width="75%" height="50%"/>
 
-5. On you app dashboard click deploy and select GitHub, connect it to your GitHub respository. Don't click `Enable Automatic Deploys` yet. <br>
+5. On your app dashboard click deploy and select `GitHub`, connect it to your GitHub respository. Don't click `Enable Automatic Deploys` yet. <br>
 <img src="static/readme_images/heroku_deployment_3.png" alt="Deployment to Heroku 3" width="75%" height="50%"/>
 
-6. Click on Settings and then Reveal Config Vars. <br>
+6. Click on `Settings` and then `Reveal Config Vars`. <br>
 <img src="static/readme_images/heroku_deployment_4.png" alt="Deployment to Heroku 4" width="75%" height="50%"/>
 
 7. Fill in the vars with your own username, password, database name and secretkey which you have in your `env.py` file: <br>
@@ -390,18 +390,20 @@ You can click the view button to launch your app.
 ### Setting EmailJS up
 
 1. Go to [EmailJS](https://www.emailjs.com/) sign into your existing account or sign up to create an account.
-2. Click on Email Services and then add new service. <br>
+2. Click on `Email Services` and then `Add New Service`. <br>
 <img src="static/readme_images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/>
-3. Save and click on Email Templates. <br>
+3. Save and click on `Email Templates`. <br>
 <img src="static/readme_images/emailjs_2.png" alt="EmailJS new template" width="50%" height="50%"/>
 4. Make a template and give it the id names of `send contact mail` to ensure they work with the function in this code. <br>
 <img src="static/readme_images/emailjs_3.png" alt="Template settings" width="50%" height="50%"/>
 5. Copy the service id as shown at step 2.<br>
 6. Replace the id in the code for your own id. <br>
 <img src="static/readme_images/scriptjs.png" alt="JS file" width="50%" height="50%"/>
-7. Go to Integration and copy the user id and replace your id for the id in the JavaScript file.<br>
+7. Go to `Integration` and copy the user id and replace your id for the id in the JavaScript file.<br>
 <img src="static/readme_images/integration.png" alt="Integration" width="50%" height="50%"/>
 8. The EmailJS service is set up and everything should work.
+
+<div align="right"><a href="#top">🔝</a></div>
 
 :copyright: Credits
 ======
@@ -414,7 +416,7 @@ All content has been written by me, but the original recipes come out of two boo
 3. [Miso soup - THE SUSHI TIMES](https://www.thesushitimes.com/recept-miso-soep-onmisbaar-japanse-keuken/) 
 4. [All the other recipes - Culinair genieten - Japans](https://www.lantaarnpublishers.nl/winkel/koken/japans/) 
 
-The recipes added by users "admin" and "daphnehf" are all cooked and photographed by me.
+The recipes added by users `admin` and `daphnehf` are all cooked and photographed by me.
 I have sometimes edited these recipes to my own liking while cooking, the edited versions are on the site.
 Recipes posted by other users are not pre-tested!
 
@@ -465,11 +467,11 @@ Recipes posted by other users are not pre-tested!
 - Fellow student, Abi Harrison, for sharing her info about good head elements.
 - Fellow student, Sean McMahon, in who's Readme file I saw the idea to make a collapsible table of contents.
 - Fellow student, Kotaro Tanaka, in who's Readme file I saw the idea to make it possible to go back of the top of a page.
-- Fellow student, Benjamin Kavanagh (BenKav_lead), for looking into my code and remind me to use also the url_for also my images to prevent them from giving a 404.
+- Fellow student, Benjamin Kavanagh, for looking into my code and remind me to use also the url_for also my images to prevent them from giving a 404.
 ```
 {{ url_for('static', filename='images/logo.png') }}
 ```
-- Fellow slack members, Andrew Dempsey, Mike Avgeros and Peter Baker for extensively testing my project.
+- Fellow students / slack members, Andrew Dempsey, Mike Avgeros and Peter Baker for extensively testing my project.
 - Special thanks to my colleagues, friends and family for their support, tips and for testing my project.
 
 <div align="right"><a href="#top">🔝</a></div>
