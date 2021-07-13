@@ -18,7 +18,9 @@ html {
   scroll-behavior: smooth;
 }
 
-header, main, footer {
+header, 
+main, 
+footer {
   padding-left: 300px;
 }
 
@@ -114,7 +116,10 @@ header, main, footer {
   background-color: #fff;
 }
 
-button, html [type="button"], [type="reset"], [type="submit"] {
+button, 
+html [type="button"], 
+[type="reset"], 
+[type="submit"] {
   -webkit-appearance: button-bevel;
 }
 
@@ -129,6 +134,15 @@ button:focus {
   margin-left: 10px;
   margin-right: 10px;
 }
+.btn-large {
+  font-size: 22px;
+  font-family: 'Chicle', cursive;
+}
+
+.btn-small {
+  font-size: 18px;
+  font-family: 'Chicle', cursive;
+}
 
 .btn-large i {
   font-size: 1.3rem;
@@ -136,20 +150,14 @@ button:focus {
 
 .btn-green {
   background-color: #338436;
-  font-family: 'Chicle', cursive;
-  font-size: 22px;
 }
 
 .btn-blue {
   background-color: #4478b1;
-  font-family: 'Chicle', cursive;
-  font-size: 22px;
 }
 
 .btn-red {
   background-color: #c62828;
-  font-family: 'Chicle', cursive;
-  font-size: 22px;
 }
 
 .btn-large:hover,
@@ -175,7 +183,7 @@ button:focus {
   background-color: #6d1b1b;
 }
 
-.btn-search{
+.btn-search {
   display: table;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -188,13 +196,11 @@ button:focus {
 .btn-green-ingredient {
   background-color: #338436;
   font-family: 'Chicle', cursive;
-  font-size: 18px;
 }
 
 .btn-red-ingredient {
   background-color: #c62828;
   font-family: 'Chicle', cursive;
-  font-size: 18px;
 }
 
 /* ---------------------------- Forms ---------------------------- */
@@ -207,7 +213,7 @@ Those don't match the design so the CSS underneath is used to overwrite it.*/
   border-bottom: 2px solid #ea5757;
 }
 
-label#checkbox {
+.no-robot-checkbox {
   color: #757575;
 }
 
@@ -409,7 +415,7 @@ button.col.s12.collapsible-list.active {
 }
 
 div.card-panel {
-  padding-bottom: 0px;
+  padding-bottom: 0;
   padding-top: 1px;
 }
 
@@ -469,19 +475,17 @@ div.card-panel {
 }
 
 @media only screen and (max-width : 1023.98px) {
-  header, main, footer {
+  header, 
+  main, 
+  footer,
+  .flashes h4,
+  .custom-footer {
     padding-left: 0;
   }
   html {
     font-size: 16px;
   }
-  .btn-green {
-    font-size: 20px;
-  }
-  .btn-red {
-    font-size: 20px;
-  }
-  .btn-blue {
+  .btn-large {
     font-size: 20px;
   }
   .card-bottom-margin {
@@ -490,31 +494,17 @@ div.card-panel {
   .input-field .prefix {
     font-size: 1.5rem;
   }
-  .flashes h4 {
-    padding-left: 0px;
-  }
   h4 {
     font-size: 25px;
-  }
-  .custom-footer {
-    padding-left: 0px;
   }
 }
 
 @media only screen and (max-width : 414px) {
-  .margin-bottom-register {
+  .margin-bottom-register,
+  .margin-top-register {
     margin-bottom: 75px;
   }
-  .margin-top-register {
-    margin-top: 75px;
-  }
-  .btn-green {
-    font-size: 18px;
-  }
-  .btn-red {
-    font-size: 18px;
-  }
-  .btn-blue {
+  .btn-large {
     font-size: 18px;
   }
   .btn-large i {
@@ -551,19 +541,12 @@ div.card-panel {
   html {
     font-size: 13px;
   }
-  .btn-green {
+  .btn-large,
+  .btn-small {
     font-size: 16px;
   }
-  .btn-red {
-    font-size: 16px;
-  }
-  .btn-blue {
-    font-size: 16px;
-  }
-  .text-delete {
-    font-size: 16px;
-  }
-  .text-keep {
+  .text-delete,
+  .text-keep  {
     font-size: 16px;
   }
 }
