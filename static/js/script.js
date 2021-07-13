@@ -59,6 +59,7 @@ function sendMail(mailForm) {
     .then(
       function (response) {
         M.toast({ html: 'Thank you, your message has been sent successfully!', displayLength: '3000', response });
+        $("#btnSubmit"). attr("disabled", true); 
         window.setTimeout(function () {
           location.reload();
         }, 4000);
@@ -67,6 +68,7 @@ function sendMail(mailForm) {
         M.toast({ html: 'Sorry, something went wrong :-(', displayLength: '3000', error});
       }
     );
+    
   return false;
 }
 
