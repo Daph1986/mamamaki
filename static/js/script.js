@@ -51,6 +51,7 @@ document.onload = function () {
 // ---------------------------- Mail form -----------------------------
 
 function sendMail(mailForm) {
+  $("#btnSubmit"). attr("disabled", true); 
   emailjs.send("service_re41zx8", "send contact mail", {
     "from_name": mailForm.name.value,
     "from_email": mailForm.email.value,
@@ -59,7 +60,6 @@ function sendMail(mailForm) {
     .then(
       function (response) {
         M.toast({ html: 'Thank you, your message has been sent successfully!', displayLength: '3000', response });
-        $("#btnSubmit"). attr("disabled", true); 
         window.setTimeout(function () {
           location.reload();
         }, 4000);
