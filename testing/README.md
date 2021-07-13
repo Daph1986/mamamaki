@@ -40,6 +40,7 @@ On small devices the menu can be accessed through the hamburger menu, on large d
 - To be able to see different recipes and search for them using keywords.<br>
 When you navigate to `recipes` you will see a search option and a list with recipe cards.<br> 
 <img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="25%" height="25%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="25%" height="25%"> <br>
+
 In the example underneath, the `search` keyword used is pork and the results for the search will be displayed, in this case two recipes.<br>
 <img src="../testing/testing_images/screen_record_search.png" alt="Search" width="25%" height="25%">
 <img src="../testing/testing_images/extended_screen_record_search_result.png" alt="Search result" width="25%" height="25%"> 
@@ -48,18 +49,27 @@ In the example underneath, the `search` keyword used is pork and the results for
 
 - To create an account and log in on that account.<br>
 To register navigate to `Register` in the menu.<br>
+
 <img src="../testing/testing_images/screen_record_register_page_1.png" alt="Register 1" width="25%" height="25%">
 <img src="../testing/testing_images/screen_record_register_page_2.png" alt="Register 2" width="25%" height="25%"><br>
-Fill in a `Username` and `Password` and hit `Register`. If the is a not yet existing user, it will successfully register the account.<br>
+
+Fill in a username and password and hit `Register`. If the is a not yet existing user, it will successfully register the account.<br>
+
 <img src="../testing/testing_images/screen_record_successfully_registered_1.png" alt="Registered successfully 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_successfully_registered_2.png" alt="Registered successfully 2" width="25%" height="25%"><br>
 If the username is already used it will give an error message. When the characters used are not in range of what is required it will also give error messages, however since I used a phone with language set to Dutch as a primary language this will be displayed in Dutch.<br>
 <img src="../testing/testing_images/screen_record_error_username.png" alt="Username unavailable" width="25%" height="25%">
 <img src="../testing/testing_images/screen_record_error_username_and_password_1.png" alt="Register error 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_error_username_and_password_2.png" alt="Register error 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_error_username_and_password_3.png" alt="Register error 3" width="25%" height="25%"><br>
+
 The same will apply when you navigate to `Log in` and try to log in with an  existing account. It will log you in or give an error message if the username and / or password is not correct:<br>
+
 <img src="../testing/testing_images/screen_record_log_in_1.png" alt="Log in 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_log_in_2.png" alt="Log in 2" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_log_in_with_wrong_username_and_or_password.png" alt="Log in wrong" width="25%" height="25%"><br>
-Alternatively you can navigate to `Register` and `Log in` through the `Home` page:<br>
+
+Alternatively you can navigate to `Register` and `Log in` through the `Home ` page:<br>
+
 <img src="../testing/testing_images/screen_record_alternative_registration_option_1.png" alt="Alternative registration option 1" width="25%" height="25%"><br>
+
 Or navigate to `Register` through the `About` page:<br>
+
 <img src="../testing/testing_images/screen_record_alternative_registration_option_2.png" alt="Alternative registration option 2" width="25%" height="25%">
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -113,7 +123,7 @@ The HTML code of all pages was tested with a [HTML](https://validator.w3.org/nu/
 <img src="../testing/testing_images/html_check_update_recipe_page.png" alt="HTML check edit recipe page" width="55%" height="55%"> <br>
 <img src="../testing/testing_images/html_check_log_in_page.png" alt="HTML check log in page" width="55%" height="55%"> <br>
 <img src="../testing/testing_images/html_check_register_page.png" alt="HTML check register page" width="55%" height="55%"> <br>
-No errors or warnings were found. 
+No errors or warnings were found.
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -172,15 +182,15 @@ The results of the Lighthouse tests are satisfactory, so no adjustments are need
 ### GTmetrix
 
 The site was tested with [GTmetrix](https://gtmetrix.com/). The reports can be found here:<br>
-[Homepage](https://gtmetrix.com/reports/mamamaki.herokuapp.com/s5oaEEkc/) <br>
-[About page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/ORtp6cCU/) <br>
-[Recipes page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/jJydxJtH/) <br>
-[Single recipe page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/bZ5vU616/) <br>
-[Register page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/D9zcldQf/) <br>
-[Log in page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/w7caPZIA/) <br>
-[Personal recipe page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/ilAC1S1D/) <br>
-[Add recipe](https://gtmetrix.com/reports/mamamaki.herokuapp.com/N1BFTHGb/) <br>
-[Edit recipe](https://gtmetrix.com/reports/mamamaki.herokuapp.com/UMcBCkEe/) <br>
+[Homepage](https://gtmetrix.com/reports/mamamaki.herokuapp.com/DtF79YmN/) <br>
+[About page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/ehQW2KTp/) <br>
+[Recipes page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/Aok6T3gH/) <br>
+[Single recipe page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/FMvG3INv/) <br>
+[Register page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/nxjFnBeX/) <br>
+[Log in page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/NfTTBCfW/) <br>
+[Personal recipe page](https://gtmetrix.com/reports/mamamaki.herokuapp.com/f0CLM9rG/) <br>
+[Add recipe](https://gtmetrix.com/reports/mamamaki.herokuapp.com/OZgPHOwf/) <br>
+[Edit recipe](https://gtmetrix.com/reports/mamamaki.herokuapp.com/hL6hdl9W/) <br>
 
 
 <div align="right"><a href="#top">🔝</a></div>
