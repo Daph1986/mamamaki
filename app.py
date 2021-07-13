@@ -112,8 +112,10 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome back, {}".format(request.form.get("username")))
                 return redirect(url_for("personal", username=session["user"]))
+
             flash("Sorry, this Username and/or Password is incorrect")
             return redirect(url_for("login"))
+
         flash("Sorry, this Username and/or Password is incorrect")
         return redirect(url_for("login"))
 
@@ -197,6 +199,7 @@ def edit_recipe(recipe_id):
 
 # -------------- Delete recipe --------------
 @app.route("/recipe/delete/<recipe_id>")
+@login_required
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Your recipe is deleted successfully")
@@ -217,4 +220,4 @@ def server_error(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
