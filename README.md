@@ -57,7 +57,6 @@ By clicking this [link](https://mamamaki.herokuapp.com/) a live demo version wil
 * [**_Acknowledgements_**](#acknowledgements)
 </details>
 <br>
-
 <div align="right"><a href="#top">🔝</a></div>
 
 :busts_in_silhouette: UX
@@ -113,7 +112,6 @@ The site will be structured as clear as possible, it should be easy to see what 
 ### Skeleton
 
 The skeleton section is a bit more extensive for that reason please view this separate [file](skeleton/README.md).
-
 <div align="right"><a href="#top">🔝</a></div>
 
 ### Fonts and icons
@@ -121,7 +119,6 @@ The skeleton section is a bit more extensive for that reason please view this se
 [Google Fonts](https://fonts.google.com/) was used to embed the Chicle and Ubuntu font in the code. Chicle was chosen because this reminds of Japanese calligraphy. Ubuntu was chosen because for the main text I felt this has a better readability which gives better UX.
 
 For the icons [Font Awesome](https://fontawesome.com/) was used.
-
 <div align="right"><a href="#top">🔝</a></div>
 
 :star2: Features
@@ -147,7 +144,6 @@ The following items can be added:
 - Being able to print out a recipe directly from the site with one click on a button. 
 - Put the ingredients on a shopping list which one can print out.
 - Share videos of the cooking techniques.
-
 <div align="right"><a href="#top">🔝</a></div>
 
 :gear: Technologies
@@ -184,7 +180,6 @@ The following items can be added:
 - [MongoDB Atlas](https://www.mongodb.com/): as a database for this project
 - [Heroku](https://www.heroku.com/): as a host for the deployed site
 - [GitHub](https://github.com/): for the repository
-
 <div align="right"><a href="#top">🔝</a></div>
 
 :test_tube: :bug: Testing and Bugs 
@@ -194,7 +189,6 @@ The following items can be added:
 
 The tests have been done on multiple devices and browsers. In the end everything works as intended. Because this topic contained more content than expected, a separate page was created.
 For more details about testing and bugs please view this [file](testing/README.md).
-
 <div align="right"><a href="#top">🔝</a></div>
 
 :computer: Deployment
@@ -203,7 +197,6 @@ For more details about testing and bugs please view this [file](testing/README.m
 ### Deployment
 
 The deployment section is a bit more extensive for that reason please view this separate [file](deployment/README.md).
-
 <div align="right"><a href="#top">🔝</a></div>
 
 :copyright: Credits
@@ -233,7 +226,6 @@ Recipes posted by other users are not pre-tested!
 8. [Autoprefixer CSS](https://autoprefixer.github.io/) to optimize the use of vendor extensions in the CSS code.
 9. [Materialize](https://materializecss.com/) as a reference work on the framework.
 10. [Python Programming](https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/) as how to use the Login_Required decorator.
-
 <div align="right"><a href="#top">🔝</a></div>
 
 ### Media 
@@ -274,5 +266,4 @@ Recipes posted by other users are not pre-tested!
 ```
 - Fellow students / slack members, Andrew Dempsey, Mike Avgeros and Peter Baker for extensively testing my project.
 - Special thanks to my colleagues, friends and family for their support, tips and for testing my project.
-
 <div align="right"><a href="#top">🔝</a></div>

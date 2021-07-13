@@ -7,8 +7,10 @@
 * [**_Heroku_**](#heroku)
 * [**_Setting EmailJS up_**](#setting-emailjs-up)
 </details>
+<br>
 
 :computer: Deployment
+======
 
 ### Live version
 
@@ -23,7 +25,6 @@ By clicking that link the live demo version will be visible. <br>
 
 <img src="../static/readme_images/deployment_link_1.png" alt="Deployment link 1" width="75%" height="50%"/>
 <img src="../static/readme_images/deployment_link_2.png" alt="Deployment link 2" width="75%" height="50%"/>
-
 <div align="right"><a href="#top">🔝</a></div>
 
 ### Run local
@@ -95,7 +96,6 @@ __pycache__/
 python3 app.py
 ```
 in the CLI terminal. It will show ` * Running on http://192.168.1.170:5000/ (Press CTRL+C to quit)` in the terminal, you can visit the website by pressing the link holding the CTRL or COMMAND button, depending on if you are using a Windows or IOS system.
-
 <div align="right"><a href="#top">🔝</a></div>
 
 ### Heroku
@@ -134,7 +134,6 @@ For more information about your MONGO_URI in MongoDB Atlas you can look [here](h
 9. This can take a little bit, when it's ready you should see something like this:<br>
 <img src="../static/readme_images/heroku_deployment_5.png" alt="Deployment to Heroku 5" width="75%" height="50%"/>
 You can click the view button to launch your app.
-
 <div align="right"><a href="#top">🔝</a></div>
 
 ### Setting EmailJS up
@@ -152,5 +151,4 @@ You can click the view button to launch your app.
 7. Go to `Integration` and copy the user id and replace your id for the id in the JavaScript file.<br>
 <img src="../static/readme_images/integration.png" alt="Integration" width="50%" height="50%"/>
 8. The EmailJS service is set up and everything should work.
-
 <div align="right"><a href="#top">🔝</a></div>
