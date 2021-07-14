@@ -54,7 +54,7 @@ To register navigate to `Register` in the menu.<br>
 <img src="../testing/testing_images/screen_record_register_page_1.png" alt="Register 1" width="25%" height="25%">
 <img src="../testing/testing_images/screen_record_register_page_2.png" alt="Register 2" width="25%" height="25%"><br>
 
-Fill in a username and password and hit `Register`. If the is a not yet existing user, it will successfully register the account.<br>
+Fill in a username and password and hit `Register`. If this is not yet an existing user, it will successfully register the account.<br>
 
 <img src="../testing/testing_images/screen_record_successfully_registered_1.png" alt="Registered successfully 1" width="25%" height="25%"> <img src="../testing/testing_images/screen_record_successfully_registered_2.png" alt="Registered successfully 2" width="25%" height="25%"><br>
 If the username is already used it will give an error message. When the characters used are not in range of what is required it will also give error messages, however since I used a phone with language set to Dutch as a primary language this will be displayed in Dutch.<br>
@@ -102,7 +102,7 @@ The love for Japanese home cooking is explained on the about page, to read it na
 <div align="right"><a href="#top">🔝</a></div>
 
 - Share nice Japanese home cooking recipes.<br>
-This is shown through the recipes page were all the shared recipes can be found. Navigate to `Recipes` to read them.<br>
+This is shown through the recipes page where all the shared recipes can be found. Navigate to `Recipes` to read them.<br>
 <img src="../testing/testing_images/extended_screen_record_recipes_page_1.png" alt="Recipes page 1" width="25%" height="25%"> <img src="../testing/testing_images/extended_screen_record_recipes_page_2.png" alt="Recipes page 2" width="25%" height="25%"> <br><br>
 
 It can be concluded that all goals have been achieved. <br>
