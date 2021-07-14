@@ -84,7 +84,7 @@ The design goal is to make a clear, accessible, structured site so that visitors
 ### Scope
 
 The site shows a homepage with a small introduction. Second is the about page which tells a bit about the creator of the site and why the site was created. Furthermore, the site contains a recipes page on which you can you choose to go to a specific recipe. It also contains a register page, a log in page, a personal recipe page and a add recipe page.
-The personal recipe page, add recipe page and the log out option will only be visible when you are logged in. 
+The personal recipe page, add recipe page and the log out option will only be visible when you are logged in.
 | Sidenav | Logged in User | Logged out User |
  --- | --- | ---
 Home| &#9989; | &#9989; |
@@ -96,12 +96,19 @@ Personal recipe page| &#9989; | &#10060; |
 Add recipe| &#9989; | &#10060; |
 Log out| &#9989; | &#10060; |
 
+Also on the homepage there is a difference in what you will see when you are logged in or logged out.
+
+| Homepage | Logged in User | Logged out User |
+ --- | --- | ---
+Register button | &#10060; | &#9989; |
+Log in button  | &#10060; | &#9989; |
+
 A difference has also been made in user rights:
 | Recipe options | Standard User Account | Admin User Account |
  --- | --- | ---
 Add own recipe| &#9989; | &#9989; |
-Edit own recipe |&#9989; | &#9989; |
-Delete own recipe |&#9989; | &#9989; |
+Edit own recipe | &#9989; | &#9989; |
+Delete own recipe | &#9989; | &#9989; |
 Edit recipes of other users| &#10060; | &#9989; |
 Delete recipes of other users| &#10060; | &#9989; |
 
@@ -111,7 +118,7 @@ The site will be structured as clear as possible, it should be easy to see what 
 
 ### Skeleton
 
-The skeleton section is a bit more extensive for that reason please view this separate [file](skeleton/README.md).
+The skeleton section is a bit more extensive, for that reason please view this separate [file](skeleton/README.md).
 <div align="right"><a href="#top">🔝</a></div>
 
 ### Fonts and icons
