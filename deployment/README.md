@@ -139,16 +139,25 @@ You can click the view button to launch your app.
 ### Setting EmailJS up
 
 1. Go to [EmailJS](https://www.emailjs.com/) sign into your existing account or sign up to create an account.
-2. Click on `Email Services` and then `Add New Service`. <br>
-<img src="../static/readme_images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/>
+2. Click on `Email Services` and then `Add New Service`.<br>
+
+<img src="../static/readme_images/emailjs_1.png" alt="Set up EmailJS" width="50%" height="50%"/><br>
+
 3. Save and click on `Email Templates`. <br>
-<img src="../static/readme_images/emailjs_2.png" alt="EmailJS new template" width="50%" height="50%"/>
+
+<img src="../static/readme_images/emailjs_2.png" alt="EmailJS new template" width="50%" height="50%"/><br>
+
 4. Make a template and give it the id names of `send contact mail` to ensure they work with the function in this code. <br>
-<img src="../static/readme_images/emailjs_3.png" alt="Template settings" width="50%" height="50%"/>
+<img src="../static/readme_images/emailjs_3.png" alt="Template settings" width="50%" height="50%"/><br>
+
 5. Copy the service id as shown at step 2.<br>
 6. Replace the id in the code for your own id. <br>
-<img src="../static/readme_images/scriptjs.png" alt="JS file" width="50%" height="50%"/>
+
+<img src="../static/readme_images/scriptjs.png" alt="JS file" width="50%" height="50%"/><br>
+
 7. Go to `Integration` and copy the user id and replace your id for the id in the JavaScript file.<br>
-<img src="../static/readme_images/integration.png" alt="Integration" width="50%" height="50%"/>
+
+<img src="../static/readme_images/integration.png" alt="Integration" width="50%" height="50%"/><br>
+
 8. The EmailJS service is set up and everything should work.
 <div align="right"><a href="#top">🔝</a></div>
