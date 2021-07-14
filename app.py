@@ -192,7 +192,18 @@ def edit_recipe(recipe_id):
 
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-        if session["user"].lower() == recipe["recipe_created_by"].lower():
+        if session["user"] == 'admin':
+
+            if request.method == "POST":
+                save = display_recipes(request)
+                mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, save)
+                flash("Your recipe is updated successfully")
+                return redirect(url_for("personal", username=session["user"]))
+            recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+            return render_template(
+                    "recipes/edit_recipe.html", recipe=recipe)
+
+        elif session["user"].lower() == recipe["recipe_created_by"].lower():
 
             if request.method == "POST":
                 save = display_recipes(request)
@@ -218,8 +229,12 @@ def delete_recipe(recipe_id):
 
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-        if session["user"].lower() == recipe["recipe_created_by"].lower():
+        if session["user"] == 'admin':
+            mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+            flash("Your recipe is deleted successfully")
+            return redirect(url_for("get_recipes"))
 
+        elif session["user"].lower() == recipe["recipe_created_by"].lower():
             mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
             flash("Your recipe is deleted successfully")
             return redirect(url_for("get_recipes"))
