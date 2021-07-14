@@ -8,7 +8,7 @@ from bson.objectid import ObjectId
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
-    import env
+    import env  # noqa: F401
 
 
 app = Flask(__name__)
@@ -188,22 +188,44 @@ def add_recipe():
 @app.route("/recipe/update/<recipe_id>", methods=["GET", "POST"])
 @login_required
 def edit_recipe(recipe_id):
-    if request.method == "POST":
-        save = display_recipes(request)
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, save)
-        flash("Your recipe is updated successfully")
-        return redirect(url_for("personal", username=session["user"]))
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("recipes/edit_recipe.html", recipe=recipe)
+    if "user" in session:
+
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+        if session["user"].lower() == recipe["recipe_created_by"].lower():
+
+            if request.method == "POST":
+                save = display_recipes(request)
+                mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, save)
+                flash("Your recipe is updated successfully")
+                return redirect(url_for("personal", username=session["user"]))
+            recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+            return render_template(
+                    "recipes/edit_recipe.html", recipe=recipe)
+
+        flash("Access denied. You can't edit other user's recipes.")
+        return redirect(url_for("index"))
+
+    flash("Access denied. You can't edit other user's recipes.")
+    return redirect(url_for("index"))
 
 
 # -------------- Delete recipe --------------
 @app.route("/recipe/delete/<recipe_id>")
 @login_required
 def delete_recipe(recipe_id):
-    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Your recipe is deleted successfully")
-    return redirect(url_for("get_recipes"))
+    if "user" in session:
+
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+        if session["user"].lower() == recipe["recipe_created_by"].lower():
+
+            mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+            flash("Your recipe is deleted successfully")
+            return redirect(url_for("get_recipes"))
+
+    flash("Access denied. You can't delete other user's recipes.")
+    return redirect(url_for("index"))
 
 
 # -------------- Error handling -------------
