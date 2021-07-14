@@ -23,6 +23,7 @@
 * [**_Logo in sidenav_**](#logo-in-sidenav)
 * [**_Safari button bug_**](#safari-button-bug)
 * [**_Multiple cards in one card bug_**](#multiple-cards-in-one-card-bug)
+* [**_URL manipulation bug_**](#url-manipulation-bug)
 </details>
 
 :construction_worker_woman: :construction_worker_man: Manual testing
@@ -247,5 +248,8 @@ The bugs are listed below, with a link to the issue item where they are further 
 
 ### Multiple cards in one card bug
 [Multiple cards in one card bug](https://github.com/Daph1986/mamamaki/issues/31)
+
+### URL manipulation bug
+[URL manipulation bug](https://github.com/Daph1986/mamamaki/issues/33)
 
 <div align="right"><a href="#top">🔝</a></div>
