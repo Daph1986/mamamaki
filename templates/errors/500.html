@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- 500 page -->
+  <section class="error">
+    <div class="row">
+      <div class="col s12 center-align error-text top-margin-error bottom-margins">
+        <h1>Uh oh! A 500 internal server error occurred.</h1>
+        <h5>Something went wrong!</h5>
+        <p>Sorry about that, you can return to the homepage of<a href="{{ url_for('index') }}" class="btn-large btn-red"> MAMAMAKI</a></p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

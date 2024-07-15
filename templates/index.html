@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Image slider -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{ url_for('static', filename='images/sushi.png') }}" alt="Sushi" loading="lazy">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/miso_soup.png') }}" alt="Miso soup" loading="lazy">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/tempura_udon.png') }}" alt="Tempura udon" loading="lazy">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/chicken_with_pepper_cooking.png') }}" 
+          alt="Tori to pitman no item ni" loading="lazy">
+      </li>
+    </ul>
+  </div>
+
+  <!-- Homepage content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h5 class="center-align top-margins">MAMAMAKIA e yōkoso</h5>
+        <h5 class="center-align">Welcome to MAMAMAKI</h5>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <p>
+            This site contains Japanese recipes that can easily be created
+            at your own home.
+            If you yourself have a nice recipe you are most welcome to
+            share it here!
+          </p>
+        </div>
+      </div>
+      {% if not session.user %}
+      <div class="row">
+        <div class="col s12 center-align">
+          <a href="{{ url_for('register') }}"
+              class="col m4 push-m4 s12 btn-large btn-blue center-align">
+              Register <i class="fas fa-user"></i>
+          </a>
+        </div>
+        <div class="col s12 center-align">
+          <p>
+            Don’t have an account yet? 
+            <a href="{{ url_for('register') }}" class="redirect-text">Please, register here!</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <a href="{{ url_for('login') }}"
+              class="col m4 push-m4 s12 btn-large btn-blue center-align">
+              Log in <i class="fas fa-user-lock"></i>
+          </a>
+        </div>
+        <div class="col s12 center-align">
+          <p>
+            Already have an account?
+            <a href="{{ url_for('login') }}" class="redirect-text">Please log in here!</a>
+          </p>
+        </div>
+      </div>
+      {% endif %}
+      <div class="row bottom-margins">
+        <div class="col s12 center-align">
+          <p>
+            Do you have a question or any additional information that you would like?
+            Please send me a message through the form below.
+          </p>
+        </div>
+        <form class="col s12" name="form" action="#" onsubmit="return sendMail(this);">
+          <div class="card-panel">
+            <div class="row">
+              <div class="col s12">
+                <h5 class="center-align top-margins">Watashi ni renraku shite</h5>
+                <h5 class="center-align">Contact me</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-user prefix"></i>
+                <input id="name" name="name" type="text" minlength="2" maxlength="50"
+                  class="validate" required>
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-at prefix"></i>
+                <input id="email" name="email" type="email" minlength="5" maxlength="50"
+                  class="validate" required>
+                <label for="email">Email address</label>
+                <span class="helper-text" data-error="wrong" data-success="right">
+                  Please use a valid email address
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-comment-alt prefix"></i>
+                <textarea id="message" name="message" data-length="500" minlength="5" maxlength="500"
+                  class="materialize-textarea validate" required></textarea>
+                <label for="message">Message</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p>
+                  <label id="checkbox" class="no-robot-checkbox">
+                    <input type="checkbox" required="" aria-required="true" />
+                    <span>I'm not a robot!</span>
+                  </label>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center-align bottom-margins">
+                <button type="submit" class="btn-large btn-blue center-align" id="btnSubmit"> 
+                  Send <i class="fas fa-paper-plane prefix"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+
+{% endblock %}

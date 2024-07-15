@@ -1,0 +1,552 @@
+/* ------------------ Styling for gerneral use ------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Ubuntu&display=swap');
+
+html {
+  min-height: 100%;
+  background-color: #f1dec2;
+  background-image: -o-linear-gradient(315deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
+  background-image: linear-gradient(135deg, #f1dec2 0%, #f3bea2 30%, #efaa9c 41%, #de5959 75%);
+  background-repeat:no-repeat;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: #212121;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+header, 
+main, 
+footer {
+  padding-left: 300px;
+}
+
+.top-margins{
+  margin-top: 75px;
+}
+
+.bottom-margins {
+  margin-bottom: 100px;
+}
+
+.flashes h4 {
+  font-family: 'Chicle', cursive;
+  color: #4478b1;
+  padding-left: 300px;
+}
+
+.flashes {
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  line-height: 1;
+  top: 650px;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #c62828;
+}
+
+.redirect-text {
+  color: #fff;
+}
+
+/* --------------------------- Sidenav --------------------------- */
+
+.logo {
+  width: 150px;
+  height: 130px;
+}
+
+.sidenav {
+  background-color: #ea5757;
+}
+
+.sidenav li>a {
+  font-family: 'Chicle', cursive;
+  font-size: 20px;
+  color: #fff;
+}
+
+.sidenav li>a>i {
+  color: #fff;
+}
+
+.sidenav-overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hamburger-menu {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+  color: #fff;;
+  position: absolute;
+  z-index: 3;
+}
+
+.opaque-overlay {
+  padding-left: 7px;
+  padding-top: 6px;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------------- Buttons --------------------------- */
+
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.76);
+  color: #212121;
+  cursor: pointer;
+}
+
+#goToTopBtn:hover {
+  background-color: #fff;
+}
+
+button, 
+html [type="button"], 
+[type="reset"], 
+[type="submit"] {
+  -webkit-appearance: button-bevel;
+}
+
+button:focus {
+  background-color: #fff;
+}
+
+.btn, 
+.btn-large, 
+.btn-small {
+  text-transform: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn-large {
+  font-size: 22px;
+  font-family: 'Chicle', cursive;
+}
+
+.btn-small {
+  font-size: 18px;
+  font-family: 'Chicle', cursive;
+}
+
+.btn-large i {
+  font-size: 1.3rem;
+}
+
+.btn-green {
+  background-color: #338436;
+}
+
+.btn-blue {
+  background-color: #4478b1;
+}
+
+.btn-red {
+  background-color: #c62828;
+}
+
+.btn-large:hover,
+.btn-large:focus {
+  background-color:#1a581c; 
+}
+
+.btn-large.btn-red:hover {
+  background-color: #6d1b1b;
+}
+
+.btn-small:hover {
+  background-color:#1a581c; 
+}
+
+.btn-large.btn-blue:hover,
+.btn-large.btn-blue:focus {
+  background-color: #103d6d;
+}
+
+.btn-small.btn-red:hover,
+.btn-small.btn-red-ingredient:hover {
+  background-color: #6d1b1b;
+}
+
+.btn-search {
+  display: table;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-green-ingredient {
+  background-color: #338436;
+  font-family: 'Chicle', cursive;
+}
+
+.btn-red-ingredient {
+  background-color: #c62828;
+  font-family: 'Chicle', cursive;
+}
+
+/* ---------------------------- Forms ---------------------------- */
+
+/* Materialize uses active / focus colors in green for it's forms. 
+Those don't match the design so the CSS underneath is used to overwrite it.*/
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  border-right: 2px solid #ea5757;
+  border-bottom: 2px solid #ea5757;
+}
+
+.no-robot-checkbox {
+  color: #757575;
+}
+
+.input-field .prefix.active {
+  color: #212121;
+}
+
+.input-field>label {
+  color: #757575;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #707070;
+  -webkit-box-shadow: 0 1px 0 0 #707070;
+  box-shadow: 0 1px 0 0 #707070;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label, 
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #707070;
+}
+
+.input-field .prefix {
+  font-size: 1.7rem;
+}
+
+.switch label {
+  color: #757575;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: #338436;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #3384368a;
+}
+
+.character-counter {
+  margin-right: 10px;
+}
+
+/* --------------------------- Modals ---------------------------- */
+
+.text-delete {
+  color: #c62828;
+  font-family: 'Chicle', cursive;
+  font-size: 20px;
+}
+
+span.text-delete:hover {
+  color: #6d1b1b;;
+}
+
+.text-keep {
+  color: #338436;
+  font-family: 'Chicle', cursive;
+  font-size: 20px;
+}
+
+span.text-keep:hover {
+  color: #1a581c;
+}
+
+/* -------------------------- Homepage --------------------------- */
+
+.toast {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chicle', cursive;
+  font-size: 35px;
+  color: #4478b1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+  position: relative;
+}
+
+/* ------------------------- About page -------------------------- */
+
+.hero-image {
+  background-image: url("/static/images/daphne.png");
+  min-height: 400px;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------ Recipes page ------------------------- */
+
+.card-title {
+  font-family: 'Chicle', cursive;
+  color: #fff;
+  width: 100%;
+  background: #00000063;
+}
+
+.card-header {
+  font-family: 'Chicle', cursive;
+  color: #212121;
+}
+
+.card-image img {
+  max-height: 700px;
+}
+
+.card {
+  background: none;
+  -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0%), 0 3px 1px -2px rgb(0 0 0 / 0%), 0 1px 5px 0 rgb(0 0 0 / 0%);
+          box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0%), 0 3px 1px -2px rgb(0 0 0 / 0%), 0 1px 5px 0 rgb(0 0 0 / 0%);
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.row.bg-white {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 100px;
+}
+
+.recipe-margins {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.search-card {
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-bottom: 75px;
+}
+
+.no-results-text {
+  font-family: 'Chicle', cursive;
+  font-size: 45px;
+  color: #4478b1;
+}
+
+/* ------------------------ Single recipe ------------------------ */
+
+.collapsible-list {
+  background-color: #fff;
+  height: 50px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.collapsible-list:hover {
+  color: #eb6161;
+}
+
+button.col.s12.collapsible-list,
+button.col.s12.collapsible-list.active {
+  padding-left: 20px;
+}
+
+.lists {
+  padding-left: 20px;
+}
+
+.fa-hand-point-down {
+  font-size: large;
+  margin-left: 10px;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: transparent;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+/* ---------------------- Register / Log in ---------------------- */
+
+.bg-register {
+  background-image: url("/static/images/background_login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 105vh;
+  min-height: 100%;
+}
+
+div.card-panel {
+  padding-bottom: 0;
+  padding-top: 1px;
+}
+
+.margin-top-register  {
+  margin-top: 200px;
+}
+
+/* ------------------------- Error pages ------------------------- */
+
+.error {
+  background-image: url("/static/images/error.png");
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 100%;
+}
+
+.error-text {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: #fff;
+}
+
+.top-margin-error {
+  margin-top: 400px;
+}
+
+/* --------------------------- Footer ---------------------------- */
+
+.custom-footer {
+  background-color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  color: #212121;
+  font-size: small;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 2;
+  padding-left: 300px;
+}
+
+.social-icons {
+  margin-right: 15px;
+  font-size: large;
+  color: #212121;
+}
+
+/* ----------------------- Media queries ------------------------- */
+
+@media only screen and (max-width : 1440px) {
+  .margin-top-register {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width : 1023.98px) {
+  header, 
+  main, 
+  footer,
+  .flashes h4,
+  .custom-footer {
+    padding-left: 0;
+  }
+  html {
+    font-size: 16px;
+  }
+  .btn-large {
+    font-size: 20px;
+  }
+  .card-bottom-margin {
+    margin-bottom: 70px;
+  }
+  .input-field .prefix {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width : 414px) {
+  .margin-bottom-register,
+  .margin-top-register {
+    margin-bottom: 75px;
+  }
+  .btn-large {
+    font-size: 18px;
+  }
+  .btn-large i {
+    font-size: 1rem;
+  }
+  .btn-spacing {
+    margin: 20px;
+  }
+  .top-margin-error {
+    margin-top: 125px;
+  }
+  .card-image img {
+    height: 200px;
+  }
+  .search-card {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .input-field .prefix {
+    font-size: 1.5rem;
+  }
+  .no-results-text {
+    font-size: 35px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .flashes {
+    top: 150px;
+  }
+}
+
+@media only screen and (max-width : 360px) {
+  html {
+    font-size: 13px;
+  }
+  .btn-large,
+  .btn-small {
+    font-size: 16px;
+  }
+  .text-delete,
+  .text-keep  {
+    font-size: 16px;
+  }
+}

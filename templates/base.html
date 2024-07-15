@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="MAMAMAKI, share recipes for Japanese home cooking, try it yourself!"> 
+	<meta name="keywords" content="Japanese, food, recipes, cooking">
+	<meta name="author" content="Daphne Heimgartner">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<!-- Facebook, LinkedIn, Google -->
+ 	<meta property="og:type" content="article" />
+	<meta property="og:title" content="MAMAMAKI" />
+	<meta property="og:description" content="MAMAMAKI, share recipes for Japanese home cooking, try it yourself!" />
+	<meta property="og:site_name" content="MAMAMAKI" />
+	<!-- Favicon -->
+	<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png" sizes="32x32">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		referrerpolicy="no-referrer" type="text/css" />
+	<!-- Materialize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		type="text/css">
+	<!-- Local stylesheet for CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+	{% block styles %}
+	{% endblock %}
+	<!-- Validation for EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+	<title>MAMAMAKI</title>
+</head>
+
+<body>
+
+	<header>
+		<!-- Side navbar-->
+		<ul id="slide-out" class="sidenav sidenav-fixed">
+			<li>
+				<div class="user-view">
+					<a href="{{ url_for('index') }}"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" loading="lazy"></a>
+				</div>
+			</li>
+			<li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i>Home</a></li>
+			<li><a href="{{ url_for('about') }}"><i class="fas fa-info center-align"></i>About</a></li>
+			<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-book-open"></i>Recipes</a></li>
+			{% if session.user %}
+				<li>
+					<a href="{{ url_for('personal', username=session['user']) }}">
+						<i class="fas fa-user-check"></i>Personal recipe page
+					</a>
+			  </li>
+				<li><a href="{{ url_for('add_recipe') }}"><i class="fas fa-plus"></i>Add recipe</a></li>
+				<li>
+					<a href="#log-out-modal" class="modal-trigger"><i class="fas fa-user-times"></i>Log out</a>
+				</li>
+			{% else %}
+				<li><a href="{{ url_for('register') }}"><i class="fas fa-user"></i>Register</a></li>
+				<li><a href="{{ url_for('login') }}"><i class="fas fa-user-lock"></i>Log in</a></li>
+			{% endif %}
+		</ul>
+		<!-- Mobile navbar-->
+		<a href="#" data-target="slide-out" class="sidenav-trigger" aria-label="Hamburger menu">
+			<i class="fas fa-bars hamburger-menu opaque-overlay hide-on-large-only"></i>
+		</a>
+	</header>
+
+	<div>
+		<!-- Flash messages -->
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			  {% for message in messages %}
+		<div class="row flashes">
+			<h4 class="center-align">{{ message }}</h4>
+		</div>
+		    {% endfor %}
+		  {% endif %}
+		{% endwith %}
+	</div>
+
+	<main>
+		<button onclick="goToTop()" class="btn-small" id="goToTopBtn" title="Go to top"><i class="fas fa-hand-point-up"></i></button>
+		{% block content %}
+		{% endblock %}
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="custom-footer">
+			<div class="row">
+				<div class="col s12">
+					<p class="center-align">
+						<a target="_blank" href="https://www.instagram.com/hello_daphne_nl" rel="noreferrer">
+							<i class="fab fa-instagram social-icons" aria-hidden="true"></i>
+							<span class="sr-only">Instagram</span>
+						</a>
+						<a target="_blank" href="https://www.facebook.com/hellodaphnenl" rel="noreferrer">
+							<i class="fab fa-facebook social-icons" aria-hidden="true"></i>
+							<span class="sr-only">Facebook</span>
+						</a> <br>
+						© <span id="currentYear"></span> - Daphne Heimgartner
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Log out Modal -->
+	<div id="log-out-modal" class="modal">
+		<div class="modal-content center-align">
+			<h4 class="card-header">Pay attention!</h4>
+			<p>
+				Are you sure you want to log out?
+			</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close btn-flat">
+				<span class="text-keep">No, I'll stay!</span>
+			</a>
+			<a href="{{ url_for('logout') }}"
+				class="modal-action modal-close btn-flat">
+				<span class="text-delete">Yes, log me out!</span>
+			</a>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+	<script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+	{% block scripts %}
+	{% endblock %}
+		
+</body>
+
+</html>

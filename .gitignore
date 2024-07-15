@@ -1,0 +1,7 @@
+__pycache__
+
+# Exclude VScode created def folders
+.vscode
+env
+env.py
+.venv

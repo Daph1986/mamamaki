@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section class="bg-register">
+      <div class="container">
+        <div class="row">
+          <form class="col s12" method="POST" action="{{ url_for('register') }}">
+            <div class="card-panel margin-top-register margin-bottom-register">
+              <div class="row">
+                <h4 class="center-align">Tōroku</h4>
+                <h4 class="center-align">Register</h4>
+              </div>
+              <!-- Username -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="fas fa-user-check prefix"></i>
+                  <input id="username" name="username" type="text" minlength="5" maxlength="25"
+                    pattern="^[a-zA-Z0-9]{5,25}$" class="validate grey lighten-4" required>
+                  <label for="username">Username</label>
+                  <span class="helper-text" data-error="wrong" data-success="right">
+                    Please use 5-25 characters and letters and numbers only
+                  </span>
+                </div>
+              </div>
+              <!-- Password -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="fas fa-user-lock prefix"></i>
+                  <input id="password" name="password" type="password" minlength="5" maxlength="25"
+                    pattern="^[a-zA-Z0-9]{5,25}$" class="validate grey lighten-4" required>
+                  <label for="password">Password</label>
+                  <span class="helper-text" data-error="wrong" data-success="right">
+                    Please use 5-25 characters and letters and numbers only
+                  </span>
+                </div>
+              </div>
+              <!-- Register -->
+              <div class="row">
+                <button type="submit" class="col m4 push-m4 s12 btn-large btn-green center-align">
+                  Register <i class="fas fa-sign-in-alt"></i>
+                </button>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p class="center-align">
+                    Already have an account?
+                    <a href="{{ url_for('login') }}">Please log in here!</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Image slider -->
+  <div class="slider">
+    <ul class="slides">
+      {% if recipe.recipe_image_1 %}
+      <li>
+        <img src="{{ recipe.recipe_image_1 }}" alt="First image of {{ recipe.japanese_recipe_name }}" loading="lazy">
+      </li>
+      {% endif %}
+      {% if recipe.recipe_image_2 %}
+      <li>
+        <img src="{{ recipe.recipe_image_2 }}" alt="Second image of {{ recipe.japanese_recipe_name }}" loading="lazy">
+      </li>
+      {% endif %}
+      {% if recipe.recipe_image_3 %}
+      <li>
+        <img src="{{ recipe.recipe_image_3 }}" alt="Third image of {{ recipe.japanese_recipe_name }}" loading="lazy">
+      </li>
+      {% endif %}
+      {% if recipe.recipe_image_4 %}
+      <li>
+        <img src="{{ recipe.recipe_image_4 }}" alt="Fourth image of {{ recipe.japanese_recipe_name }}" loading="lazy">
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="container">
+    <!-- Recipe header -->
+    <div class="row">
+      <div class="col s12">
+        <h5 class="center-align top-margins">{{ recipe.japanese_recipe_name }}</h5>
+        <h5 class="center-align">{{ recipe.english_recipe_name }}</h5>
+      </div>
+    </div>
+    <!-- Recipe short description -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_introduction }}</p>
+        <p><b>Preparation time about {{ recipe.recipe_preparation_time }} minutes.</b></p>
+        <p><b>Recipe for {{ recipe.recipe_servings }} persons.</b></p>
+      </div>
+    </div>
+    <!-- Recipe is or is not vegetarian -->
+    {% if recipe.recipe_is_vegetarian == "on" %}
+    <div class="row">
+      <div class="col s12 center-align">
+        <i class="fas fa-leaf center-align prefix"> Vegetarian recipe</i>
+      </div>
+    </div>
+    {% endif %} 
+    <!-- Recipe ingredients -->
+    <div class="row">
+      <button class="col s12 collapsible-list">Ingredients<i class="fas fa-hand-point-down prefix"></i></button>
+        <div class="content">
+          <ul class="lists">
+            {% for ingredient in recipe.recipe_ingredients %}
+                <li>
+                    <i class="fas fa-minus"></i>
+                    {{ ingredient }}
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <!-- Recipe remarks -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_remarks }}
+        </p>
+      </div>
+    </div>
+    <!-- Recipe instructions -->
+    <div class="row">
+      <button class="col s12 collapsible-list">Instructions<i class="fas fa-hand-point-down prefix"></i></button>
+        <div class="content">
+          <ol class="lists">
+            {% for step in recipe.recipe_instruction %}
+                <li>
+                    {{ step }}
+                </li>
+            {% endfor %}
+        </ol>
+      </div>
+    </div>
+    <!-- Recipe notes -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p>{{ recipe.recipe_additional_notes }}
+        </p>
+      </div>
+    </div>
+    <!-- Recipe created by -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <p><i>Recipe created by: {{ recipe.recipe_created_by }}</i></p>
+      </div>
+    </div> 
+    <!-- Return button -->
+    <div class="row center-align">
+      <div class="col s12 bottom-margins">
+        <a href="{{ url_for('get_recipes') }}" class="btn-large btn-green">Go back to recipes <i class="fas fa-undo icons"></i></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

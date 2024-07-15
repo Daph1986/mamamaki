@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Image slider -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{ url_for('static', filename='images/tonkatsu_pork.png') }}"
+          alt="Tonkatsu pork" loading="lazy">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/yakitori_on_baking_tray.png') }}" alt="Yakitori on baking tray" loading="lazy">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/teriyaki_beef.png') }}" alt="Teriyaki beef" loading="lazy">
+      </li>
+      <li>
+        <img src="{{ url_for('static', filename='images/gyoza.png') }}" alt="Gyoza" loading="lazy">
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <h5 class="center-align top-margins">Itadakimasu</h5>
+      <h5 class="center-align">I humbly receive</h5>
+      <p class="center-align">This is a phrase one says before starting to eat.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <h5 class="center-align">All recipes</h5>
+    </div>
+  </div>
+
+  <!-- Recipe search function -->
+  <div class="row center-align card-panel search-card">
+    <form class="col s12" method="POST" action="{{ url_for('search') }}">
+      <div class="row">
+        <div class="input-field col s12 top-margins">
+          <i class="fas fa-search prefix"></i>
+          <input type="text" name="query" id="query" minlength="3" class="validate" required>
+          <label for="query">Search recipes</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <button type="submit" class="btn-large btn-green">
+            <i class="fas fa-search prefix"></i> Go
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a href="{{ url_for('get_recipes') }}" class="btn-large btn-red">
+            <i class="fas fa-redo"></i> Reset
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Recipe cards -->
+  <div class="container">
+    {% if recipes|length > 0 %}
+    {% for recipe in recipes %}
+    <div class="row">
+      <div class="col s12 center-align">
+        <div class="card card-bottom-margin">
+          <div class="card-image">
+            <img src="{{ recipe.recipe_image_1 }}" alt="Image of {{ recipe.japanese_recipe_name }}" loading="lazy">
+            <span class="card-title center-align">{{ recipe.japanese_recipe_name }}</span>
+          </div>
+          <div class="card-content bg-white">
+            <h5 class="center-align card-header">{{ recipe.english_recipe_name }}</h5><br>
+            <p>{{ recipe.recipe_introduction }}<br><br>
+              Preparation time about {{ recipe.recipe_preparation_time }} minutes.<br><br>
+              Recipe for {{ recipe.recipe_servings }} persons.
+            </p>
+          </div>
+          <div class="row bg-white">
+            <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"
+              class="btn-spacing btn-large btn-green center-align recipe-margins ">
+              Go to recipe <i class="fas fa-arrow-alt-circle-right prefix"></i>
+            </a>
+            {% if session.user|lower == recipe.recipe_created_by|lower or session.user|lower == 'admin'|lower %}
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+              class="btn-spacing btn-large btn-blue center-align recipe-margins">
+              Edit recipe <i class="fas fa-edit prefix"></i>
+            </a>
+            <button data-target="{{ recipe._id }}" type="button"
+              class="modal-trigger btn-spacing btn-large btn-red center-align recipe-margins">
+              Delete recipe <i class="fas fa-trash-alt prefix"></i>
+            </button>
+            {% endif %}
+          </div>
+        </div>
+        <!-- Delete Recipe Modal -->
+        <div id="{{ recipe._id }}" class="modal">
+          <div class="modal-content">
+            <h4 class="card-header">Pay attention!</h4>
+            <p class="center-align">
+              You are about to delete your recipe, this can not be undone!
+              Are you sure you want to delete this recipe?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close btn-flat">
+              <span class="text-keep">No, cancel!</span>
+            </a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" data-target="{{ recipe._id }}"
+              class="modal-action modal-close btn-flat">
+              <span class="text-delete">Yes, delete!</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% else %}
+      <h3 class="bottom-margins no-results-text center-align">No recipes were found</h3>
+    {% endif %}
+  </div>
+
+{% endblock %}
