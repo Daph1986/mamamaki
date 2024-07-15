@@ -11,7 +11,7 @@ The focus with this site is to combine knowledge about Japanese home cooking wit
 :clapper: Demo
 ======
 
-Due to changes on Heroku, there is no longer a demo link available.
+By clicking this [link](https://mamamaki.vercel.app/) a live demo version will be visible.
 
 <img src="static/readme_images/mockup_1.png" alt="Mockup 1" width="65%" height="65%">
 <img src="static/readme_images/mockup_2.png" alt="Mockup 2" width="65%" height="65%">
